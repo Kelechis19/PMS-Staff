@@ -266,7 +266,7 @@ const Departments = () => {
   <img src="/src/assets/taskimg/check.png" alt="" />
   </div>
   <div className="note">
-    <p>Create presentation slide for meeting with MD concerning the..</p>
+    <p>Create presentation slide for meeting with MD concerning the.</p>
   </div>
     </div>
     <div className="bg-green-100 text-center text-green-500  w-[120px] mb-[25px]">
