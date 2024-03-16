@@ -6,13 +6,13 @@ import { CiSearch } from "react-icons/ci";
 
 const Header = () => {
   const User = {
-    name: "Samiya",
+    name: "John Doe",
     profile_picture: "/samiya.png",
   };
   return (
     <div>
       {" "}
-      <div className="w-full flex justify-between">
+      <div className="flex justify-between w-full">
         <p className="text-[20px] font-[700]">Welcome Back, {User.name}</p>
         <div className="w-[40%] h-[30px] flex bg-[white] items-center rounded-[30px] ">
           <span className="text-[20px] pl-[20px] pr-[5px] text-slate-400">
@@ -39,7 +39,7 @@ const Header = () => {
               className="w-[32px] h-[32px] rounded-[60%] object-cover relative right-[15px]"
             />
             <span className="text-white font-medium relative right-[20px]">
-              Samiya Usman
+              John Doe
             </span>
             <span className="text-white font-medium text-[20px]">
               <IoMdMore />
