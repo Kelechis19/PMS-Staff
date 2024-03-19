@@ -8,7 +8,7 @@ const TaskReview = () => {
             <p>Status</p>
         </div>
         <div className="w-[120px]">
-            <p>Deadline</p>
+            <p>Rating</p>
         </div>
         <div className="w-[170px]">
             <p>Members</p>
