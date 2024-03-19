@@ -9,6 +9,9 @@ import Goals from "./pages/Goals";
 import Signin from "./pages/Signin";
 import Department from "./components/Department";
 import Settings from "./pages/Settings";
+import OngoingTask from "./pages/OngoingTask";
+import TaskReview from "./pages/TaskReview";
+import TaskHistory from "./pages/TaskHistory";
 function App() {
   return (
     <BrowserRouter>
@@ -16,7 +19,11 @@ function App() {
         <Route path="signin" element={<Signin />} />
         <Route path="dashboard" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="departments" element={<Departments />} />
+          <Route path="departments" element={<Departments />}>
+            <Route path="ongoing-task" element={<OngoingTask />} />
+            <Route path="task-review" element={<TaskReview />} />
+            <Route path="task-history" element={<TaskHistory />} />
+          </Route>
           <Route path="departments/:pathId" element={<Department />} />
 
           <Route path="analytics" element={<Analytics />} />
