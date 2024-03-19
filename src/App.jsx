@@ -12,6 +12,7 @@ import Settings from "./pages/Settings";
 import OngoingTask from "./pages/OngoingTask";
 import TaskReview from "./pages/TaskReview";
 import TaskHistory from "./pages/TaskHistory";
+
 function App() {
   return (
     <BrowserRouter>

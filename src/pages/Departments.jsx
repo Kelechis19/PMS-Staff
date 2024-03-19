@@ -15,20 +15,20 @@ const Departments = () => {
     <>
 
       <div className="flex items-center bg-white text-center mt-[20px]  font-[700]">
-        <div className={`w-[370px] font-[700]`}>
+        <div className={`w-full font-[700]`}>
           <Link to={`ongoing-task`}>
-            <button className={`${activeTab === 1 ? "bg-[rgba(29,83,161,0.09)]" : ''} p-3 w-[370px]`} onClick={() => handleClick(1)}>Ongoing Task</button>
+            <button className={`${activeTab === 1 ? "bg-[rgba(29,83,161,0.09)]" : ''} p-3 w-full`} onClick={() => handleClick(1)}>Ongoing Task</button>
           </Link>
         </div>
-        <div className=" w-[370px] font-[700] ">
+        <div className=" w-full font-[700] ">
           <Link to={`task-review`}>
-            <button className={`${activeTab === 2 ? "bg-[rgba(29,83,161,0.09)]" : ''} p-3 w-[370px]`} onClick={() => handleClick
+            <button className={`${activeTab === 2 ? "bg-[rgba(29,83,161,0.09)]" : ''} p-3 w-full`} onClick={() => handleClick
               (2)}>Task Review</button>
           </Link>
         </div>
-        <div className="w-[370px] font-[700]">
+        <div className="w-full font-[700]">
           <Link to={`task-history`}>
-            <button className={`${activeTab === 3 ? "bg-[rgba(29,83,161,0.09)]" : ''} p-3 w-[370px]`} onClick={() => handleClick
+            <button className={`${activeTab === 3 ? "bg-[rgba(29,83,161,0.09)]" : ''} p-3 w-full`} onClick={() => handleClick
               (3)}>Task History</button>
           </Link>
         </div>
