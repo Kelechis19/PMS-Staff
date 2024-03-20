@@ -66,10 +66,15 @@ const Nav = () => {
           </NavLink>
         </div>
         <div className="flex flex-col w-full px-[20px] gap-4 pb-[30px] ">
+        <NavLink to="setting">
+
           <div className="flex gap-3 w-full items-center pl-[10px]  ">
+            
             <IoSettingsOutline />
             Settings
+
           </div>
+          </NavLink>
           <div
             onClick={() => {
               navigate("/signin");
