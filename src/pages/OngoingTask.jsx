@@ -1,3 +1,4 @@
+import { OngoingTasks } from "../data/temp"
 const OngoingTask = () => {
     return <div className="">
         <div className="flex items-center bg-white text-center mt-[20px] text-gray-400">
@@ -17,49 +18,55 @@ const OngoingTask = () => {
         </div>
 
 
-        <div className=" ">
+        <div className="">
 
-        <TaskRow title="Create a new satellite" status="Not approved" date="29th of March,2023"  />
-        <TaskRow title="delete satellite"status="Ongoing" date="12th of April,2024"/>
-        <TaskRow title="delete satellite"status="Overdue" date="30th of April,2024"/>
-
-
+       
+         {
+            OngoingTasks.map((item,key)=>{
+                return(
+                    <TaskRow title={item.title} status={item.status} date={item.date} people={item.people}/>
+                )
+            })
+         }
         </div>
     </div>
 
 }
 
-const TaskRow=({title,status,date})=>{
+const TaskRow=({title,status,date,people})=>{
     return(
-        <div className="flex justify-around mt-[px] bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
-                <div className="flex items-center gap-2.5 pb-[25px] ">
+        <div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
+                <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
                     <div className="w-[20px] ">
-                        <img src={`/src/assets/taskimg/${status==="Not Approved"?"Vector.png":status==="Ongoing"?"minus":""}`}/>
+                        <img src={`/src/assets/taskimg/${status==="Not approved"?"Vector.png":"minus.png"}`}/>
                     </div>
                     <div className="note">
                         <p>{title}</p>
                     </div>
                 </div>
-                <div className={`${status==="Not approved"?"bg-red-100 text-red-500":status==="Ongoing"?"bg-green-100 text-green-500":status==="Overdue"?"bg-amber-100 text-amber-300":""} text-center   w-[120px] mb-[25px]`}>
-                    <button><p>{status}</p></button>
+                <div className="relative w-[15%] flex ">
+                    <div className={`flex  w-[100px] h-[30px] rounded-[4px] ${status==="Not approved"?"bg-red-100 text-red-500":status==="Ongoing"?"bg-green-100 text-green-500":status==="Overdue"?"bg-amber-100 text-amber-300":""} text-center   w-[120px] mb-[25px]`}>
+                        <p className="w-full h-full text-center">{status}</p>
+                    </div>
                 </div>
-                <div className="mb-[25px]">
+                
+                <div className="w-[17%]">
                     <p>{date}</p>
                 </div>
                 {/* Make it dynamic */}
-                <div className="flex  ">
-                    <div className="holder">
-                        <img src="/src/assets/member/Group4.svg" alt="" />
-                    </div>
-                    <div className="ml-[-10px] ">
-                        <img src="/src/assets/member/Group2.svg" alt="" />
-                    </div>
-                    <div className="ml-[-10px] ">
-                        <img src="/src/assets/member/Group3.svg" alt="" />
-                    </div>
-                    <div className="ml-[-10px] ">
-                        <img src="/src/assets/member/Group1.svg" alt="" />
-                    </div>
+                <div className="flex w-[10%]">
+                        <div className="holder ">
+                            <img src={`/src/assets/member/${people=== 1 ? "Group1.svg" : people=== 2 ? ["Group2.svg"]: people===3?"Group3.svg":people=== 4? "Group4.svg": ""} `}  />
+                        </div>
+                        {/* <div className="ml-[-10px] ">
+                            <img src="/src/assets/member/Group2.svg" alt="" />
+                        </div>
+                        <div className="ml-[-10px] ">
+                            <img src="/src/assets/member/Group3.svg" alt="" />
+                        </div>
+                        <div className="ml-[-10px] ">
+                            <img src="/src/assets/member/Group1.svg" alt="" />
+                        </div> */}
 
 
 

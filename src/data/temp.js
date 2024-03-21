@@ -48,3 +48,39 @@ export const user={
   "profile_img": "https://example.com/profile_images/johndoe.jpg"
 }
 
+export const OngoingTasks = [
+  {
+    "title": "Upgrade satellite communication systems",
+    "status": "Ongoing",
+    "date": "20th of March, 2024",
+    "people": 2
+  },
+  {
+    "title": "Implement redundancy measures for ground stations",
+    "status": "Not approved",
+    "date": "28th of February, 2024",
+    "people": 3
+  },
+  {
+    "title": "Conduct performance analysis of satellite transponders",
+    "status": "Overdue",
+    "date": "20th of December, 2023",
+    "people": 1
+  },
+  {
+    "title": "Install new ground station antennas",
+    "status": "Ongoing",
+    "date": "10th of January, 2024",
+    "people": 4
+  },
+  {
+    "title": "Develop disaster recovery plan for satellite operations",
+    "status": "Not approved",
+    "date": "5th of March, 2024",
+    "people": 3
+  }
+]
+
+
+
+
