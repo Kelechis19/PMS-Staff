@@ -2,13 +2,13 @@ import { OngoingTasks } from "../data/temp"
 const OngoingTask = () => {
     return <div className="">
         <div className="flex items-center bg-white text-center mt-[20px] text-gray-400">
-            <div className="w-[470px] ">
+            <div className="w-[400px] ">
                 <p>Task Title</p>
             </div>
-            <div className="w-[220px]">
+            <div className="w-[205px]">
                 <p>Status</p>
             </div>
-            <div className="w-[120px]">
+            <div className="w-[250px]">
                 <p>Deadline</p>
             </div>
             <div className="w-[170px]">
@@ -56,22 +56,11 @@ const TaskRow=({title,status,date,people})=>{
                 {/* Make it dynamic */}
                 <div className="flex w-[10%]">
                         <div className="holder ">
-                            <img src={`/src/assets/member/${people=== 1 ? "Group1.svg" : people=== 2 ? ["Group2.svg"]: people===3?"Group3.svg":people=== 4? "Group4.svg": ""} `}  />
+                            <img src={`/src/assets/member/${people=== 1 ? "Group1.svg" : people=== 2 ? ["Group2.svg "]: people===3?"Group3.svg":people=== 4? "Group4.svg": ""} `}  />
                         </div>
-                        {/* <div className="ml-[-10px] ">
-                            <img src="/src/assets/member/Group2.svg" alt="" />
-                        </div>
-                        <div className="ml-[-10px] ">
-                            <img src="/src/assets/member/Group3.svg" alt="" />
-                        </div>
-                        <div className="ml-[-10px] ">
-                            <img src="/src/assets/member/Group1.svg" alt="" />
-                        </div> */}
-
-
-
+                        
                 </div>
-                <div className="bg-white text-center  w-[80px] mb-[23px] border-gray-500 border-[1px]  hover:bg-blue-500 hover:text-white">
+                <div className="bg-white text-center  w-[80px] mb-[23px] border-gray-500 border-[1px]  hover:bg-blue-500 hover:text-white rounded">
                     <button><p>Submit</p></button>
                 </div>
 
