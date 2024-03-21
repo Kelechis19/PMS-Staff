@@ -34,7 +34,7 @@ const TaskReview = () => {
 }   
     
    
-const TaskRow=({title,status,date,people})=>{
+const TaskRow=({title,status,date,people,rating})=>{
     return(
         <div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
                 <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
