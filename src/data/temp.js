@@ -89,31 +89,37 @@ export const TaskReviews = [
   {
     title: "Review satellite communication systems upgrade proposal",
     status: "Pending",
+    date: "20th of March, 2024",
     people: 2,
   },
   {
     title: "Review redundancy measures for ground stations",
     status: "Not Approved",
+    date: "28th of February, 2024",
     people: 1,
   },
   {
     title: "Review performance analysis of satellite transponders",
     status: "Completed",
+    date: "20th of December, 2023",
     people: 3,
   },
   {
     title: "Review installation of new ground station antennas",
     status: "Pending",
+    date: "10th of January, 2024",
     people: 4,
   },
   {
     title: "Review disaster recovery plan for satellite operations",
     status: "Not Approved",
+    date: "5th of March, 2024",
     people: 2,
   },
   {
     title: "Review satellite imagery acquisition process",
     status: "Completed",
+    date: "5th of March, 2024",
     people: 3,
   },
 ];

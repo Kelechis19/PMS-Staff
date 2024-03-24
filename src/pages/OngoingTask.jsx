@@ -27,7 +27,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             <div className="relative w-11/12 max-w-md mx-auto my-6 bg-white rounded-md shadow-lg">
                 <div className="flex items-start justify-between p-4 border-b">
                     <h3 className="text-lg font-semibold">Modal Title</h3>
-
+                    
                     <button
                         onClick={closeModal}
                         className="text-gray-500 hover:text-gray-700"
@@ -53,7 +53,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 };
 const OngoingTask = () => {
     return <div className="">
-        <div className="flex items-center bg-white text-center mt-[20px] text-gray-400">
+        <div className="flex items-center bg-white text-center mt-[20px] text-gray-400 rounded-lg">
             <div className="w-[400px] ">
                 <p>Task Title</p>
             </div>
@@ -99,8 +99,8 @@ const TaskRow = ({ title, status, date, people }) => {
         <>
             <div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
                 <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
-                    <div className="w-[20px] ">
-                        <img src={`/src/assets/taskimg/${status === "Not approved" ? "Warning.svg" : "minus.svg"}`} />
+                    <div className="w-[30px]  ">
+                        <img src={`/src/assets/taskimg/${status === "Not approved" ? "Warning.svg " : "minus.svg"}`} />
                     </div>
                     <div className="note">
                         <p>{title}</p>
@@ -127,21 +127,12 @@ const TaskRow = ({ title, status, date, people }) => {
                 </div>
                 {isOpen && (
                     <Modal isOpen={isOpen} onClose={closeModal}>
-                        <p className="text-lg font-[500] text-gray-500">Task title</p>
-                        <div className="text-sm ">
-                        <input type="text" className="w-[100%] p-1 border-gray-500 border-1 " placeholder="Task title"  /> 
-                        </div>
-                        <div className="mt-[10px]">
-                            <p>Report</p>
-                        </div>
-                        <div className="text-sm">
-                        <input type="text" className="w-[100%] py-28 pt-[5px]  border-gray-500 border-1 " placeholder="Write Task Report"/> 
-                        </div>
+                        <p className="text-center">Modal Content Here</p>
                         <button
                             onClick={closeModal}
-                            className="block w-[100px] px-4 py-1 mt-4 ml-[315px] text-white bg-blue-500 rounded-md hover:bg-blue-600"
+                            className="block w-full px-4 py-2 mt-4 text-white bg-blue-500 rounded-md hover:bg-blue-600"
                         >
-                            Submit
+                            Close Modal
                         </button>
                     </Modal>
                 )}

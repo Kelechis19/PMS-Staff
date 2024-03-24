@@ -53,15 +53,15 @@ const Modal = ({ isOpen, onClose, children }) => {
 };
 const TaskReview = () => {
     return <div className="">
-        <div className="flex items-center bg-white text-center mt-[20px] text-gray-400">
+        <div className="flex items-center bg-white text-center mt-[20px] text-gray-400 rounded-lg">
             <div className="w-[400px] ">
                 <p>Task Title</p>
             </div>
             <div className="w-[205px]">
-                <p>Rating</p>
+                <p>Status</p>
             </div>
             <div className="w-[250px]">
-                <p>Date completed</p>
+                <p>Rating</p>
             </div>
             <div className="w-[170px]">
                 <p>Members</p>
@@ -85,7 +85,7 @@ const TaskReview = () => {
 
 }
 
-const TaskRow = ({ title, status, date, people }) => {
+const TaskRow = ({ title, status, date, people, rating }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const openModal = () => {
@@ -99,8 +99,8 @@ const TaskRow = ({ title, status, date, people }) => {
         <>
             <div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
                 <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
-                    <div className="w-[20px] ">
-                        <img src={`/src/assets/taskimg/${status === "Not approved" ? "Warning.svg" : "minus.svg"}`} />
+                    <div className="w-[30px] ">
+                        <img src={`/src/assets/taskimg/${status === "Not Approved" ? "Warning.svg" : "check.svg"}`} />
                     </div>
                     <div className="note">
                         <p>{title}</p>
@@ -113,7 +113,7 @@ const TaskRow = ({ title, status, date, people }) => {
                 </div>
 
                 <div className="w-[17%]">
-                    <p>{date}</p>
+                    <p>{rating}</p>
                 </div>
                 {/* Make it dynamic */}
                 <div className="flex w-[10%]">
@@ -188,7 +188,7 @@ const TaskRow = ({ title, status, date, people }) => {
                        
                         <p
                            
-                            className="block border-1 px-4 py-2 mt-4 text-black rounded-md "
+                            className="block px-4 py-2 mt-4 text-black rounded-md border-1 "
                             
                             
             

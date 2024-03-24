@@ -53,7 +53,7 @@ const Modal = ({ isOpen, onClose, children }) => {
 };
 const OngoingTask = () => {
     return <div className="">
-        <div className="flex items-center bg-white text-center mt-[20px] text-gray-400">
+        <div className="flex items-center bg-white text-center mt-[20px] text-gray-400 rounded-lg">
             <div className="w-[400px] ">
                 <p>Task Title</p>
             </div>
@@ -99,7 +99,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
         <>
             <div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
                 <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
-                    <div className="w-[20px] ">
+                    <div className="w-[30px] ">
                         <img src={`/src/assets/taskimg/check.svg`} />
                     </div>
                     <div className="note">
