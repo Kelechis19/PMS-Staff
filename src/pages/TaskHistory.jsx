@@ -85,7 +85,7 @@ const OngoingTask = () => {
 
 }
 
-const TaskRow = ({ title, status, date, people }) => {
+const TaskRow = ({ title, status, date, people, rating }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const openModal = () => {
@@ -100,15 +100,15 @@ const TaskRow = ({ title, status, date, people }) => {
             <div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
                 <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
                     <div className="w-[20px] ">
-                        <img src={`/src/assets/taskimg/${status === "Not approved" ? "Warning.svg" : "minus.svg"}`} />
+                        <img src={`/src/assets/taskimg/check.svg`} />
                     </div>
                     <div className="note">
                         <p>{title}</p>
                     </div>
                 </div>
                 <div className="relative w-[15%] flex ">
-                    <div className={`flex  w-[100px] h-[30px] rounded-[4px] ${status === "Not approved" ? "bg-red-100 text-red-500" : status === "Ongoing" ? "bg-green-100 text-green-500" : status === "Overdue" ? "bg-amber-100 text-amber-300" : ""} text-center   w-[120px] mb-[25px]`}>
-                        <p className="w-full h-full text-center">{status}</p>
+                    <div> {/* style that was here for background color of completed task and all flex `flex  w-[100px] h-[30px] rounded-[4px] ${status === "Not approved" ? "bg-red-100 text-red-500" : status === "Ongoing" ? "bg-green-100 text-green-500" : status === "Overdue" ? "bg-amber-100 text-amber-300" : ""} text-center   w-[120px] mb-[25px]`*/}
+                        <p>{rating}</p>
                     </div>
                 </div>
 
