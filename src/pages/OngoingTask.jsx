@@ -123,7 +123,7 @@ const TaskRow = ({ title, status, date, people }) => {
 
                 </div>
                 <div className="bg-white text-center  w-[80px] mb-[23px] border-gray-500 border-[1px]  hover:bg-blue-500 hover:text-white rounded">
-                    <button onClick={openModal}><p>Submit</p></button>
+                    <button onClick={openModal} className="w-full">Submit</button>
                 </div>
                 {isOpen && (
                     <Modal isOpen={isOpen} onClose={closeModal}>
@@ -137,7 +137,7 @@ const TaskRow = ({ title, status, date, people }) => {
                         <div className="text-sm">
                         <input type="text" className="w-[100%] py-28 pt-[5px]  border-gray-500 border-1 " placeholder="Write Task Report"/> 
                         </div>
-                        <p className="text-center">Modal Content Here</p>
+                        <p className="text-center"></p>
                         <button
                             onClick={closeModal}
                             className="block w-full px-4 py-2 mt-4 text-white bg-blue-500 rounded-md hover:bg-blue-600"
