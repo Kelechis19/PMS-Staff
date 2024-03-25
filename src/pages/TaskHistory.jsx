@@ -128,78 +128,75 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                 </div>
                 {isOpen && (
                     <Modal isOpen={isOpen} onClose={closeModal}>
-                        <div className="flex items-center gap-3">
-                        <div className="text-6xl">3.0</div>
-                        <div className="text-sm">
-                            Rated by GM
-                        </div>
-                        </div>
-                     
-                        <div className="flex items-center justify-between mt-[35px] font-bold">
-                        <div className="">
-                            <p>Create presentation slides for meeting with MD</p>
-                        </div>
-                        <div className="mr-[20px]">
-                            <p>23rd Feb April 2024</p>
-                        </div>
-                        </div>
-                        <div className="mt-[20px] text-sm">
-                            <p>Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut</p>
-                        </div>
+                    <div className="flex items-center gap-3">
+                    <div className="text-6xl">3.0</div>
+                    <div className="text-sm">
+                        Rated by GM
+                    </div>
+                    </div>
+                 
+                    <div className="flex items-center justify-between mt-[35px] font-bold">
+                    <div className="">
+                        <p>Create presentation slides for meeting with MD</p>
+                    </div>
+                    <div className="mr-[20px]">
+                        <p>23rd Feb April 2024</p>
+                    </div>
+                    </div>
+                    <div class="mt-[10px] text-sm max-h-[82px] max-w-[750px]  break-words border-1 rounded-lg text-wrap ">
+                         Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim.
+                    </div>
 
-                        <div className="w-[38%] h-3 bg-green-600 mt-[40px] rounded">
 
-                        </div>
-                        <div className="flex items-center gap-6 mt-4">
-                            <div className="12">
-                            <p className="mt-[10px]">2/2 task completed</p>
-                            </div>
-                            <div className="flex ">
-                                <div className="imgg">
-                                    <img src="/src/assets/task/ima.svg" alt="" />
-                                </div>
-                                <div className="ml-[-10px]">
-                                    <img src="/src/assets/task/imaa.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2 mt-[40px]">
-                            <div className="img">
-                                <img src="/src/assets/taskimg/check.png" alt="" />
-                            </div>
-                            <div className="para">
-                                <p>Create presentation slides 1-30</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="img">
-                                <img src="/src/assets/taskimg/check.png" alt="" />
-                            </div>
-                            <div className="para">
-                                <p>Create presentation slides 31-50</p>
-                            </div>
-                        </div>
+                    <div className="w-[38%] h-3 bg-green-600 mt-[20px] rounded ">
 
-                        <div className="font-bold mt-[30px]">
-                            <p>Comment by Gm</p>
-                
+                    </div>
+                    <div className="flex items-center gap-6 mt-4">
+                        <div className="12">
+                        <p className="mt-[10px]">2/2 task completed</p>
                         </div>
-                        
-                        
-                       
-                        <p
-                           
-                            className="block px-4 py-2 mt-4 text-black rounded-md border-1 "
-                            
-                            
+                        <div className="flex ">
+                            <div className="imgg">
+                                <img src="/src/assets/task/ima.svg" alt="" />
+                            </div>
+                            <div className="ml-[-10px]">
+                                <img src="/src/assets/task/imaa.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2 mt-[15px]">
+                        <div className="img">
+                            <img src="/src/assets/taskimg/check.png" alt="" />
+                        </div>
+                        <div className="para">
+                            <p>Create presentation slides 1-30</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="img">
+                            <img src="/src/assets/taskimg/check.png" alt="" />
+                        </div>
+                        <div className="para">
+                            <p>Create presentation slides 31-50</p>
+                        </div>
+                    </div>
+
+                    <div className="font-bold mt-[10px]">
+                        <p>Comment by GM</p>
             
-                        >
-                           Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend
+                    </div>
+                    
+                    
+                   
+                    <div className="text">
+                    <p className="block px-4 py-2 mt-4 text-black rounded-md border-1 text-wrap ">
+                      Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim mauris ac dui. A mi sed gravida ac molestie. Imperdiet sed quis tincidunt dolor sagittis duis. Ullamcorper magna sed duis odio nulla.
 
-                            
-                        </p>
-                        
-                    </Modal>
+                       
+                   </p>
+                    </div>
+                    
+                </Modal>
                     
                 )}
 

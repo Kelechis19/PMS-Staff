@@ -25,7 +25,7 @@ const Modal = ({ isOpen, onClose, children }) => {
             }}
         >
             <div className="relative  w-[782px] bg-white rounded-md shadow-lg my-auto h-[690px]">
-                <div className="flex items-start justify-between px-2 py-1">
+                <div className="flex items-start justify-between p-3">
                     <h3 className="text-lg font-semibold">Overall Rating</h3>
                     
                     <button
@@ -152,7 +152,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                         </div>
                         <div className="flex items-center gap-6 mt-4">
                             <div className="12">
-                            <p className="mt-[10px]">2/ 2 task completed</p>
+                            <p className="mt-[10px]">2/2 task completed</p>
                             </div>
                             <div className="flex ">
                                 <div className="imgg">
