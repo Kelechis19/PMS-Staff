@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-
+import {user} from "../data/temp"
 import { MdOutlineModeEdit } from "react-icons/md";
 
 const Settings = () => {
-  const [activeView, setActiveView] = useState(1);
+  const [activeView, setActiveView] = useState("account");
   const [editPersonal, setEditPersonal] = useState(true);
   const [firstname, setFirstname] = useState(user.firstname);
   const [middlename, setMiddleName] = useState(user.middlename);
@@ -148,7 +148,7 @@ const Settings = () => {
                 className="decoration-none  text-[16px] font-bold"
                 disabled={editPersonal}
                 onChange={(e) => {
-                  set(e.currentTarget.value);
+                  setPhone(e.currentTarget.value);
                 }}
               />
             </span>
