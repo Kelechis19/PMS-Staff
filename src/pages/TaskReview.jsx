@@ -24,8 +24,8 @@ const Modal = ({ isOpen, onClose, children }) => {
                 }
             }}
         >
-            <div className="relative  w-[60%] mx-auto my-6 bg-white rounded-md shadow-lg">
-                <div className="flex items-start justify-between p-3">
+            <div className="relative  w-[782px] bg-white rounded-md shadow-lg my-auto h-[690px]">
+                <div className="flex items-start justify-between px-2 py-1">
                     <h3 className="text-lg font-semibold">Overall Rating</h3>
                     
                     <button
@@ -142,11 +142,12 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                             <p>23rd Feb April 2024</p>
                         </div>
                         </div>
-                        <div className="mt-[20px] text-sm">
-                            <p>Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim mauris ac dui. A mi sed gravida ac molestie. Imperdiet sed quis tincidunt dolor sagittis duis. Ullamcorper magna sed duis odio nulla.</p>
+                        <div class="mt-[10px] text-sm max-h-[82px] max-w-[750px]  break-words border-1 rounded-lg text-wrap ">
+                             Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim.
                         </div>
 
-                        <div className="w-[38%] h-3 bg-green-600 mt-[40px] rounded">
+
+                        <div className="w-[38%] h-3 bg-green-600 mt-[20px] rounded ">
 
                         </div>
                         <div className="flex items-center gap-6 mt-4">
@@ -162,7 +163,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex items-center gap-2 mt-[40px]">
+                        <div className="flex items-center gap-2 mt-[15px]">
                             <div className="img">
                                 <img src="/src/assets/taskimg/check.png" alt="" />
                             </div>
@@ -179,24 +180,20 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                             </div>
                         </div>
 
-                        <div className="font-bold mt-[30px]">
-                            <p>Comment by Gm</p>
+                        <div className="font-bold mt-[10px]">
+                            <p>Comment by GM</p>
                 
                         </div>
                         
                         
                        
-                        <p
-                           
-                            className="block px-4 py-2 mt-4 text-black rounded-md border-1 "
-                            
-                            
-            
-                        >
-                           Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim mauris ac dui. A mi sed gravida ac molestie. Imperdiet sed quis tincidunt dolor sagittis duis. Ullamcorper magna sed duis odio nulla.
+                        <div className="text">
+                        <p className="block px-4 py-2 mt-4 text-black rounded-md border-1 text-wrap ">
+                          Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim mauris ac dui. A mi sed gravida ac molestie. Imperdiet sed quis tincidunt dolor sagittis duis. Ullamcorper magna sed duis odio nulla.
 
-                            
-                        </p>
+                           
+                       </p>
+                        </div>
                         
                     </Modal>
                     
