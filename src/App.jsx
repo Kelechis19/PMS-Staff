@@ -29,7 +29,7 @@ function App() {
 
           <Route path="analytics" element={<Analytics />} />
           <Route path="goals" element={<Goals />} />
-          <Route path="setting" element={<Settings />} />
+          <Route path="settings" element={<Settings />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
