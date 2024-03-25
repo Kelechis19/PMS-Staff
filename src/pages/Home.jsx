@@ -10,6 +10,7 @@ import Calendar from "react-calendar";
 
 import ChartTasks from "../components/Chart";
 import GoalForm from "../components/GoalForm";
+import Date from "../components/Date"
 
 const Home = () => {
   const [goalsList, setGoals] = useState([...goals]);
@@ -23,7 +24,7 @@ const Home = () => {
     setGoalForm(false);
   };
   return (
-    <div className="w-full flex flex-col">
+    <div className="flex flex-col w-full">
       {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
       <div className="w-full gap-4  mt-[10px] flex">
@@ -51,12 +52,12 @@ const Home = () => {
           </div>
         </div>
         <div className="w-[500px] h-[160px] bg-white rounded-[8px]">
-          {/* <MiniCalendar /> */}
+          {<Date/>}
         </div>
       </div>
-      <div className="w-full flex mt-[1rem] gap-4 ">
+      {/* <div className="w-full flex mt-[1rem] gap-4 ">
         <div className="w-[600px]  bg-white rounded-[8px] flex flex-col p-[20px]">
-          <div className="w-full flex justify-between">
+          <div className="flex justify-between w-full">
             <p className="text-[16px] font-[700]">Analytics Per Department</p>
             <div className="flex gap-4">
               <div className="w-[80px] h-[30px] text-center rounded-[4px] bg-[#6A91CB24]">
@@ -111,15 +112,15 @@ const Home = () => {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
       <div></div>
     </div>
   );
 };
 const GoalCheckBox = ({ checked, title }) => {
   return (
-    <div className="flex w-full items-center justify-between">
-      <label className=" flex items-center">
+    <div className="flex items-center justify-between w-full">
+      <label className="flex items-center ">
         <input className="w-[33px]" type="checkbox" checked={checked} />
         <span className="text-[13px] font-[500]">{title}</span>
       </label>
