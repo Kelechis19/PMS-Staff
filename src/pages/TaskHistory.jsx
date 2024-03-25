@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { OngoingTasks } from "../data/temp"
+import { TaskReviews } from "../data/temp"
 
 const Modal = ({ isOpen, onClose, children }) => {
     const [opacity, setOpacity] = useState(isOpen ? "opacity-100" : "opacity-0");
@@ -24,9 +24,9 @@ const Modal = ({ isOpen, onClose, children }) => {
                 }
             }}
         >
-            <div className="relative w-11/12 max-w-md mx-auto my-6 bg-white rounded-md shadow-lg">
-                <div className="flex items-start justify-between p-4 border-b">
-                    <h3 className="text-lg font-semibold">Modal Title</h3>
+            <div className="relative  w-[60%] mx-auto my-6 bg-white rounded-md shadow-lg">
+                <div className="flex items-start justify-between p-3">
+                    <h3 className="text-lg font-semibold">Overall Rating</h3>
                     
                     <button
                         onClick={closeModal}
@@ -51,17 +51,17 @@ const Modal = ({ isOpen, onClose, children }) => {
         </div>
     );
 };
-const OngoingTask = () => {
+const TaskReview = () => {
     return <div className="">
         <div className="flex items-center bg-white text-center mt-[20px] text-gray-400 rounded-lg">
             <div className="w-[400px] ">
                 <p>Task Title</p>
             </div>
             <div className="w-[205px]">
-                <p>Rating</p>
+                <p>Status</p>
             </div>
             <div className="w-[250px]">
-                <p>Date conpleted</p>
+                <p>Rating</p>
             </div>
             <div className="w-[170px]">
                 <p>Members</p>
@@ -74,7 +74,7 @@ const OngoingTask = () => {
 
 
             {
-                OngoingTasks.map((item, key) => {
+                TaskReviews.map((item, key) => {
                     return (
                         <TaskRow title={item.title} status={item.status} date={item.date} people={item.people} />
                     )
@@ -100,20 +100,16 @@ const TaskRow = ({ title, status, date, people, rating }) => {
             <div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
                 <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
                     <div className="w-[30px] ">
-                        <img src={`/src/assets/taskimg/check.svg`} />
+                        <img src={`/src/assets/taskimg/${status === "Not Approved" ? "Warning.svg" : "check.svg"}`} />
                     </div>
                     <div className="note">
                         <p>{title}</p>
                     </div>
                 </div>
-                <div className="relative w-[15%] flex ">
-                    <div> {/* style that was here for background color of completed task and all flex `flex  w-[100px] h-[30px] rounded-[4px] ${status === "Not approved" ? "bg-red-100 text-red-500" : status === "Ongoing" ? "bg-green-100 text-green-500" : status === "Overdue" ? "bg-amber-100 text-amber-300" : ""} text-center   w-[120px] mb-[25px]`*/}
-                        <p>{rating}</p>
-                    </div>
-                </div>
+              
 
                 <div className="w-[17%]">
-                    <p>{date}</p>
+                    <p>{rating}</p>
                 </div>
                 {/* Make it dynamic */}
                 <div className="flex w-[10%]">
@@ -123,18 +119,83 @@ const TaskRow = ({ title, status, date, people, rating }) => {
 
                 </div>
                 <div className="bg-white text-center  w-[80px] mb-[23px] border-gray-500 border-[1px]  hover:bg-blue-500 hover:text-white rounded">
-                    <button onClick={openModal}><p>Submit</p></button>
+                    <button onClick={openModal}><p>View</p></button>
                 </div>
                 {isOpen && (
                     <Modal isOpen={isOpen} onClose={closeModal}>
-                        <p className="text-center">Modal Content Here</p>
-                        <button
-                            onClick={closeModal}
-                            className="block w-full px-4 py-2 mt-4 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+                        <div className="flex items-center gap-3">
+                        <div className="text-6xl">3.0</div>
+                        <div className="text-sm">
+                            Rated by GM
+                        </div>
+                        </div>
+                     
+                        <div className="flex items-center justify-between mt-[35px] font-bold">
+                        <div className="">
+                            <p>Create presentation slides for meeting with MD</p>
+                        </div>
+                        <div className="mr-[20px]">
+                            <p>23rd Feb April 2024</p>
+                        </div>
+                        </div>
+                        <div className="mt-[20px] text-sm">
+                            <p>Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim mauris ac dui. A mi sed gravida ac molestie. Imperdiet sed quis tincidunt dolor sagittis duis. Ullamcorper magna sed duis odio nulla.</p>
+                        </div>
+
+                        <div className="w-[38%] h-3 bg-green-600 mt-[40px] rounded">
+
+                        </div>
+                        <div className="flex items-center gap-6 mt-4">
+                            <div className="12">
+                            <p className="mt-[10px]">2/ 2 task completed</p>
+                            </div>
+                            <div className="flex ">
+                                <div className="imgg">
+                                    <img src="/src/assets/task/ima.svg" alt="" />
+                                </div>
+                                <div className="ml-[-10px]">
+                                    <img src="/src/assets/task/imaa.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-2 mt-[40px]">
+                            <div className="img">
+                                <img src="/src/assets/taskimg/check.png" alt="" />
+                            </div>
+                            <div className="para">
+                                <p>Create presentation slides 1-30</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <div className="img">
+                                <img src="/src/assets/taskimg/check.png" alt="" />
+                            </div>
+                            <div className="para">
+                                <p>Create presentation slides 31-50</p>
+                            </div>
+                        </div>
+
+                        <div className="font-bold mt-[30px]">
+                            <p>Comment by Gm</p>
+                
+                        </div>
+                        
+                        
+                       
+                        <p
+                           
+                            className="block px-4 py-2 mt-4 text-black rounded-md border-1 "
+                            
+                            
+            
                         >
-                            Close Modal
-                        </button>
+                           Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim mauris ac dui. A mi sed gravida ac molestie. Imperdiet sed quis tincidunt dolor sagittis duis. Ullamcorper magna sed duis odio nulla.
+
+                            
+                        </p>
+                        
                     </Modal>
+                    
                 )}
 
             </div>
@@ -143,4 +204,4 @@ const TaskRow = ({ title, status, date, people, rating }) => {
     )
 }
 
-export default OngoingTask;
+export default TaskReview;
