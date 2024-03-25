@@ -24,7 +24,7 @@ const Modal = ({ isOpen, onClose, children }) => {
                 }
             }}
         >
-            <div className="relative  w-[60%] mx-auto my-6 bg-white rounded-md shadow-lg">
+            <div className="relative  w-[782px] bg-white rounded-md shadow-lg my-auto h-[690px] ">
                 <div className="flex items-start justify-between p-3">
                     <h3 className="text-lg font-semibold">Overall Rating</h3>
                     
@@ -58,10 +58,10 @@ const TaskReview = () => {
                 <p>Task Title</p>
             </div>
             <div className="w-[205px]">
-                <p>Status</p>
+                <p>Rating</p>
             </div>
             <div className="w-[250px]">
-                <p>Rating</p>
+                <p>Date Completed</p>
             </div>
             <div className="w-[170px]">
                 <p>Members</p>
@@ -108,9 +108,14 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                 </div>
               
 
-                <div className="w-[17%]">
+                <div className="w-[20%]">
                     <p>{rating}</p>
                 </div>
+                
+                <div className="w-[20%]">
+                    <p>{date}</p>
+                </div>
+                
                 {/* Make it dynamic */}
                 <div className="flex w-[10%]">
                     <div className="holder ">
@@ -119,7 +124,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
 
                 </div>
                 <div className="bg-white text-center  w-[80px] mb-[23px] border-gray-500 border-[1px]  hover:bg-blue-500 hover:text-white rounded">
-                    <button onClick={openModal}><p>View</p></button>
+                    <button onClick={openModal} className="w-full">View</button>
                 </div>
                 {isOpen && (
                     <Modal isOpen={isOpen} onClose={closeModal}>
@@ -139,7 +144,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                         </div>
                         </div>
                         <div className="mt-[20px] text-sm">
-                            <p>Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim mauris ac dui. A mi sed gravida ac molestie. Imperdiet sed quis tincidunt dolor sagittis duis. Ullamcorper magna sed duis odio nulla.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut</p>
                         </div>
 
                         <div className="w-[38%] h-3 bg-green-600 mt-[40px] rounded">
@@ -147,7 +152,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                         </div>
                         <div className="flex items-center gap-6 mt-4">
                             <div className="12">
-                            <p className="mt-[10px]">2/ 2 task completed</p>
+                            <p className="mt-[10px]">2/2 task completed</p>
                             </div>
                             <div className="flex ">
                                 <div className="imgg">
@@ -189,7 +194,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                             
             
                         >
-                           Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend faucibus duis massa mi pulvinar sollicitudin. Nec enim mauris ac dui. A mi sed gravida ac molestie. Imperdiet sed quis tincidunt dolor sagittis duis. Ullamcorper magna sed duis odio nulla.
+                           Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis pellentesque laoreet elit nibh tortor tempus mauris ut. Viverra rhoncus quam porttitor netus gravida ut. Montes eleifend
 
                             
                         </p>

@@ -123,7 +123,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
 
                 </div>
                 <div className="bg-white text-center  w-[80px] mb-[23px] border-gray-500 border-[1px]  hover:bg-blue-500 hover:text-white rounded">
-                    <button onClick={openModal}><p>View</p></button>
+                    <button onClick={openModal} className="w-full">View</button>
                 </div>
                 {isOpen && (
                     <Modal isOpen={isOpen} onClose={closeModal}>
