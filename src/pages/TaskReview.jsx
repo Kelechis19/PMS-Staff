@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { TaskReviews } from "../data/temp"
+import { Tasks } from "../data/temp";
+import People from "../components/Peopleimg";
 
 const Modal = ({ isOpen, onClose, children }) => {
     const [opacity, setOpacity] = useState(isOpen ? "opacity-100" : "opacity-0");
@@ -74,7 +75,7 @@ const TaskReview = () => {
 
 
             {
-                TaskReviews.map((item, key) => {
+                Tasks.map((item, key) => {
                     return (
                         <TaskRow title={item.title} status={item.status} date={item.date} people={item.people} />
                     )
@@ -117,8 +118,8 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                 </div>
                 {/* Make it dynamic */}
                 <div className="flex w-[10%]">
-                    <div className="holder ">
-                        <img src={`/src/assets/member/${people === 1 ? "Group1.svg" : people === 2 ? ["Group2.svg "] : people === 3 ? "Group3.svg" : people === 4 ? "Group4.svg" : ""} `} />
+                    <div className="flex ">
+                        <People people={people}/> 
                     </div>
 
                 </div>
