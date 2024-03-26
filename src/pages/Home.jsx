@@ -283,7 +283,7 @@ const Home = () => {
       <p>Comment</p>
       </div>
       <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
-      <p>Peer Review</p>
+      <p>Peer Reviews</p>
       </div>
       </div>
 
