@@ -51,8 +51,8 @@ const Home = () => {
             <GoalMeter status={20} id="Goal 3" />
           </div>
         </div>
-        <div className="w-[500px] h-[160px] bg-white rounded-[8px]">
-          {<Date/>}
+        <div className="w-[430px] h-[160px] bg-white rounded-[8px]">
+          {<Date />}
         </div>
       </div>
       {/* <div className="w-full flex mt-[1rem] gap-4 ">
@@ -113,7 +113,181 @@ const Home = () => {
           </div>
         </div>
       </div> */}
-      <div></div>
+      
+      <div className="flex justify-between flex-wrap">
+
+      
+
+      <div className=" bg-white  mt-[20px] w-[550px]  items-center rounded-lg">
+        <div className="flex items-center justify-between p-2 pt-[-15px]">
+          <div className="font-[700]">
+            <p>Ongoing Tasks</p>
+          </div>
+          <div className="ongoing">
+            <p>See all</p>
+          </div>
+        </div>
+
+
+      
+
+
+          <div className="mt-[-10px]">
+            <div className="flex justify-between p-2">
+             <div className="flex items-center">
+             <div className="w-[26px]  ">
+                <img src="/src/assets/taskimg/check.png" alt="" />
+              </div>
+              <div className="text-sm">
+                <p>People financial projections for upcoming..</p>
+              </div>
+             </div>
+              <div className="flex items-center w-[55px] mt-[5px]">
+                <div className="img">
+                  <img src="/src/assets/homee/hme.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme2.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme3.svg" alt="" />
+                </div>
+              </div>
+              <div className="text-sm">
+                <p>3rd March 2024</p>
+              </div>
+            </div>
+
+               <div className="flex justify-between p-2 mt-[-10px]">
+             <div className="flex items-center">
+             <div className="w-[26px]  ">
+                <img src="/src/assets/taskimg/check.png" alt="" />
+              </div>
+              <div className="text-sm">
+                <p>People financial projections for upcoming..</p>
+              </div>
+             </div>
+              <div className="flex items-center w-[55px] mt-[5px]">
+                <div className="img">
+                  <img src="/src/assets/homee/hme.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme2.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme3.svg" alt="" />
+                </div>
+              </div>
+              <div className="text-sm">
+                <p>3rd March 2024</p>
+              </div>
+            </div>
+            <div className="flex justify-between p-2 mt-[-10px]">
+             <div className="flex items-center">
+             <div className="w-[26px]  ">
+                <img src="/src/assets/taskimg/check.png" alt="" />
+              </div>
+              <div className="text-sm">
+                <p>People financial projections for upcoming..</p>
+              </div>
+             </div>
+              <div className="flex items-center w-[55px] mt-[5px]">
+                <div className="img">
+                  <img src="/src/assets/homee/hme.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme2.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme3.svg" alt="" />
+                </div>
+              </div>
+              <div className="text-sm">
+                <p>3rd March 2024</p>
+              </div>
+            </div>
+                 <div className="flex justify-between p-2 mt-[-10px]">
+             <div className="flex items-center">
+             <div className="w-[26px]  ">
+                <img src="/src/assets/taskimg/check.png" alt="" />
+              </div>
+              <div className="text-sm">
+                <p>People financial projections for upcoming..</p>
+              </div>
+             </div>
+              <div className="flex items-center w-[55px] mt-[5px]">
+                <div className="img">
+                  <img src="/src/assets/homee/hme.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme2.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme3.svg" alt="" />
+                </div>
+              </div>
+              <div className="text-sm">
+                <p>3rd March 2024</p>
+              </div>
+            </div>
+            <div className="flex justify-between p-2 mt-[-10px]">
+             <div className="flex items-center">
+             <div className="w-[26px]  ">
+                <img src="/src/assets/taskimg/check.png" alt="" />
+              </div>
+              <div className="text-sm">
+                <p>People financial projections for upcoming..</p>
+              </div>
+             </div>
+              <div className="flex items-center w-[55px] mt-[5px]">
+                <div className="img">
+                  <img src="/src/assets/homee/hme.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme2.svg" alt="" />
+                </div>
+                <div className="ml-[-13px]">
+                  <img src="/src/assets/homee/hme3.svg" alt="" />
+                </div>
+              </div>
+              <div className="text-sm">
+                <p>3rd March 2024</p>
+              </div>
+            </div>
+
+
+            
+          </div>
+
+
+
+
+
+
+
+
+        
+      </div>
+
+      <div className="w-[560px] mt-[20px]  relative bg-white rounded-lg">
+      <p>Analysis</p>
+      </div>
+
+      <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
+      <p>Task Review</p>
+      </div>
+      <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
+      <p>Comment</p>
+      </div>
+      <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
+      <p>Comment</p>
+      </div>
+      <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
+      <p>Peer Review</p>
+      </div>
+      </div>
+
+     
     </div>
   );
 };
