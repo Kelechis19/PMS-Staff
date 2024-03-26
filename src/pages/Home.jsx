@@ -269,20 +269,20 @@ const Home = () => {
         
       </div>
 
-      <div className="w-[560px] mt-[20px]  relative bg-white rounded-lg">
+      <div className="w-[570px] mt-[20px]  relative bg-white rounded-lg">
       <p>Analysis</p>
       </div>
 
       <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
       <p>Task Review</p>
       </div>
-      <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
+      <div className="w-[570px] mt-[10px]   bg-white rounded-lg ">
       <p>Comment</p>
       </div>
       <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
       <p>Comment</p>
       </div>
-      <div className="w-[550px] mt-[10px]   bg-white rounded-lg ">
+      <div className="w-[570px] mt-[10px]   bg-white rounded-lg ">
       <p>Peer Reviews</p>
       </div>
       </div>
