@@ -60,152 +60,226 @@ export const Tasks = [
     date: "20th of March, 2024",
     people: [
       {
-        "name": "John",
-        "id": "P001",
-        "profile_pic":"Group1.svg"
-
+        name: "John",
+        id: "P001",
+        profile_pic: "Group1.svg",
       },
       {
-        "name": "Alice",
-        "id": "P002",
-        "profile_pic":"Group2.svg"
+        name: "Alice",
+        id: "P002",
+        profile_pic: "Group2.svg",
       },
       {
-        "name": "Michael",
-        "id": "P003",
-        "profile_pic":"Group3.svg"
+        name: "Michael",
+        id: "P003",
+        profile_pic: "Group3.svg",
       },
       {
-        "name": "Emily",
-        "id": "P004",
-        "profile_pic":"Group4.svg"
-      }
-      
+        name: "Emily",
+        id: "P004",
+        profile_pic: "Group4.svg",
+      },
     ],
   },
   {
     title: "Implement redundancy measures for ground stations",
     status: "Not approved",
     date: "28th of February, 2024",
-    people: [{
-      "name": "John",
-      "id": "P001",
-      "profile_pic":"Group1.svg"
-
-    },  {
-      "name": "Alice",
-      "id": "P002",
-      "profile_pic":"Group2.svg"
-    },
-    {
-      "name": "Michael",
-      "id": "P003",
-      "profile_pic":"Group3.svg"
-    },
-    {
-      "name": "Emily",
-      "id": "P004",
-      "profile_pic":"Group4.svg"
-    },
-    {
-      "name": "Alice",
-      "id": "P002",
-      "profile_pic":"Group2.svg"
-    },
-    {
-      "name": "Michael",
-      "id": "P003",
-      "profile_pic":"Group3.svg"
-    },
-    {
-      "name": "Emily",
-      "id": "P004",
-      "profile_pic":"Group4.svg"
-    }
-    
+    people: [
+      {
+        name: "John",
+        id: "P001",
+        profile_pic: "Group1.svg",
+      },
+      {
+        name: "Alice",
+        id: "P002",
+        profile_pic: "Group2.svg",
+      },
+      {
+        name: "Michael",
+        id: "P003",
+        profile_pic: "Group3.svg",
+      },
+      {
+        name: "Emily",
+        id: "P004",
+        profile_pic: "Group4.svg",
+      },
+      {
+        name: "Alice",
+        id: "P002",
+        profile_pic: "Group2.svg",
+      },
+      {
+        name: "Michael",
+        id: "P003",
+        profile_pic: "Group3.svg",
+      },
+      {
+        name: "Emily",
+        id: "P004",
+        profile_pic: "Group4.svg",
+      },
     ],
   },
   {
     title: "Conduct performance analysis of satellite transponders",
     status: "Overdue",
     date: "20th of December, 2023",
-    people: [{
-      "name": "John",
-      "id": "P001",
-      "profile_pic":"Group1.svg"
-
-    },],
+    people: [
+      {
+        name: "John",
+        id: "P001",
+        profile_pic: "Group1.svg",
+      },
+    ],
   },
   {
     title: "Install new ground station antennas",
     status: "Ongoing",
     date: "10th of January, 2024",
-    people: [{
-      "name": "John",
-      "id": "P001",
-      "profile_pic":"Group1.svg"
-
-    },{
-      "name": "Emily",
-      "id": "P004",
-      "profile_pic":"Group4.svg"
-    },],
+    people: [
+      {
+        name: "John",
+        id: "P001",
+        profile_pic: "Group1.svg",
+      },
+      {
+        name: "Emily",
+        id: "P004",
+        profile_pic: "Group4.svg",
+      },
+    ],
   },
   {
     title: "Develop disaster recovery plan for satellite operations",
     status: "Not approved",
     date: "5th of March, 2024",
-    people: [{
-      "name": "John",
-      "id": "P001",
-      "profile_pic":"Group1.svg"
-
-    },{
-      "name": "Emily",
-      "id": "P004",
-      "profile_pic":"Group4.svg"
-    },{
-      "name": "Alice",
-      "id": "P002",
-      "profile_pic":"Group2.svg"
-    }],
+    people: [
+      {
+        name: "John",
+        id: "P001",
+        profile_pic: "Group1.svg",
+      },
+      {
+        name: "Emily",
+        id: "P004",
+        profile_pic: "Group4.svg",
+      },
+      {
+        name: "Alice",
+        id: "P002",
+        profile_pic: "Group2.svg",
+      },
+    ],
   },
 ];
 export const TaskReviews = [
   {
-    title: "Review satellite communication systems upgrade proposal",
-    status: "Pending",
-    date: "20th of March, 2024",
-    people: 2,
+    "title": "Upgrade satellite communication systems",
+    "status": "Completed",
+    "date": "20th of March, 2024",
+    "people": [
+      {
+        "name": "John",
+        "id": "P001",
+        "profile_pic": "Group1.svg"
+      },
+      {
+        "name": "Alice",
+        "id": "P002",
+        "profile_pic": "Group2.svg"
+      },
+      {
+        "name": "Michael",
+        "id": "P003",
+        "profile_pic": "Group3.svg"
+      },
+      {
+        "name": "Emily",
+        "id": "P004",
+        "profile_pic": "Group4.svg"
+      }
+    ]
   },
   {
-    title: "Review redundancy measures for ground stations",
-    status: "Not Approved",
-    date: "28th of February, 2024",
-    people: 1,
+    "title": "Implement redundancy measures for ground stations",
+    "status": "Not approved",
+    "date": "28th of February, 2024",
+    "people": [
+      {
+        "name": "John",
+        "id": "P001",
+        "profile_pic": "Group1.svg"
+      },
+      {
+        "name": "Alice",
+        "id": "P002",
+        "profile_pic": "Group2.svg"
+      },
+      {
+        "name": "Michael",
+        "id": "P003",
+        "profile_pic": "Group3.svg"
+      },
+      {
+        "name": "Emily",
+        "id": "P004",
+        "profile_pic": "Group4.svg"
+      }
+    ]
   },
   {
-    title: "Review performance analysis of satellite transponders",
-    status: "Completed",
-    date: "20th of December, 2023",
-    people: 3,
+    "title": "Conduct performance analysis of satellite transponders",
+    "status": "Pending",
+    "date": "20th of December, 2023",
+    "people": [
+      {
+        "name": "John",
+        "id": "P001",
+        "profile_pic": "Group1.svg"
+      }
+    ]
   },
   {
-    title: "Review installation of new ground station antennas",
-    status: "Pending",
-    date: "10th of January, 2024",
-    people: 4,
+    "title": "Install new ground station antennas",
+    "status": "Completed",
+    "date": "10th of January, 2024",
+    "people": [
+      {
+        "name": "John",
+        "id": "P001",
+        "profile_pic": "Group1.svg"
+      },
+      {
+        "name": "Emily",
+        "id": "P004",
+        "profile_pic": "Group4.svg"
+      }
+    ]
   },
   {
-    title: "Review disaster recovery plan for satellite operations",
-    status: "Not Approved",
-    date: "5th of March, 2024",
-    people: 2,
-  },
-  {
-    title: "Review satellite imagery acquisition process",
-    status: "Completed",
-    date: "5th of March, 2024",
-    people: 3,
-  },
-];
+    "title": "Develop disaster recovery plan for satellite operations",
+    "status": "Not approved",
+    "date": "5th of March, 2024",
+    "people": [
+      {
+        "name": "John",
+        "id": "P001",
+        "profile_pic": "Group1.svg"
+      },
+      {
+        "name": "Emily",
+        "id": "P004",
+        "profile_pic": "Group4.svg"
+      },
+      {
+        "name": "Alice",
+        "id": "P002",
+        "profile_pic": "Group2.svg"
+      }
+    ]
+  }
+]
+;
