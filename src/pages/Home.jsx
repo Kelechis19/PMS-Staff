@@ -125,7 +125,7 @@ const Home = () => {
             </div>
             <div className="text-black text-sm font-medium font-['Raleway'] flex items-center ">
             
-            <p>See all</p> 
+            <button>See all</button>
             <div className="w-6 h-6 relative">
         <img src="/src/assets/star/arrow.svg" alt="" />
           </div>
@@ -238,7 +238,7 @@ const Home = () => {
             </div>
             <div className="text-black text-sm font-medium font-['Raleway'] flex items-center gap-1">
             
-            <p>See all</p> 
+            <button>See all</button>
             <div className="w-6 h-6 relative">
         <img src="/src/assets/star/arrow.svg" alt="" />
           </div>
@@ -319,14 +319,14 @@ const Home = () => {
             <div className="text-center text-indigo-50 text-xs font-semibold font-['Raleway'] ">Create a comment</div>
           </div>
         </div>
-        <div className="w-[550px] mt-[10px]   bg-white rounded-lg  mt-[-65px]">
+        <div className="w-[550px] mb-[100px]   bg-white rounded-lg  mt-[-65px]">
         <div className="flex items-center justify-between p-2 pt-[-15px]">
             <div className="text-black text-base font-bold font-['Raleway']">
               <p>Comment</p>
             </div>
             <div className="text-black text-sm font-medium font-['Raleway'] flex items-center gap-1">
             
-              <p>See all</p> 
+            <button>See all</button>
               <div className="w-6 h-6 relative">
           <img src="/src/assets/star/arrow.svg" alt="" />
             </div>
@@ -441,7 +441,7 @@ const Home = () => {
        
 
         </div>
-        <div className="w-[570px] mt-[10px]   bg-white rounded-lg px-[15px] pt-[10px] mb-[20px]">
+        <div className="w-[570px] mt-[10px]   bg-white rounded-lg px-[15px] pt-[10px] mb-[120px]">
           <div className="text-black text-base font-bold font-['Raleway']">
             <p>Peer Reviews</p>
           </div>
@@ -461,8 +461,8 @@ const Home = () => {
             
           </div>
           <div className="w-[142px] h-[38px] px-4 py-3 bg-blue-500 rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex ">
-<div className="text-indigo-50 text-xs font-bold font-['Raleway']">Review Colleagues</div>
-</div>
+          <div className="text-indigo-50 text-xs font-bold font-['Raleway']">Review Colleagues</div>
+          </div>
          </div>
           
         </div>
