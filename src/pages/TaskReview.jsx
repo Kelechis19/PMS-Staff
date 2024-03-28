@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Tasks } from "../data/temp";
 import People from "../components/Peopleimg";
+import { TaskReviews } from "../data/temp";
 
 const Modal = ({ isOpen, onClose, children }) => {
     const [opacity, setOpacity] = useState(isOpen ? "opacity-100" : "opacity-0");
@@ -75,7 +76,7 @@ const TaskReview = () => {
 
 
             {
-                Tasks.map((item, key) => {
+                TaskReviews.map((item, key) => {
                     return (
                         <TaskRow title={item.title} status={item.status} date={item.date} people={item.people} />
                     )
@@ -101,14 +102,14 @@ const TaskRow = ({ title, status, date, people, rating }) => {
             <div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
                 <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
                     <div className="w-[30px] ">
-                        <img src={`/src/assets/taskimg/${status === "Not Approved" ? "Warning.svg" : "check.svg"}`} />
+                        <img src={`/src/assets/taskimg/${status === "Not approved" ? "Warning.svg" : "check.svg"}`} />
                     </div>
                     <div className="note">
                         <p>{title}</p>
                     </div>
                 </div>
                 <div className="relative w-[15%] flex ">
-                    <div className={`flex  w-[100px] h-[30px] rounded-[4px] ${status==="Not Approved"?"bg-red-100 text-red-500":status==="Completed"?"bg-green-100 text-green-500":status==="Pending"?"bg-amber-100 text-amber-300":""} text-center   w-[120px] mb-[25px]`}>
+                    <div className={`flex  w-[100px] h-[30px] rounded-[4px] ${status==="Not approved"?"bg-red-100 text-red-500":status==="Completed"?"bg-green-100 text-green-500":status==="Pending"?"bg-amber-100 text-amber-300":""} text-center   w-[120px] mb-[25px]`}>
                         <p className="w-full h-full text-center">{status}</p>
                     </div>
                 </div>
