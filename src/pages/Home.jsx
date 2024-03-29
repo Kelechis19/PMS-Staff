@@ -24,36 +24,56 @@ const Home = () => {
     setGoalForm(false);
   };
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col ">
       {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
       <div className="w-full gap-4  mt-[10px] flex">
-        <div className="flex bg-white h-[160px] w-[700px] rounded-[8px] items-center p-[30px] gap-6 ">
+        <button>
+        <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
           <div className="flex flex-col gap-4">
             <div>
-              <p className="text-[16px] font-[700]">Goal Progress</p>
+              <p className="text-[16px] font-[700]">Overall Task Completed</p>
               <p className="font-[300] text-[12px] ">
-                Progress of Goal based on tasks of all departments
+                28/56 tasks completed
               </p>
             </div>
-            <div className="relative w-[333px] bg-[#D9D9D9] h-[8px] rounded-full">
+            <div className="relative w-[253px] bg-[#D9D9D9] h-[8px] rounded-full">
               <div
-                className="absolute h-full bg-[#4D7CC1] rounded-full"
+                className="absolute h-full bg-[#cdc307ed] rounded-full"
                 style={{ width: `${percentage}%` }}
               ></div>
             </div>
             <span className="text-[20px] font-[600] ">{percentage}%</span>
           </div>
-          <div className="relative w-[1px] h-[128px] bg-[#D9D9D9] rounded-full" />
-          <div className="w-[10vw] flex gap-6 ">
-            <GoalMeter status={80} id="Goal 1" />
-            <GoalMeter status={50} id="Goal 2" />
-            <GoalMeter status={20} id="Goal 3" />
+         
+        
+        </div>
+        </button>
+        <button>
+        <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
+          <div className="flex flex-col gap-4">
+            <div>
+              <p className="text-[16px] font-[700]">Overall Task Completed</p>
+              <p className="font-[300] text-[12px] ">
+                28/56 tasks completed
+              </p>
+            </div>
+            <div className="relative w-[253px] bg-[#D9D9D9] h-[8px] rounded-full">
+              <div
+                className="absolute h-full bg-[#cdc307ed] rounded-full"
+                style={{ width: `${percentage}%` }}
+              ></div>
+            </div>
+            <span className="text-[20px] font-[600] ">{percentage}%</span>
           </div>
+         
+        
         </div>
-        <div className="w-[430px] h-[160px] bg-white rounded-[8px]">
+        </button>
+       <button> <div className="w-[430px] h-[160px] bg-white rounded-[8px]">
           {<Date />}
-        </div>
+        </div></button>
+      
       </div>
       {/* <div className="w-full flex mt-[1rem] gap-4 ">
         <div className="w-[600px]  bg-white rounded-[8px] flex flex-col p-[20px]">
