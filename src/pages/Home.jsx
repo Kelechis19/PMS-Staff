@@ -114,19 +114,19 @@ const Home = () => {
         </div>
       </div> */}
 
-      <div className="flex justify-between flex-wrap">
+      <div className="flex flex-wrap justify-between">
 
 
 
         <div className=" bg-white  mt-[20px] w-[550px]  items-center rounded-lg px-1">
           <div className="flex items-center justify-between p-2 pt-[-15px]">
-            <div className="text-black text-base font-bold font-['Raleway']">
+            <div className="text-base font-bold text-black ">
               <p>Ongoing Tasks</p>
             </div>
-            <div className="text-black text-sm font-medium font-['Raleway'] flex items-center ">
+            <div className="flex items-center text-sm font-medium text-black ">
             
             <button>See all</button>
-            <div className="w-6 h-6 relative">
+            <div className="relative w-6 h-6">
         <img src="/src/assets/star/arrow.svg" alt="" />
           </div>
           </div>
@@ -136,7 +136,7 @@ const Home = () => {
 
 
 
-          <div className="mt-[-10px] text-black text-xs font-normal font-['Raleway'] ">
+          <div className="mt-[-10px] text-black text-xs font-normal  ">
             <div className="flex justify-between p-1">
               <div className="flex items-center">
                 <div className="w-[26px]  ">
@@ -233,19 +233,19 @@ const Home = () => {
 
         <div className="w-[550px] mt-[10px]   bg-white rounded-lg h-28 px-1">
           <div className="flex items-center justify-between p-2 pt-[-15px]">
-            <div className="text-black text-base font-bold font-['Raleway']">
+            <div className="text-base font-bold text-black ">
               <p>Ongoing Tasks</p>
             </div>
-            <div className="text-black text-sm font-medium font-['Raleway'] flex items-center gap-1">
+            <div className="flex items-center gap-1 text-sm font-medium text-black">
             
             <button>See all</button>
-            <div className="w-6 h-6 relative">
+            <div className="relative w-6 h-6">
         <img src="/src/assets/star/arrow.svg" alt="" />
           </div>
           </div>
 
           </div>
-          <div className="flex justify-between items-center p-1 text-black text-xs font-normal font-['Raleway']">
+          <div className="flex items-center justify-between p-1 text-xs font-normal text-black ">
             <div className="flex items-center">
               <div className="w-[26px]  ">
                 <img src="/src/assets/taskimg/check.png" alt="" />
@@ -275,7 +275,7 @@ const Home = () => {
               <p>3rd March 2024</p>
             </div>
           </div>
-          <div className="flex items-center justify-between p-1 mt-[-10px] text-black text-xs font-normal font-['Raleway'] pb-[-60px] ">
+          <div className="flex items-center justify-between p-1 mt-[-10px] text-black text-xs font-normal  pb-[-60px] ">
             <div className="flex items-center">
               <div className="w-[26px]  ">
                 <img src="/src/assets/taskimg/check.png" alt="" />
@@ -307,27 +307,27 @@ const Home = () => {
           </div>
         </div>
         <div className="w-[570px] mt-[10px]   bg-white rounded-lg pl-[15px] ">
-          <div className="text-black text-base font-bold font-['Raleway'] pt-[15px]">
+          <div className="text-black text-base font-bold  pt-[15px]">
             Comments</div>
-          <div className="text-black text-xs font-normal font-['Raleway'] pt-[6px] pb-[15px]">
+          <div className="text-black text-xs font-normal  pt-[6px] pb-[15px]">
             <p>You can send complaints or feedback to your General Manager</p>
           </div>
           <div className="w-[540px] h-[57px] p-1 relative rounded border border-black border-opacity-20 pt-[10px]">
 
           </div>
           <div className="w-[130px] h-[30px] px-3 py-2 bg-blue-500 rounded shadow justify-end items-center gap-2 inline-flex  ml-[410px] mt-[14px] mb-[8px]">
-            <div className="text-center text-indigo-50 text-xs font-semibold font-['Raleway'] ">Create a comment</div>
+            <div className="text-xs font-semibold text-center text-indigo-50 ">Create a comment</div>
           </div>
         </div>
         <div className="w-[550px] mb-[100px]   bg-white rounded-lg  mt-[-65px]">
         <div className="flex items-center justify-between p-2 pt-[-15px]">
-            <div className="text-black text-base font-bold font-['Raleway']">
+            <div className="text-base font-bold text-black ">
               <p>Comment</p>
             </div>
-            <div className="text-black text-sm font-medium font-['Raleway'] flex items-center gap-1">
+            <div className="flex items-center gap-1 text-sm font-medium text-black">
             
             <button>See all</button>
-              <div className="w-6 h-6 relative">
+              <div className="relative w-6 h-6">
           <img src="/src/assets/star/arrow.svg" alt="" />
             </div>
             </div>
@@ -335,15 +335,15 @@ const Home = () => {
          <div className="holaa">
          <div className="hold">
           <div className="flex justify-between px-[20px] pb-[5px]">
-        <div className="flex items-center flex-wrap gap-2 ">
+        <div className="flex flex-wrap items-center gap-2 ">
             <div className="img">
               <img src="/src/assets/star/Eli14.svg" alt="" />
             </div>
             <div className="flex gap-2">
-              <div className="text-black text-sm font-bold font-['Raleway']">
+              <div className="text-sm font-bold text-black ">
               <p>Hr</p>
               </div>
-              <div className="text-black text-[10px] font-light font-['Raleway'] ">
+              <div className="text-black text-[10px] font-light  ">
                 <div className="pt-[-40px]">
                 <p>2.00pm</p>
                 </div>
@@ -359,7 +359,7 @@ const Home = () => {
             <div className="w-[15px] h-[15px] relative origin-top-left ">
           <img src="/src/assets/star/share.svg" alt="" />
             </div>
-            <div className="w-[31px] h-3.5 text-black text-[10px] font-light font-['Raleway']">
+            <div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
               <p>Reply</p>
             </div>
           </div>
@@ -369,15 +369,15 @@ const Home = () => {
           </div>
           <div className="mt-[5px] mb-[5px]">
           <div className="flex justify-between px-[20px] pb-[5px]">
-        <div className="flex items-center flex-wrap gap-2 ">
+        <div className="flex flex-wrap items-center gap-2 ">
             <div className="img">
               <img src="/src/assets/star/Eli14.svg" alt="" />
             </div>
             <div className="flex gap-2">
-              <div className="text-black text-sm font-bold font-['Raleway']">
+              <div className="text-sm font-bold text-black ">
               <p>GM</p>
               </div>
-              <div className="text-black text-[10px] font-light font-['Raleway'] ">
+              <div className="text-black text-[10px] font-light  ">
                 <div className="pt-[-40px]">
                 <p>2.00pm</p>
                 </div>
@@ -393,7 +393,7 @@ const Home = () => {
             <div className="w-[15px] h-[15px] relative origin-top-left ">
           <img src="/src/assets/star/share.svg" alt="" />
             </div>
-            <div className="w-[31px] h-3.5 text-black text-[10px] font-light font-['Raleway']">
+            <div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
               <p>Reply</p>
             </div>
           </div>
@@ -403,15 +403,15 @@ const Home = () => {
           </div>
           <div className="hold">
           <div className="flex justify-between px-[20px] pb-[5px]">
-        <div className="flex items-center flex-wrap gap-2 ">
+        <div className="flex flex-wrap items-center gap-2 ">
             <div className="img">
               <img src="/src/assets/star/Eli14.svg" alt="" />
             </div>
             <div className="flex gap-2">
-              <div className="text-black text-sm font-bold font-['Raleway']">
+              <div className="text-sm font-bold text-black ">
               <p>GM</p>
               </div>
-              <div className="text-black text-[10px] font-light font-['Raleway'] ">
+              <div className="text-black text-[10px] font-light  ">
                 <div className="pt-[-40px]">
                 <p>2.00pm</p>
                 </div>
@@ -427,7 +427,7 @@ const Home = () => {
             <div className="w-[15px] h-[15px] relative origin-top-left ">
           <img src="/src/assets/star/share.svg" alt="" />
             </div>
-            <div className="w-[31px] h-3.5 text-black text-[10px] font-light font-['Raleway']">
+            <div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
               <p>Reply</p>
             </div>
           </div>
@@ -435,21 +435,21 @@ const Home = () => {
         </div>
         <div className="w-[543] h-[0px] border border-black border-opacity-10 "></div>
           </div>
-          <div className="w-[90%]  text-black text-opacity-40 text-[13px] font-medium font-['Raleway'] mt-[10px] border-1 rounded-[20px] border-gray-200 p-1 ml-[25px] mb-[10px]"><input type="text " placeholder ="Add a comment" />
+          <div className="w-[90%]  text-black text-opacity-40 text-[13px] font-medium  mt-[10px] border-1 rounded-[20px] border-gray-200 p-1 ml-[25px] mb-[10px]"><input type="text " placeholder ="Add a comment" />
           </div>
          </div>
        
 
         </div>
         <div className="w-[570px] mt-[10px]   bg-white rounded-lg px-[15px] pt-[10px] mb-[120px]">
-          <div className="text-black text-base font-bold font-['Raleway']">
+          <div className="text-base font-bold text-black ">
             <p>Peer Reviews</p>
           </div>
           <div className="flex items-center justify-between">
-          <div className="text-black text-xs font-light font-['Raleway']">
+          <div className="text-xs font-light text-black ">
             <p>Anonymous Review from co-workers</p>
           </div>
-          <div className="text-black text-2xl font-bold font-['Raleway']">73%</div>
+          <div className="text-2xl font-bold text-black ">73%</div>
           </div>
          <div className="flex items-center justify-between mt-[5px] pt-[-40px]">
          <div className="w-[25px] flex items-center">
@@ -461,7 +461,7 @@ const Home = () => {
             
           </div>
           <div className="w-[142px] h-[38px] px-4 py-3 bg-blue-500 rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex ">
-          <div className="text-indigo-50 text-xs font-bold font-['Raleway']">Review Colleagues</div>
+          <div className="text-xs font-bold text-indigo-50 ">Review Colleagues</div>
           </div>
          </div>
           
