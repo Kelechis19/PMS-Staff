@@ -125,11 +125,10 @@ const Home = () => {
             </div>
             <div className="flex items-center text-sm font-medium text-black ">
             
-            <button>See all</button>
-            <div className="relative w-6 h-6">
-        <img src="/src/assets/star/arrow.svg" alt="" />
-          </div>
-          </div>
+              <button className="flex ">See all <img src="/src/assets/star/arrow.svg" alt="" /></button>
+                
+            </div>
+            
           </div>
 
 
