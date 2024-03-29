@@ -11,6 +11,7 @@ import Calendar from "react-calendar";
 import ChartTasks from "../components/Chart";
 import GoalForm from "../components/GoalForm";
 import Date from "../components/Date"
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [goalsList, setGoals] = useState([...goals]);
@@ -123,11 +124,9 @@ const Home = () => {
             <div className="text-base font-bold text-black ">
               <p>Ongoing Tasks</p>
             </div>
-            <div className="flex items-center text-sm font-medium text-black ">
-            
+            <Link to="OngoingTasks"><div className="flex items-center text-sm font-medium text-black ">
               <button className="flex ">See all <img src="/src/assets/star/arrow.svg" alt="" /></button>
-                
-            </div>
+            </div></Link>
             
           </div>
 
