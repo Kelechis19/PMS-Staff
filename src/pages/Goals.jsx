@@ -71,7 +71,7 @@ const TaskRow = ({ title, status, to }) => {
   // };
 
   return (
-    <div className=" w-full flex flex-col gap-[10px] mt-1">
+    <div className=" w-full flex flex-col gap-[10px] ">
       
       {/* <div className="w-full h-[45px]  bg-[white] rounded-[5px] flex  text-center">
         <button
