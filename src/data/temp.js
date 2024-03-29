@@ -283,3 +283,31 @@ export const TaskReviews = [
   }
 ]
 ;
+export const Complaints =[
+  {
+    "title": "Internet connectivity issue",
+    "to": "GM",
+    "status": "Received"
+  },
+  {
+    "title": "Salary delay complaint",
+    "to": "HR",
+    "status": "Pending"
+  },
+  {
+    "title": "Equipment malfunction complaint",
+    "to": "GM",
+    "status": "Pending"
+  },
+  {
+    "title": "Misconduct complaint",
+    "to": "HR",
+    "status": "Received"
+  },
+  {
+    "title": "Security concern",
+    "to": "GM",
+    "status": "Received"
+  }
+]
+

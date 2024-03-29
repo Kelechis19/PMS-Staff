@@ -31,6 +31,11 @@ function App() {
           <Route path="goals" element={<Goals />} />
           <Route path="settings" element={<Settings />} />
           <Route path="*" element={<Error />} />
+          
+          <Route path="OngoingTasks" element={<OngoingTask />}>
+            
+          
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
