@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Tasks } from "../data/temp";
 import People from "../components/Peopleimg";
 import { TaskReviews } from "../data/temp";
+import HoverRating from "../components/Star";
 
 const Modal = ({ isOpen, onClose, children }) => {
     const [opacity, setOpacity] = useState(isOpen ? "opacity-100" : "opacity-0");
@@ -115,7 +116,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
                 </div>
 
                 <div className="w-[17%]">
-                    <p>{rating}</p>
+                    <p>{<HoverRating/>}</p>
                 </div>
                 {/* Make it dynamic */}
                 <div className="flex w-[10%]">

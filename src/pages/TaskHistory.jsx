@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Tasks } from "../data/temp";
-
+import HoverRating from "../components/Star";
 import People from "../components/Peopleimg";
 
 const Modal = ({ isOpen, onClose, children }) => {
@@ -111,7 +111,7 @@ const TaskRow = ({ title, status, date, people, rating }) => {
               
 
                 <div className="w-[20%]">
-                    <p>{rating}</p>
+                    <p>{<HoverRating/>}</p>
                 </div>
                 
                 <div className="w-[20%]">
