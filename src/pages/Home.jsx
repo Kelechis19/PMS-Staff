@@ -158,7 +158,7 @@ const Home = () => {
             <div className="flex justify-between p-1">
               <div className="flex items-center">
                 <div className="w-[26px]  ">
-                  <img src="/src/assets/taskimg/check.png" alt="" />
+                  <img src="/src/assets/taskimg/check.svg" alt="" />
                 </div>
                 <div className="text-sm">
                   <p>People financial projections for upcoming..</p>
@@ -183,7 +183,7 @@ const Home = () => {
             <div className="flex justify-between p-1 mt-[-10px]">
               <div className="flex items-center">
                 <div className="w-[26px]  ">
-                  <img src="/src/assets/taskimg/check.png" alt="" />
+                  <img src="/src/assets/taskimg/check.svg" alt="" />
                 </div>
                 <div className="text-sm">
                   <p>People financial projections for upcoming..</p>
@@ -207,7 +207,7 @@ const Home = () => {
             <div className="flex justify-between p-1 mt-[-10px]">
               <div className="flex items-center">
                 <div className="w-[26px]  ">
-                  <img src="/src/assets/taskimg/check.png" alt="" />
+                  <img src="/src/assets/taskimg/check.svg" alt="" />
                 </div>
                 <div className="text-sm">
                   <p>People financial projections for upcoming..</p>
@@ -266,7 +266,7 @@ const Home = () => {
           <div className="flex items-center justify-between p-1 text-xs font-normal text-black ">
             <div className="flex items-center">
               <div className="w-[26px]  ">
-                <img src="/src/assets/taskimg/check.png" alt="" />
+                <img src="/src/assets/taskimg/check.svg" alt="" />
               </div>
               <div className="text-sm">
                 <p>Create presentation slides for meeting with...</p>
@@ -296,7 +296,7 @@ const Home = () => {
           <div className="flex items-center justify-between p-1 mt-[-10px] text-black text-xs font-normal  pb-[-60px] ">
             <div className="flex items-center">
               <div className="w-[26px]  ">
-                <img src="/src/assets/taskimg/check.png" alt="" />
+                <img src="/src/assets/taskimg/check.svg" alt="" />
               </div>
               <div className="text-sm">
                 <p>Create presentation slides for meeting with...</p>
