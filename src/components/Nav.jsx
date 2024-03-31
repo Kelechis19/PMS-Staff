@@ -53,7 +53,7 @@ const Nav = () => {
             </span>
           </NavLink>
           <NavLink
-            to="goals"
+            to="reports"
             className={({ isActive, isPending }) =>
               isActive ? activeLink : normal
             }
