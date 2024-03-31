@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
-import Departments from "./pages/Departments";
+import Task from "./pages/Task";
 import Analytics from "./pages/Analytics";
 import Error from "./pages/Error";
 import Goals from "./pages/Goals";
@@ -20,7 +20,7 @@ function App() {
         <Route path="signin" element={<Signin />} />
         <Route path="dashboard" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="departments" element={<Departments />}>
+          <Route path="task" element={<Task />}>
             <Route path="ongoing-task" element={<OngoingTask />} />
             <Route path="task-review" element={<TaskReview />} />
             <Route path="task-history" element={<TaskHistory />} />

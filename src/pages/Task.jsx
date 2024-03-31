@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 import { Facilities, Marketing, Network, Innovation, Finance, HumanR, Budgeting, InfoTS, Administration, Broadcast, Sales, Business, SatNav, Broadband, SatCtrl } from "../assets/index";
 
 
-const Departments = () => {
+const Task = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   function handleClick(tabNumber) {
@@ -47,4 +47,4 @@ const DepartmentTile = ({ title, image, link }) => {
   //   </div>
   // )
 }
-export default Departments;
+export default Task;
