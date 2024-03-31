@@ -6,7 +6,7 @@ import { IoMdAddCircle } from "react-icons/io";
 import { Complaints } from "../data/temp";
 // import { NavLink } from "react-router-dom";
 
-const Reports = () =>{
+const Report = () =>{
   const [activeView, setActiveView] = useState(1);
   const handleButtonClick = (buttonName) => {
     setActiveView(buttonName);
@@ -133,4 +133,4 @@ const TaskRow = ({ title, status, to }) => {
 };
 
 
-export default Reports;
+export default Report;
