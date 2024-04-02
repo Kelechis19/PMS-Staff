@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const [goalsList, setGoals] = useState([...goals]);
 
-  const percentage = 70;
+  const percentage = 50;
   const [goalform, setGoalForm] = useState(false);
   const handleAddGoal = (e) => {
     setGoalForm(true);
@@ -139,7 +139,7 @@ const Home = () => {
 
 
 
-        <div className=" bg-white  mt-[20px] w-[550px]  items-center rounded-lg px-1">
+        <div className=" bg-white  mt-[20px] w-[570px]  items-center rounded-lg px-1">
           <div className="flex items-center justify-between p-2 pt-[-15px]">
             <div className="text-base font-bold text-black ">
               <p>Ongoing Tasks</p>
@@ -249,7 +249,7 @@ const Home = () => {
           <p>Analysis</p>
         </div>
 
-        <div className="w-[550px] mt-[10px]   bg-white rounded-lg h-28 px-1">
+        <div className="w-[570px] mt-[10px]   bg-white rounded-lg h-28 px-1">
           <div className="flex items-center justify-between p-2 pt-[-15px]">
             <div className="text-base font-bold text-black ">
               <p>Ongoing Tasks</p>
@@ -337,7 +337,7 @@ const Home = () => {
             <div className="text-xs font-semibold text-center text-indigo-50 ">Create a comment</div>
           </div>
         </div>
-        <div className="w-[550px] mb-[100px]   bg-white rounded-lg  mt-[-65px]">
+        <div className="w-[570px] mb-[100px]   bg-white rounded-lg  mt-[-65px]">
         <div className="flex items-center justify-between p-2 pt-[-15px]">
             <div className="text-base font-bold text-black ">
               <p>Comment</p>
