@@ -73,11 +73,11 @@ const TaskRow = ({ title, status, date, people }) => {
                         <img src={`/src/assets/taskimg/${status === "Not approved" ? "Warning.svg " : "minus.svg"}`} />
                     </div>
                     
-                        <div className="bg-green-400 note text-start" onClick={()=>{
+                        <button className=" note text-start" onClick={()=>{
                             opendesc()
                         }}>
                             <p>{title}</p>
-                        </div>
+                        </button>
                     
                 </div>
                 <div className="relative w-[15%] flex ">

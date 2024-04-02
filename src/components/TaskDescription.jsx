@@ -10,7 +10,7 @@ const Desc = ({opendesc}) => {
                     <div className="">
                         <img className="ml-[1450px] mt-2  w-8 h-8" src="/src/assets/Close_round.svg" alt="lol" />
                     </div> 
-                    <div className="flex hold"><div className="bg-white  h-[440px] ml-[20px] rounded-lg w-[1000px] ">
+                    <div className="flex "><div className="bg-white  h-[440px] ml-[20px] rounded-lg w-[1000px] ">
                         oerinhgnierugnirngoirng
                     </div>
                     
