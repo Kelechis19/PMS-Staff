@@ -12,7 +12,7 @@ const Desc = ({opendesc}) => {
                 <div className="absolute inset-0 z-10 flex items-center justify-center w-screen h-screen overflow-auto bg-black/20" onClick={()=>{opendesc()}}/>
                 <div className="absolute w-screen z-50 h-[70%] bottom-0 bg-slate-100 rounded-lg">
                     <div className="">
-                        <img className="ml-[1450px] mt-2  w-8 h-8" src="/src/assets/Close_round.svg" alt="lol" />
+                        <img className="ml-[97.5%] mt-2  w-8 h-8" src="/src/assets/Close_round.svg" alt="lol" />
                     </div> 
                     <div className="flex "><div className="bg-white  h-[440px] ml-[20px] rounded-lg w-[67%] ">
                         oerinhgnierugnirngoirng
