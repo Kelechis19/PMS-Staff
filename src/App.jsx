@@ -12,7 +12,7 @@ import Settings from "./pages/Settings";
 import OngoingTask from "./pages/OngoingTask";
 import TaskReview from "./pages/TaskReview";
 import TaskHistory from "./pages/TaskHistory";
-import Description  from "./pages/Description";
+
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           <Route path="task" element={<Task />}>
             <Route path="ongoing-task" element={<OngoingTask />}></Route>
               
-            <Route path="description" element={<Description/>}/>
+            
             <Route path="task-review" element={<TaskReview />} />
             <Route path="task-history" element={<TaskHistory />} />
           </Route>

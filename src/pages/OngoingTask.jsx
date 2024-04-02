@@ -4,6 +4,8 @@ import People from "../components/Peopleimg";
 import { Link } from "react-router-dom";
 import Description from "./Description";
 import Modal from "../components/TaskSubmit";
+import Desc from "../components/TaskDescription";
+
 
 
 const OngoingTask = () => {
@@ -44,11 +46,17 @@ const OngoingTask = () => {
 
 const TaskRow = ({ title, status, date, people }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [descOPen, setDescOpen] = useState(false);
 
     const modal = () => {
         setIsOpen(!isOpen);
     };
     const [description,setDescription]=useState(true)
+    
+    const opendesc =() =>{
+        setDescOpen(!descOPen);
+    }
+    const [desc,setDesc]=useState(true)
     
      
     return (
@@ -57,13 +65,16 @@ const TaskRow = ({ title, status, date, people }) => {
                 {
                     isOpen && <Modal tile={title} modal={modal}/>
                 }
+                {
+                    descOPen && <Desc tile={title} opendesc={opendesc}/>
+                }
                 <div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
                     <div className="w-[30px]  ">
                         <img src={`/src/assets/taskimg/${status === "Not approved" ? "Warning.svg " : "minus.svg"}`} />
                     </div>
                     
                         <div className="bg-green-400 note text-start" onClick={()=>{
-                            setDescription(!description)
+                            opendesc()
                         }}>
                             <p>{title}</p>
                         </div>
