@@ -343,7 +343,7 @@ const Home = () => {
               <input type="text" />
           </div> */}
         
-            <input className="w-[95%] h-[57px] border-black border-1 text-wrap rounded  " type="text"  />
+            <textarea className="w-[95%] h-[57px] border-black border-1 text-wrap rounded  " type="text"  />
         
           <div className="w-[130px] h-[30px] px-3 py-2 bg-blue-500 rounded shadow justify-end items-center gap-2 inline-flex  ml-[410px] mt-[14px] mb-[8px]">
             <div className="text-xs font-semibold text-center text-indigo-50 "><button>File a complaint</button></div>
@@ -464,7 +464,7 @@ const Home = () => {
           
         </div>
        
-        <input className  ="w-[90%]  text-black text-opacity-40 text-[13px] font-medium  mt-[10px] border-1 rounded-[20px] border-gray-200 p-1 ml-[25px] mb-[10px] " type="text" placeholder="Add a comment" />
+        <textarea className  ="w-[90%]  text-black text-opacity-40 text-[13px] font-medium  mt-[10px] border-1 rounded-[20px] border-gray-200 p-1 ml-[25px] mb-[10px] " type="text" placeholder="Add a comment" />
           </div>
          
          </div>
@@ -506,7 +506,7 @@ const GoalCheckBox = ({ checked, title }) => {
   return (
     <div className="flex items-center justify-between w-full">
       <label className="flex items-center ">
-        <input className="w-[33px]" type="checkbox" checked={checked} />
+        <textarea className="w-[33px]" type="checkbox" checked={checked} />
         <span className="text-[13px] font-[500]">{title}</span>
       </label>
       {!checked ? (
