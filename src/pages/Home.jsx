@@ -16,7 +16,8 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const [goalsList, setGoals] = useState([...goals]);
 
-  const percentage = 50;
+  const percentage1 = 50;
+  const percentage2 = 70;
   const [goalform, setGoalForm] = useState(false);
   const handleAddGoal = (e) => {
     setGoalForm(true);
@@ -24,6 +25,7 @@ const Home = () => {
   const closeGoalForm = () => {
     setGoalForm(false);
   };
+  
   return (
     <div className="flex flex-col ">
       {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
@@ -38,13 +40,13 @@ const Home = () => {
                 28/56 tasks completed
               </p>
             </div>
-            <div className="relative w-[253px] bg-[#D9D9D9] h-[8px] rounded-full">
+            <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
               <div
                 className="absolute h-full bg-[#cdc307ed] rounded-full"
-                style={{ width: `${percentage}%` }}
+                style={{ width: `${percentage1}%` }}
               ></div>
             </div>
-            <span className="text-[20px] font-[600] ">{percentage}%</span>
+            <span className="text-[20px] font-[600] ">{percentage1}%</span>
           </div>
          
         
@@ -54,18 +56,25 @@ const Home = () => {
         <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
           <div className="flex flex-col gap-4">
             <div>
-              <p className="text-[16px] font-[700]">Overall Task Completed</p>
+              <p className="text-[16px] font-[700]">Average Task Review</p>
               <p className="font-[300] text-[12px] ">
-                28/56 tasks completed
+              Reviewed by GM on 13/05/2023
               </p>
             </div>
-            <div className="relative w-[253px] bg-[#D9D9D9] h-[8px] rounded-full">
+          
+           <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
               <div
-                className="absolute h-full bg-[#cdc307ed] rounded-full"
-                style={{ width: `${percentage}%` }}
+                className="absolute h-full bg-lime-500 rounded-full"
+                style={{ width: `${percentage2}%` }}
               ></div>
             </div>
-            <span className="text-[20px] font-[600] ">{percentage}%</span>
+        
+         <div className="flex items-center justify-between">
+            <span className="text-[20px] font-[600] ">{percentage2}%</span>
+            <div className="text-black text-xl font-normal font-['Raleway']">
+              <p>Excellence</p>
+            </div>
+            </div>
           </div>
          
         
@@ -135,11 +144,11 @@ const Home = () => {
         </div>
       </div> */}
 
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap gap-x-5 ">
 
 
 
-        <div className=" bg-white  mt-[20px] w-[570px]  items-center rounded-lg px-1">
+        <div className=" bg-white  mt-[20px] w-[49%]  items-center rounded-lg px-1">
           <div className="flex items-center justify-between p-2 pt-[-15px]">
             <div className="text-base font-bold text-black ">
               <p>Ongoing Tasks</p>
@@ -245,11 +254,11 @@ const Home = () => {
 
         </div>
 
-        <div className="w-[570px] mt-[20px]  relative bg-white rounded-lg">
+        <div className="w-[49%] mt-[20px]  relative bg-white rounded-lg">
           <p>Analysis</p>
         </div>
 
-        <div className="w-[570px] mt-[10px]   bg-white rounded-lg h-28 px-1">
+        <div className="w-[49%] mt-[10px]   bg-white rounded-lg h-28 px-1">
           <div className="flex items-center justify-between p-2 pt-[-15px]">
             <div className="text-base font-bold text-black ">
               <p>Ongoing Tasks</p>
@@ -324,17 +333,20 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-[570px] mt-[10px]   bg-white rounded-lg pl-[15px] ">
+        <div className="w-[49%] mt-[10px]   bg-white rounded-lg pl-[15px] ">
           <div className="text-black text-base font-bold  pt-[15px]">
             Comments</div>
           <div className="text-black text-xs font-normal  pt-[6px] pb-[15px]">
             <p>You can send complaints or feedback to your General Manager</p>
           </div>
-          <div className="w-[540px] h-[57px] p-1 relative rounded border border-black border-opacity-20 pt-[10px]">
-
-          </div>
+          {/* <div className="w-[540px] h-[57px] p-1 relative rounded border border-black border-opacity-20 pt-[10px]">
+              <input type="text" />
+          </div> */}
+        
+            <textarea className="w-[95%] h-[57px] border-black border-1 text-wrap rounded  " type="text"  />
+        
           <div className="w-[130px] h-[30px] px-3 py-2 bg-blue-500 rounded shadow justify-end items-center gap-2 inline-flex  ml-[410px] mt-[14px] mb-[8px]">
-            <div className="text-xs font-semibold text-center text-indigo-50 ">Create a comment</div>
+            <div className="text-xs font-semibold text-center text-indigo-50 "><button>File a complaint</button></div>
           </div>
         </div>
         <div className="w-[570px] mb-[100px]   bg-white rounded-lg  mt-[-65px]">
@@ -451,15 +463,15 @@ const Home = () => {
           </div>
           
         </div>
-        <div className="w-[543] h-[0px] border border-black border-opacity-10 "></div>
+       
+        <textarea className  ="w-[90%]  text-black text-opacity-40 text-[13px] font-medium  mt-[10px] border-1 rounded-[20px] border-gray-200 p-1 ml-[25px] mb-[10px] " type="text" placeholder="Add a comment" />
           </div>
-          <div className="w-[90%]  text-black text-opacity-40 text-[13px] font-medium  mt-[10px] border-1 rounded-[20px] border-gray-200 p-1 ml-[25px] mb-[10px]"><input type="text " placeholder ="Add a comment" />
-          </div>
+         
          </div>
        
 
         </div>
-        <div className="w-[570px] mt-[10px]   bg-white rounded-lg px-[15px] pt-[10px] mb-[120px]">
+        <div className="w-[49%] mt-[10px]   bg-white rounded-lg px-[15px] pt-[10px] mb-[120px]">
           <div className="text-base font-bold text-black ">
             <p>Peer Reviews</p>
           </div>
@@ -494,7 +506,7 @@ const GoalCheckBox = ({ checked, title }) => {
   return (
     <div className="flex items-center justify-between w-full">
       <label className="flex items-center ">
-        <input className="w-[33px]" type="checkbox" checked={checked} />
+        <textarea className="w-[33px]" type="checkbox" checked={checked} />
         <span className="text-[13px] font-[500]">{title}</span>
       </label>
       {!checked ? (
