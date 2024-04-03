@@ -96,7 +96,177 @@ const Desc = ({opendesc}) => {
                             
                         </div>
                     
-                    <div className="bg-white h-[430px] w-[28%] mt-[10px] ml-6 rounded-lg ">kmgeuihgurgheuh
+                    <div className="bg-white h-[430px] w-[28%] mt-[10px] ml-6 rounded-lg ">
+                    
+                       <div className="pl-[30px] mt-[15px] p-3">
+                       <div className="text-base font-bold text-black ">
+                            <p>comments</p>
+                        </div>
+                       <div className="flex items-center justify-between ">
+                       <div className="hold">
+                        <div className="flex items-center gap-1">
+                            <div className="hold">
+                            <div className="mt-[15px]">
+                                <img src="/src/assets/desc/subt1.svg" alt="" />
+                            </div>
+                            <div className="w-2 h-2 bg-lime-500 rounded-full ml-[21px] mt-[-10px]" />
+                            </div>
+                            <div className="flex items-center gap-2">
+                               <div className="text-sm font-bold text-black">
+                               <p>Adoyiza omuya </p>
+                               </div>
+                               <div className="text-black text-[10px] font-light">
+                               <p>02:00 pm</p>
+                               </div>
+                            </div>
+                            
+                        </div>
+                        <div className="text-black text-xs font-medium ml-[35px] mt-[-15px] "><p>Morning, team! How's progress?</p></div>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <div className="w-[15px] h-[15px] relative origin-top-left">
+                                <img src="/src/assets/desc/share.svg" alt="" />
+                            </div>
+                            <div className="w-[31px] h-3.5 text-black text-[10px] font-light">
+                                <p>Reply</p>
+                            </div>
+                        </div>
+                       </div>
+
+                       <div className="flex items-center justify-between ">
+                       <div className="hold">
+                        <div className="flex items-center gap-1">
+                            <div className="hold">
+                            <div className="mt-[15px]">
+                                <img src="/src/assets/desc/subt4.svg" alt="" />
+                            </div>
+                            <div className="w-2 h-2 bg-lime-500 rounded-full ml-[21px] mt-[-10px]" />
+                            </div>
+                            <div className="flex items-center gap-2">
+                               <div className="text-sm font-bold text-black">
+                               <p>Robert Peters </p>
+                               </div>
+                               <div className="text-black text-[10px] font-light">
+                               <p>02:00 pm</p>
+                               </div>
+                            </div>
+                            
+                        </div>
+                        <div className="text-black text-xs font-medium ml-[35px] mt-[-15px] "><p>Market research done; budget on track.</p></div>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <div className="w-[15px] h-[15px] relative origin-top-left">
+                                <img src="/src/assets/desc/share.svg" alt="" />
+                            </div>
+                            <div className="w-[31px] h-3.5 text-black text-[10px] font-light">
+                                <p>Reply</p>
+                            </div>
+                        </div>
+                       </div>
+
+                       <div className="flex items-center justify-between ">
+                       <div className="hold">
+                        <div className="flex items-center gap-1">
+                            <div className="hold">
+                            <div className="mt-[15px]">
+                                <img src="/src/assets/desc/subt1.svg" alt="" />
+                            </div>
+                            <div className="w-2 h-2 bg-lime-500 rounded-full ml-[21px] mt-[-10px]" />
+                            </div>
+                            <div className="flex items-center gap-2">
+                               <div className="text-sm font-bold text-black">
+                               <p>Adoyiza omuya</p>
+                               </div>
+                               <div className="text-black text-[10px] font-light">
+                               <p>02:00 pm</p>
+                               </div>
+                            </div>
+                            
+                        </div>
+                        <div className="text-black text-xs font-medium ml-[35px] mt-[-15px] w-[230px]"><p>Perfect! It sounds like we're on track. Ashley, make 
+                        sure to loop in Robert and Stephen on the design updates.</p></div>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <div className="w-[15px] h-[15px] relative origin-top-left">
+                                <img src="/src/assets/desc/share.svg" alt="" />
+                            </div>
+                            <div className="w-[31px] h-3.5 text-black text-[10px] font-light">
+                                <p>Reply</p>
+                            </div>
+                        </div>
+                       </div>
+
+                       <div className="flex items-center justify-between ">
+                       <div className="hold">
+                        <div className="flex items-center gap-1">
+                            <div className="hold">
+                            <div className="mt-[15px]">
+                                <img src="/src/assets/desc/subt2.svg" alt="" />
+                            </div>
+                            <div className="w-2 h-2 bg-red-500 rounded-full ml-[21px] mt-[-10px]" />
+                            </div>
+                            <div className="flex items-center gap-2">
+                               <div className="text-sm font-bold text-black">
+                               <p>Ashley olika</p>
+                               </div>
+                               <div className="text-black text-[10px] font-light">
+                               <p>02:00 pm</p>
+                               </div>
+                            </div>
+                            
+                        </div>
+                        <div className="text-black text-xs font-medium ml-[35px] mt-[-15px] w-[230px]"><p>Will do. By the way, I scheduled a client feedback session for later this week.</p></div>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <div className="w-[15px] h-[15px] relative origin-top-left">
+                                <img src="/src/assets/desc/share.svg" alt="" />
+                            </div>
+                            <div className="w-[31px] h-3.5 text-black text-[10px] font-light">
+                                <p>Reply</p>
+                            </div>
+                        </div>
+                       </div>
+
+                       <div className="flex items-center justify-between ">
+                       <div className="hold">
+                        <div className="flex items-center gap-1">
+                            <div className="hold">
+                            <div className="mt-[15px]">
+                                <img src="/src/assets/desc/subt3.svg" alt="" />
+                            </div>
+                            <div className="w-2 h-2 bg-red-500 rounded-full ml-[21px] mt-[-10px]" />
+                            </div>
+                            <div className="flex items-center gap-2">
+                               <div className="text-sm font-bold text-black">
+                               <p>Stephen Vem</p>
+                               </div>
+                               <div className="text-black text-[10px] font-light">
+                               <p>02:00 pm</p>
+                               </div>
+                            </div>
+                            
+                        </div>
+                        <div className="text-black text-xs font-medium ml-[35px] mt-[-15px] w-[230px]"><p>Just a reminder, we have a team meeting tomorrow with the GM.</p></div>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <div className="w-[15px] h-[15px] relative origin-top-left">
+                                <img src="/src/assets/desc/share.svg" alt="" />
+                            </div>
+                            <div className="w-[31px] h-3.5 text-black text-[10px] font-light">
+                                <p>Reply</p>
+                            </div>
+                        </div>
+                       </div>
+                       <div className="flex items-center ">
+                       <textarea placeholder="Add a comment" className=  " mt-[15px] w-[450px] h-[47px] bg-white rounded-[20px] border border-black border-opacity-20  text-black text-opacity-40 text-[13px] font-medium pt-[10px] pl-[10px] " />
+                       <div className="w-6 h-6 relative mt-[20px] ">
+                       <img src="/src/assets/desc/sent.svg" alt="" />
+                       </div>
+                       
+                       </div>
+                       
+                    
+                       </div>
                     </div>
                     </div>
                     
