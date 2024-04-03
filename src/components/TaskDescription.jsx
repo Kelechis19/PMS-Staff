@@ -43,10 +43,10 @@ const Desc = ({opendesc}) => {
                             <div className="flex">
                                 <div className="w-[470px] h-[152px] flex  ">
                                     <div className="flex ">
-                                            <div className="mt-6 ml-4 text-xl font-semibold x">
-                                                {myData.sub} 
+                                            <div className="mt-6 ml-4 text-xl x">
+                                                 <div className="font-semibold">{myData.sub}</div>
                                                 
-                                                <div className="flex mt-2 mb-3 text-sm text-neutral-900 ">
+                                                <div className="flex mt-2 mb-3 text-sm ">
                                                     <img src="/src/assets/Ellipse 12.svg" alt="" /> 
                                                     <div className="ml-2"> {myData.subtasks}</div>
                                                 </div>
