@@ -1,0 +1,25 @@
+<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="25" height="24" fill="#1E1E1E"/>
+<g id="Staff/ Task Description &#38; Task Thread">
+<mask id="path-1-inside-1_0_1" fill="white">
+<path d="M-1639 -591C-1639 -596.523 -1634.52 -601 -1629 -601H79C84.5228 -601 89 -596.523 89 -591V103H-1639V-591Z"/>
+</mask>
+<path d="M-1639 -591C-1639 -596.523 -1634.52 -601 -1629 -601H79C84.5228 -601 89 -596.523 89 -591V103H-1639V-591Z" fill="#F1F4F9"/>
+<path d="M-1639 -591C-1639 -597.075 -1634.08 -602 -1628 -602H78C84.0751 -602 89 -597.075 89 -591C89 -595.971 84.5228 -600 79 -600H-1629C-1634.52 -600 -1639 -595.971 -1639 -591ZM89 103H-1639H89ZM-1639 103V-601V103ZM89 -601V103V-601Z" fill="#6A91CB" fill-opacity="0.47" mask="url(#path-1-inside-1_0_1)"/>
+<g id="Group 345">
+<g id="Group 344">
+<g id="Frame 437">
+<rect id="Rectangle 302" x="-434" y="-510" width="486" height="570" rx="8" fill="white"/>
+<g id="Rectangle 233">
+<rect x="-410" y="-12" width="445.55" height="47" rx="20" fill="white"/>
+<rect x="-409.5" y="-11.5" width="444.55" height="46" rx="19.5" stroke="black" stroke-opacity="0.15"/>
+</g>
+</g>
+</g>
+<g id="sent">
+<path id="Vector" d="M21.4032 3.05293C19.2252 0.707361 2.84195 6.4532 2.85548 8.551C2.87082 10.9299 9.25356 11.6617 11.0227 12.1581C12.0866 12.4565 12.3715 12.7625 12.6168 13.8781C13.7278 18.9305 14.2856 21.4435 15.5569 21.4996C17.5833 21.5892 23.5288 5.342 21.4032 3.05293Z" stroke="black" stroke-width="1.5"/>
+<path id="Vector_2" d="M11.8555 12.5L15.3555 9" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>

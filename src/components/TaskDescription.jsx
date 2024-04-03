@@ -96,9 +96,8 @@ const Desc = ({opendesc}) => {
                             
                         </div>
                     
-                        <div className="bg-white h-[430px] w-[28%] mt-[10px] ml-6 rounded-lg ">
-                            kmgeuihgurgheuh
-                        </div>
+                    <div className="bg-white h-[430px] w-[28%] mt-[10px] ml-6 rounded-lg ">kmgeuihgurgheuh
+                    </div>
                     </div>
                     
                 </div>
