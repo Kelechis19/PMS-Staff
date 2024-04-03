@@ -10,7 +10,7 @@ const Task = () => {
   function handleClick(tabNumber) {
     setActiveTab(tabNumber);
   }
-  console.log(Facilities)
+  
   return (
     <>
 

@@ -283,7 +283,7 @@ export const TaskReviews = [
   }
 ]
 ;
-export const Complaints =[
+export const Complaintss =[
   {
     "title": "Internet connectivity issue",
     "to": "GM",
@@ -310,4 +310,27 @@ export const Complaints =[
     "status": "Received"
   }
 ]
+export const Evaluations =[
+  {
+    "title": "Q1 2023 Evaluation",
+    "date": "3rd January 2023",
+    "status": "Received"
+  },
+  {
+    "title": "Q2 2023 Evaluation",
+    "date": "3rd April 2023",
+    "status": "Pending"
+  },
+  {
+    "title": "Q3 2023 Evaluation",
+    "date": "3rd July 2023",
+    "status": "Pending"
+  },
+  {
+    "title": "Q4 2023 Evaluation",
+    "date": "3rd October 2023",
+    "status": "Received"
+  }
+]
+
 

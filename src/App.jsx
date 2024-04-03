@@ -12,6 +12,8 @@ import Settings from "./pages/Settings";
 import OngoingTask from "./pages/OngoingTask";
 import TaskReview from "./pages/TaskReview";
 import TaskHistory from "./pages/TaskHistory";
+import Complaints from "./components/Complaints";
+import Evaluation from "./components/Evaluation";
 
 
 function App() {
@@ -22,16 +24,18 @@ function App() {
         <Route path="dashboard" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="task" element={<Task />}>
-            <Route path="ongoing-task" element={<OngoingTask />}></Route>
+            <Route path="ongoing-task" element={<OngoingTask />}/>
               
-            
             <Route path="task-review" element={<TaskReview />} />
             <Route path="task-history" element={<TaskHistory />} />
           </Route>
           <Route path="departments/:pathId" element={<Department />} />
 
           <Route path="analytics" element={<Analytics />} />
-          <Route path="reports" element={<Report />} />
+          <Route path="reports" element={<Report />} >
+            <Route path="complaints" element={<Complaints/>} />
+            <Route path="evaluation" element={<Evaluation/>} />
+          </Route>
           <Route path="settings" element={<Settings />} />
           <Route path="*" element={<Error />} />
           
