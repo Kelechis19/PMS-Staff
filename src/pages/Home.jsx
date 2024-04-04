@@ -64,15 +64,15 @@ const Home = () => {
           
            <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
               <div
-                className="absolute h-full bg-lime-500 rounded-full"
+                className="absolute h-full rounded-full bg-lime-500"
                 style={{ width: `${percentage2}%` }}
               ></div>
             </div>
         
          <div className="flex items-center justify-between">
             <span className="text-[20px] font-[600] ">{percentage2}%</span>
-            <div className="text-black text-xl font-normal font-['Raleway']">
-              <p>Excellence</p>
+            <div className="text-lg font-normal text-black">
+              <p>Excellent</p>
             </div>
             </div>
           </div>
@@ -85,64 +85,7 @@ const Home = () => {
         </div></button>
       
       </div>
-      {/* <div className="w-full flex mt-[1rem] gap-4 ">
-        <div className="w-[600px]  bg-white rounded-[8px] flex flex-col p-[20px]">
-          <div className="flex justify-between w-full">
-            <p className="text-[16px] font-[700]">Analytics Per Department</p>
-            <div className="flex gap-4">
-              <div className="w-[80px] h-[30px] text-center rounded-[4px] bg-[#6A91CB24]">
-                This week
-              </div>
-
-              <div className="w-[57px] h-[30px] border-[1px] border-[#17417E] rounded-[4px] text-center cursor-pointer">
-                Filter
-              </div>
-            </div>
-          </div>
-
-          <div className="flex w-full items-center justify-center mt-[1rem] flex-col gap-[1rem]">
-            <div className="w-[70%] h-[30px] flex bg-[white] border-[1px] border-[#6A91CB] items-center rounded-[30px] ">
-              <span className="text-[20px] pl-[20px] pr-[5px] text-slate-400">
-                <CiSearch />
-              </span>
-
-              <input
-                className="decorations-none no-underline outline-none w-full rounded-[30px]"
-                placeholder="Facility"
-              />
-            </div>
-            <div className="w-[70%] flex justify-between">
-              <p className="text-[18px] font-[700]">
-                HOD:{" "}
-                <span className="text-[13px] font-[300]">Adoyiza Daniel</span>
-              </p>
-              <p className="text-[18px] font-[700]">
-                No. of Staff: <span className="text-[13px] font-[300]">15</span>
-              </p>
-            </div>
-          </div>
-          <ChartTasks />
-        </div>
-        <div className="bg-[white] w-[600px] h-full rounded-[8px]">
-          <div className="flex w-full justify-between p-[20px]">
-            <p className="font-[700] text-[16px]">Goals Window</p>
-            <div
-              className="bg-[#4D7CC1] rounded-[4px] text-white flex items-center px-[10px] py-[5px] gap-3 cursor-pointer hover:bg-[#072b61]"
-              onClick={handleAddGoal}
-            >
-              <IoMdAddCircle className="text-[25px]" />{" "}
-              <span>Create new Goal</span>
-            </div>
-          </div>
-          <div className="px-[20px] w-full flex flex-col gap-5 pb-[20px]">
-            {goalsList.map((item, key) => {
-              return (
-                <GoalCheckBox title={item.title} checked={item.achieved} />
-              );
-            })}
-          </div>
-        </div>
-      </div> */}
+      
 
       <div className="flex flex-wrap gap-x-5 ">
 
