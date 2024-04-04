@@ -37,15 +37,15 @@ const Modal = ({ title, modal }) => {
                     
                 </div>
                 <div className="ml-[25px]">
-                <div className="text-black text-base font-bold font-['Raleway']  mt-[15px]">Task title</div>
-                <div className="text-black text-sm font-medium font-['Raleway']  mt-[5px] mb-[40px]">Create presentation slides for meeting with MD concerning the...</div>
-                <div className="text-black text-base font-medium font-['Raleway']">
+                <div className="text-black text-base font-bold   mt-[15px]">Task title</div>
+                <div className="text-black text-sm font-medium   mt-[5px] mb-[40px]">Create presentation slides for meeting with MD concerning the...</div>
+                <div className="text-base font-medium text-black ">
                     <p>Report</p>
                 </div>
                
                 <textarea className="w-[734px] h-[198px] px-2 py-3 bg-white rounded border border-black border-opacity-20 justify-start items-start gap-2 inline-flex text-neutral-600 text-xs font-normal" type="text" placeholder="Write Task Report" />
                 <div className="w-[65px] h-[30px] px-3 py-2 bg-blue-500 rounded shadow justify-center items-center gap-2 inline-flex ml-[668px] ">
-                <div className="text-center text-indigo-50 text-xs font-semibold font-['Raleway']"><button onClick={modal} className="w-full">Submit</button></div>
+                <div className="text-xs font-semibold text-center text-indigo-50 "><button onClick={modal} className="w-full">Submit</button></div>
                 </div>
                 </div>
               
