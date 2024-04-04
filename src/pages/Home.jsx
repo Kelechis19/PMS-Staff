@@ -1,13 +1,12 @@
 import React from "react";
 import { CiSearch } from "react-icons/ci";
 // import MiniCalendar from "../../horizon-tailwind-react/src/components/calendar/MiniCalendar";
-
 import { CircularProgress } from "@nextui-org/react";
 import { IoMdAddCircle } from "react-icons/io";
 import { useState } from "react";
 import { goals } from "../data/temp";
 import Calendar from "react-calendar";
-
+import HoverRating from "../components/Star";
 import ChartTasks from "../components/Chart";
 import GoalForm from "../components/GoalForm";
 import Date from "../components/Date"
@@ -31,55 +30,59 @@ const Home = () => {
       {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
       <div className="w-full gap-4  mt-[10px] flex">
-        <button>
-        <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
-          <div className="flex flex-col gap-4">
-            <div>
-              <p className="text-[16px] font-[700]">Overall Task Completed</p>
-              <p className="font-[300] text-[12px] ">
-                28/56 tasks completed
-              </p>
-            </div>
-            <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
-              <div
-                className="absolute h-full bg-[#cdc307ed] rounded-full"
-                style={{ width: `${percentage1}%` }}
-              ></div>
-            </div>
-            <span className="text-[20px] font-[600] ">{percentage1}%</span>
-          </div>
-         
-        
-        </div>
-        </button>
-        <button>
-        <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
-          <div className="flex flex-col gap-4">
-            <div>
-              <p className="text-[16px] font-[700]">Average Task Review</p>
-              <p className="font-[300] text-[12px] ">
-              Reviewed by GM on 13/05/2023
-              </p>
+        <Link to='TaskHistory'>
+          <button>
+          <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
+            <div className="flex flex-col gap-4">
+              <div>
+                <p className="text-[16px] font-[700]">Overall Task Completed</p>
+                <p className="font-[300] text-[12px] ">
+                  28/56 tasks completed
+                </p>
+              </div>
+              <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
+                <div
+                  className="absolute h-full bg-[#cdc307ed] rounded-full"
+                  style={{ width: `${percentage1}%` }}
+                ></div>
+              </div>
+              <span className="text-[20px] font-[600] ">{percentage1}%</span>
             </div>
           
-           <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
-              <div
-                className="absolute h-full rounded-full bg-lime-500"
-                style={{ width: `${percentage2}%` }}
-              ></div>
-            </div>
-        
-         <div className="flex items-center justify-between">
-            <span className="text-[20px] font-[600] ">{percentage2}%</span>
-            <div className="text-lg font-normal text-black">
-              <p>Excellent</p>
-            </div>
-            </div>
+          
           </div>
-         
-        
-        </div>
-        </button>
+          </button>
+        </Link>
+        <Link to='TaskReview'>
+          <button>
+          <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
+            <div className="flex flex-col gap-4">
+                <div>
+                  <p className="text-[16px] font-[700]">Average Task Review</p>
+                  <p className="font-[300] text-[12px] ">
+                  Reviewed by GM on 13/05/2023
+                  </p>
+                </div>
+              
+                <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
+                    <div
+                      className="absolute h-full rounded-full bg-lime-500"
+                      style={{ width: `${percentage2}%` }}
+                    ></div>
+                </div>
+            
+                <div className="flex items-center justify-between">
+                    <span className="text-[20px] font-[600] ">{percentage2}%</span>
+                    <div className="text-lg font-normal text-black">
+                      <p>Excellent</p>
+                    </div>
+                </div>
+            </div>
+          
+          
+          </div>
+          </button>
+        </Link>
        <button> <div className="w-[430px] h-[160px] bg-white rounded-[8px]">
           {<Date />}
         </div></button>
@@ -96,9 +99,11 @@ const Home = () => {
             <div className="text-base font-bold text-black ">
               <p>Ongoing Tasks</p>
             </div>
-            <Link to="OngoingTasks"><div className="flex items-center text-sm font-medium text-black ">
-              <button className="flex ">See all <img src="/src/assets/star/arrow.svg" alt="" /></button>
-            </div></Link>
+            <Link to="OngoingTasks">
+              <div className="flex items-center text-sm font-medium text-black ">
+                <button className="flex ">See all <img src="/src/assets/star/arrow.svg" alt="" /></button>
+              </div>
+            </Link>
             
           </div>
 
@@ -208,38 +213,28 @@ const Home = () => {
             </div>
             <div className="flex items-center gap-1 text-sm font-medium text-black">
             
-            <button>See all</button>
-            <div className="relative w-6 h-6">
-        <img src="/src/assets/star/arrow.svg" alt="" />
-          </div>
+            <Link to='OngoingTasks'>
+                <div className="flex"><button>See all</button>
+                  <div className="relative w-6 h-6">
+                    <img src="/src/assets/star/arrow.svg" alt="" />
+                  </div>
+                </div>
+            </Link>
+            
           </div>
 
           </div>
           <div className="flex items-center justify-between p-1 text-xs font-normal text-black ">
             <div className="flex items-center">
-              <div className="w-[26px]  ">
+              <div className="">
                 <img src="/src/assets/taskimg/check.svg" alt="" />
               </div>
-              <div className="text-sm">
-                <p>Create presentation slides for meeting with...</p>
+              <div className="text-sm ">
+                Create presentation slides for meeting with
               </div>
             </div>
-            <div className="flex items-center   w-[100px] h-[17.86px] relative">
-              <div className="img">
-                <img src="/src/assets/star/star1.svg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/src/assets/star/star1.svg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/src/assets/star/star1.svg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/src/assets/star/star4.svg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/src/assets/star/star5.svg" alt="" />
-              </div>
+            <div className="flex  w-[125px] h-[17.86px] ">
+               {<HoverRating/>}
             </div>
             <div className="text-sm">
               <p>3rd March 2024</p>
@@ -247,29 +242,15 @@ const Home = () => {
           </div>
           <div className="flex items-center justify-between p-1 mt-[-10px] text-black text-xs font-normal  pb-[-60px] ">
             <div className="flex items-center">
-              <div className="w-[26px]  ">
+              <div className="">
                 <img src="/src/assets/taskimg/check.svg" alt="" />
               </div>
-              <div className="text-sm">
-                <p>Create presentation slides for meeting with...</p>
+              <div className="text-sm ">
+                Create presentation slides for meeting with
               </div>
             </div>
-            <div className="flex items-center   w-[100px] h-[17.86px] relative">
-              <div className="img">
-                <img src="/src/assets/star/star1.svg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/src/assets/star/star1.svg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/src/assets/star/star1.svg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/src/assets/star/star1.svg" alt="" />
-              </div>
-              <div className="img">
-                <img src="/src/assets/star/star1.svg" alt="" />
-              </div>
+            <div className="flex w-[125px] h-[17.86px] ">
+            {<HoverRating/>}
             </div>
             <div className="text-sm">
               <p>3rd March 2024</p>
