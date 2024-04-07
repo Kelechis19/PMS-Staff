@@ -24,12 +24,10 @@ function App() {
 					<Route index element={<Home />} />
 					<Route path="task" element={<Task />}>
 						<Route path="ongoing-task" element={<OngoingTask />} />
-
 						<Route path="task-review" element={<TaskReview />} />
 						<Route path="task-history" element={<TaskHistory />} />
 					</Route>
 					<Route path="departments/:pathId" element={<Department />} />
-
 					<Route path="analytics" element={<Analytics />} />
 					<Route path="reports" element={<Report />}>
 						<Route path="complaints" element={<Complaints />} />
@@ -37,10 +35,9 @@ function App() {
 					</Route>
 					<Route path="settings" element={<Settings />} />
 					<Route path="*" element={<Error />} />
-
-					<Route path="OngoingTasks" element={<OngoingTask />}></Route>
-					<Route path="TaskHistory" element={<TaskHistory />}></Route>
-					<Route path="TaskReview" element={<TaskReview />}></Route>
+					<Route path="OngoingTasks" element={<OngoingTask />} />
+					<Route path="TaskHistory" element={<TaskHistory />} />
+					<Route path="TaskReview" element={<TaskReview />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
