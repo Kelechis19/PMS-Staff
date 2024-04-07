@@ -1,9 +1,7 @@
 import React from "react";
 
-function Description(){
-    return(
-        <>lol</>
-    )
+function Description() {
+	return <>lol</>;
 }
 
-export default Description  
+export default Description;
