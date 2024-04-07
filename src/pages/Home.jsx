@@ -11,8 +11,14 @@ import ChartTasks from "../components/Chart";
 import GoalForm from "../components/GoalForm";
 import Date from "../components/Date";
 import { Link } from "react-router-dom";
+import ComplaintPopup from "../components/ComplaintPopup";
 
 const Home = () => {
+	const [complaintPopup, setComplainPopup] = useState(false);
+	const complain = () => {
+		setComplainPopup(!complaintPopup);
+	};
+
 	const [goalsList, setGoals] = useState([...goals]);
 
 	const percentage1 = 50;
@@ -27,9 +33,10 @@ const Home = () => {
 
 	return (
 		<div className="flex flex-col ">
+			{complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
 			{goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
-			<div className="w-full gap-4  mt-[10px] flex">
+			<div className="w-full gap-4 mt-[10px] flex">
 				<Link to="TaskHistory">
 					<button>
 						<div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
@@ -245,7 +252,9 @@ const Home = () => {
 						type="text"
 					/>
 
-					<button className="w-[130px] h-[30px] bg-blue-500 rounded shadow ml-[410px] mt-[14px] mb-[8px] ">
+					<button
+						className="w-[130px] h-[30px] bg-blue-500 rounded shadow ml-[410px] mt-[14px] mb-[8px] "
+						onClick={complain}>
 						<div className="text-xs font-semibold text-indigo-50 ">
 							File a complaint
 						</div>
