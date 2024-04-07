@@ -1,9 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { FaRegTrashCan } from "react-icons/fa6";
-import { goals } from "../data/temp";
-import { IoMdAddCircle } from "react-icons/io";
 
 const Report = () => {
 	const [activeTab, setActiveTab] = useState(1);

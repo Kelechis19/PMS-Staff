@@ -239,20 +239,17 @@ const Home = () => {
 					<div className="text-black text-xs font-normal  pt-[6px] pb-[15px]">
 						<p>You can send complaints or feedback to your General Manager</p>
 					</div>
-					{/* <div className="w-[540px] h-[57px] p-1 relative rounded border border-black border-opacity-20 pt-[10px]">
-              <input type="text" />
-          </div> */}
 
 					<textarea
 						className="w-[95%] h-[57px] border-black border-1 text-wrap rounded  "
 						type="text"
 					/>
 
-					<div className="w-[130px] h-[30px] px-3 py-2 bg-blue-500 rounded shadow justify-end items-center gap-2 inline-flex  ml-[410px] mt-[14px] mb-[8px]">
-						<div className="text-xs font-semibold text-center text-indigo-50 ">
-							<button>File a complaint</button>
+					<button className="w-[130px] h-[30px] bg-blue-500 rounded shadow ml-[410px] mt-[14px] mb-[8px] ">
+						<div className="text-xs font-semibold text-indigo-50 ">
+							File a complaint
 						</div>
-					</div>
+					</button>
 				</div>
 				<div className="w-[570px] mb-[100px]   bg-white rounded-lg  mt-[-65px]">
 					<div className="flex items-center justify-between p-2 pt-[-15px]">
@@ -382,11 +379,7 @@ const Home = () => {
 					</div>
 					<div className="flex items-center justify-between mt-[5px] pt-[-40px]">
 						<div className="w-[25px] flex items-center">
-							<img src="/src/assets/star/star1.svg" alt="" />
-							<img src="/src/assets/star/star1.svg" alt="" />
-							<img src="/src/assets/star/star1.svg" alt="" />
-							<img src="/src/assets/star/star4.svg" alt="" />
-							<img src="/src/assets/star/star5.svg" alt="" />
+							<HoverRating />
 						</div>
 						<div className="w-[142px] h-[38px] px-4 py-3 bg-blue-500 rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex ">
 							<div className="text-xs font-bold text-indigo-50 ">

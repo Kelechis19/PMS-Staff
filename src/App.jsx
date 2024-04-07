@@ -12,8 +12,8 @@ import Settings from "./pages/Settings";
 import OngoingTask from "./pages/OngoingTask";
 import TaskReview from "./pages/TaskReview";
 import TaskHistory from "./pages/TaskHistory";
-import Complaints from "./components/Complaints";
-import Evaluation from "./components/Evaluation";
+import Complaints from "./pages/Complaints";
+import Evaluation from "./pages/Evaluation";
 
 function App() {
 	return (

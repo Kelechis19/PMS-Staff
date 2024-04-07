@@ -4,7 +4,7 @@ import { FaRegTrashCan } from "react-icons/fa6";
 import { goals } from "../data/temp";
 import { IoMdAddCircle } from "react-icons/io";
 import { Complaintss } from "../data/temp";
-import ComplaintPopup from "./ComplaintPopup";
+import ComplaintPopup from "../components/ComplaintPopup";
 
 const Complaints = () => {
 	const [complaintPopup, setComplainPopup] = useState(false);
