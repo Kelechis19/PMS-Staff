@@ -32,12 +32,12 @@ const Home = () => {
 	};
 
 	return (
-		<div className="flex flex-col ">
-			{complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
-			{goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
+        <div className="flex flex-col ">
+            {complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
+            {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
 			<div className="w-full gap-4 mt-[10px] flex">
-				<Link to="/task/TaskHistory">
+				<Link to="TaskHistory">
 					<button>
 						<div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
 							<div className="flex flex-col gap-4">
@@ -70,336 +70,170 @@ const Home = () => {
 									</p>
 								</div>
 
-								<div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
-									<div
-										className="absolute h-full rounded-full bg-lime-500"
-										style={{ width: `${percentage2}%` }}></div>
-								</div>
+                                <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
+                                    <div
+                                        className="absolute h-full rounded-full bg-lime-500"
+                                        style={{
+                                            width: `${percentage2}%`,
+                                        }}></div>
+                                </div>
 
-								<div className="flex items-center justify-between">
-									<span className="text-[20px] font-[600] ">
-										{percentage2}%
-									</span>
-									<div className="text-lg font-normal text-black">
-										<p>Excellent</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</button>
-				</Link>
-				<button>
-					{" "}
-					<div className="w-[430px] h-[160px] bg-white rounded-[8px]">
-						{<Date />}
-					</div>
-				</button>
-			</div>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-[20px] font-[600] ">
+                                        {percentage2}%
+                                    </span>
+                                    <div className="text-lg font-normal text-black">
+                                        <p>Excellent</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </Link>
+                <button>
+                    {" "}
+                    <div className="w-[430px] h-[160px] bg-white rounded-[8px]">
+                        {<Date />}
+                    </div>
+                </button>
+            </div>
 
-			<div className="flex flex-wrap gap-x-5 ">
-				<div className=" bg-white  mt-[20px] w-[49%]  items-center rounded-lg px-1">
-					<div className="flex items-center justify-between p-2 pt-[-15px]">
-						<div className="text-base font-bold text-black ">
-							<p>Ongoing Tasks</p>
-						</div>
-						<Link to="OngoingTasks">
-							<div className="flex items-center text-sm font-medium text-black ">
-								<button className="flex ">
-									See all <img src="/src/assets/star/arrow.svg" alt="" />
-								</button>
-							</div>
-						</Link>
-					</div>
+            <div className="flex flex-wrap gap-x-5 ">
+                <div className=" bg-white  mt-[20px] w-[49%]  items-center rounded-lg px-1">
+                    <div className="flex items-center justify-between p-2 pt-[-15px]">
+                        <div className="text-base font-bold text-black ">
+                            <p>Ongoing Tasks</p>
+                        </div>
+                        <Link to="OngoingTasks">
+                            <div className="flex items-center text-sm font-medium text-black ">
+                                <button className="flex ">
+                                    See all{" "}
+                                    <img
+                                        src="/src/assets/star/arrow.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </Link>
+                    </div>
+                    <div
+                        className="
+				">
+                        <ONGOIN />
+                    </div>
+                </div>
 
-					<div className="mt-[-10px] text-black text-xs font-normal  ">
-						<div className="flex justify-between p-1">
-							<div className="flex items-center">
-								<div className="w-[26px]  ">
-									<img src="/src/assets/taskimg/check.svg" alt="" />
-								</div>
-								<div className="text-sm">
-									<p>People financial projections for upcoming..</p>
-								</div>
-							</div>
-							<div className="flex items-center w-[55px] mt-[5px]">
-								<div className="img">
-									<img src="/src/assets/homee/hme.svg" alt="" />
-								</div>
-								<div className="ml-[-13px]">
-									<img src="/src/assets/homee/hme2.svg" alt="" />
-								</div>
-								<div className="ml-[-13px]">
-									<img src="/src/assets/homee/hme3.svg" alt="" />
-								</div>
-							</div>
-							<div className="text-sm">
-								<p>23rd March 2024</p>
-							</div>
-						</div>
+                <div className="w-[49%] mt-[20px] h-[1px] relative  ">
+                    {/* <p>Analysis</p> */}
+                </div>
 
-						<div className="flex justify-between p-1 mt-[-10px]">
-							<div className="flex items-center">
-								<div className="w-[26px]  ">
-									<img src="/src/assets/taskimg/check.svg" alt="" />
-								</div>
-								<div className="text-sm">
-									<p>People financial projections for upcoming..</p>
-								</div>
-							</div>
-							<div className="flex items-center w-[55px] mt-[5px]">
-								<div className="img">
-									<img src="/src/assets/homee/hme.svg" alt="" />
-								</div>
-								<div className="ml-[-13px]">
-									<img src="/src/assets/homee/hme2.svg" alt="" />
-								</div>
-								<div className="ml-[-13px]">
-									<img src="/src/assets/homee/hme3.svg" alt="" />
-								</div>
-							</div>
-							<div className="text-sm">
-								<p>3rd March 2024</p>
-							</div>
-						</div>
-						<div className="flex justify-between p-1 mt-[-10px]">
-							<div className="flex items-center">
-								<div className="w-[26px]  ">
-									<img src="/src/assets/taskimg/check.svg" alt="" />
-								</div>
-								<div className="text-sm">
-									<p>People financial projections for upcoming..</p>
-								</div>
-							</div>
-							<div className="flex items-center w-[55px] mt-[5px]">
-								<div className="img">
-									<img src="/src/assets/homee/hme.svg" alt="" />
-								</div>
-								<div className="ml-[-13px]">
-									<img src="/src/assets/homee/hme2.svg" alt="" />
-								</div>
-								<div className="ml-[-13px]">
-									<img src="/src/assets/homee/hme3.svg" alt="" />
-								</div>
-							</div>
-							<div className="text-sm">
-								<p>13th March 2024</p>
-							</div>
-						</div>
-					</div>
-				</div>
+                <div className="w-[49%] mt-[10px]   bg-white rounded-lg h-28 px-1">
+                    <div className="flex items-center justify-between p-2 pt-[-15px]">
+                        <div className="text-base font-bold text-black ">
+                            <p>Ongoing Tasks</p>
+                        </div>
+                        <div className="flex items-center gap-1 text-sm font-medium text-black">
+                            <Link to="OngoingTasks">
+                                <div className="flex">
+                                    <button>See all</button>
+                                    <div className="relative w-6 h-6">
+                                        <img
+                                            src="/src/assets/star/arrow.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="ji">
+                        <ONGOING />
+                    </div>
+                </div>
+                <div className="w-[49%] mt-[-130px]   bg-white rounded-lg pl-[15px] ">
+                    <div className="flex items-center justify-between p-2 pt-[-15px]">
+                        <div className="text-base font-bold text-black ">
+                            <p>Complaints</p>
+                        </div>
+                        <Link to="OngoingTasks">
+                            <div className="flex items-center text-sm font-medium text-black ">
+                                <button className="flex ">
+                                    See all{" "}
+                                    <img
+                                        src="/src/assets/star/arrow.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="text-black text-xs font-normal  pt-[6px] pb-[10px]">
+                        <p>
+                            You can send complaints or feedback to your General
+                            Manager
+                        </p>
+                    </div>
 
-				<div className="w-[49%] mt-[20px]  relative bg-white rounded-lg">
-					<p>Analysis</p>
-				</div>
+                    <textarea
+                        className="w-[65%] h-[27px] border-black border-1 text-wrap rounded  "
+                        type="text"
+                    />
+                    <div className="pt-[7px] ">
+                        <p>Report</p>
+                    </div>
+                    <textarea
+                        className="w-[95%] h-[97px] border-black border-1 mt-[8px] text-sm  p-2 text-wrap rounded  "
+                        placeholder="Write Complaint"
+                        type="text"
+                    />
 
-				<div className="w-[49%] mt-[10px]   bg-white rounded-lg h-28 px-1">
-					<div className="flex items-center justify-between p-2 pt-[-15px]">
-						<div className="text-base font-bold text-black ">
-							<p>Ongoing Tasks</p>
-						</div>
-						<div className="flex items-center gap-1 text-sm font-medium text-black">
-							<Link to="OngoingTasks">
-								<div className="flex">
-									<button>See all</button>
-									<div className="relative w-6 h-6">
-										<img src="/src/assets/star/arrow.svg" alt="" />
-									</div>
-								</div>
-							</Link>
-						</div>
-					</div>
-					<div className="flex items-center justify-between p-1 text-xs font-normal text-black ">
-						<div className="flex items-center">
-							<div className="">
-								<img src="/src/assets/taskimg/check.svg" alt="" />
-							</div>
-							<div className="text-sm ">
-								Create presentation slides for meeting with
-							</div>
-						</div>
-						<div className="flex  w-[125px] h-[17.86px] ">
-							{<HoverRating />}
-						</div>
-						<div className="text-sm">
-							<p>3rd March 2024</p>
-						</div>
-					</div>
-					<div className="flex items-center justify-between p-1 mt-[-10px] text-black text-xs font-normal  pb-[-60px] ">
-						<div className="flex items-center">
-							<div className="">
-								<img src="/src/assets/taskimg/check.svg" alt="" />
-							</div>
-							<div className="text-sm ">
-								Create presentation slides for meeting with
-							</div>
-						</div>
-						<div className="flex w-[125px] h-[17.86px] ">{<HoverRating />}</div>
-						<div className="text-sm">
-							<p>3rd March 2024</p>
-						</div>
-					</div>
-				</div>
-				<div className="w-[49%] mt-[10px]   bg-white rounded-lg pl-[15px] ">
-					<div className="text-black text-base font-bold  pt-[15px]">
-						Comments
-					</div>
-					<div className="text-black text-xs font-normal  pt-[6px] pb-[15px]">
-						<p>You can send complaints or feedback to your General Manager</p>
-					</div>
-
-					<textarea
-						className="w-[95%] h-[57px] border-black border-1 text-wrap rounded  "
-						type="text"
-					/>
-
-					<button
-						className="w-[130px] h-[30px] bg-blue-500 rounded shadow ml-[410px] mt-[14px] mb-[8px] "
-						onClick={complain}>
-						<div className="text-xs font-semibold text-indigo-50 ">
-							File a complaint
-						</div>
-					</button>
-				</div>
-				<div className="w-[570px] mb-[100px]   bg-white rounded-lg  mt-[-65px]">
-					<div className="flex items-center justify-between p-2 pt-[-15px]">
-						<div className="text-base font-bold text-black ">
-							<p>Comment</p>
-						</div>
-						<div className="flex items-center gap-1 text-sm font-medium text-black">
-							<button>See all</button>
-							<div className="relative w-6 h-6">
-								<img src="/src/assets/star/arrow.svg" alt="" />
-							</div>
-						</div>
-					</div>
-					<div className="holaa">
-						<div className="hold">
-							<div className="flex justify-between px-[20px] pb-[5px]">
-								<div className="flex flex-wrap items-center gap-2 ">
-									<div className="img">
-										<img src="/src/assets/star/Eli14.svg" alt="" />
-									</div>
-									<div className="flex gap-2">
-										<div className="text-sm font-bold text-black ">
-											<p>Hr</p>
-										</div>
-										<div className="text-black text-[10px] font-light  ">
-											<div className="pt-[-40px]">
-												<p>2.00pm</p>
-											</div>
-
-											<div className="ml-[-26px]">
-												<p>Onboarding for new employees completed...</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="flex items-center gap-2">
-									<div className="w-[15px] h-[15px] relative origin-top-left ">
-										<img src="/src/assets/star/share.svg" alt="" />
-									</div>
-									<div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
-										<p>Reply</p>
-									</div>
-								</div>
-							</div>
-							<div className="w-[543] h-[0px] border border-black border-opacity-10 "></div>
-						</div>
-						<div className="mt-[5px] mb-[5px]">
-							<div className="flex justify-between px-[20px] pb-[5px]">
-								<div className="flex flex-wrap items-center gap-2 ">
-									<div className="img">
-										<img src="/src/assets/star/Eli14.svg" alt="" />
-									</div>
-									<div className="flex gap-2">
-										<div className="text-sm font-bold text-black ">
-											<p>GM</p>
-										</div>
-										<div className="text-black text-[10px] font-light  ">
-											<div className="pt-[-40px]">
-												<p>2.00pm</p>
-											</div>
-
-											<div className="ml-[-26px]">
-												<p>Onboarding for new employees completed...</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="flex items-center gap-2">
-									<div className="w-[15px] h-[15px] relative origin-top-left ">
-										<img src="/src/assets/star/share.svg" alt="" />
-									</div>
-									<div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
-										<p>Reply</p>
-									</div>
-								</div>
-							</div>
-							<div className="w-[543] h-[0px] border border-black border-opacity-10 "></div>
-						</div>
-						<div className="hold">
-							<div className="flex justify-between px-[20px] pb-[5px]">
-								<div className="flex flex-wrap items-center gap-2 ">
-									<div className="img">
-										<img src="/src/assets/star/Eli14.svg" alt="" />
-									</div>
-									<div className="flex gap-2">
-										<div className="text-sm font-bold text-black ">
-											<p>GM</p>
-										</div>
-										<div className="text-black text-[10px] font-light  ">
-											<div className="pt-[-40px]">
-												<p>2.00pm</p>
-											</div>
-
-											<div className="ml-[-26px]">
-												<p>Onboarding for new employees completed...</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="flex items-center gap-2">
-									<div className="w-[15px] h-[15px] relative origin-top-left ">
-										<img src="/src/assets/star/share.svg" alt="" />
-									</div>
-									<div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
-										<p>Reply</p>
-									</div>
-								</div>
-							</div>
-
-							<textarea
-								className="w-[90%]  text-black text-opacity-40 text-[13px] font-medium  mt-[10px] border-1 rounded-[20px] border-gray-200 p-1 ml-[25px] mb-[10px] "
-								type="text"
-								placeholder="Add a comment"
-							/>
-						</div>
-					</div>
-				</div>
-				<div className="w-[49%] mt-[10px]   bg-white rounded-lg px-[15px] pt-[10px] mb-[120px]">
-					<div className="text-base font-bold text-black ">
-						<p>Peer Reviews</p>
-					</div>
-					<div className="flex items-center justify-between">
-						<div className="text-xs font-light text-black ">
-							<p>Anonymous Review from co-workers</p>
-						</div>
-						<div className="text-2xl font-bold text-black ">73%</div>
-					</div>
-					<div className="flex items-center justify-between mt-[5px] pt-[-40px]">
-						<div className="w-[25px] flex items-center">
-							<HoverRating />
-						</div>
-						<div className="w-[142px] h-[38px] px-4 py-3 bg-blue-500 rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex ">
-							<div className="text-xs font-bold text-indigo-50 ">
-								Review Colleagues
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+                    <button
+                        className="w-[130px] h-[30px] bg-blue-500 rounded shadow ml-[410px] mt-[10px] mb-[8px] "
+                        onClick={complain}>
+                        <div className="text-xs font-semibold text-indigo-50 ">
+                            Submit
+                        </div>
+                    </button>
+                </div>
+                <div className="w-[570px] mb-[80px]   bg-white rounded-lg  mt-[-31px] h-[229px]">
+                    <div className="flex items-center justify-between p-2 pt-[-15px]">
+                        <div className="text-base font-bold text-black ">
+                            <p>Comment</p>
+                        </div>
+                        <div className="flex items-center gap-1 text-sm font-medium text-black">
+                            <button>See all</button>
+                            <div className="relative w-6 h-6">
+                                <img src="/src/assets/star/arrow.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="holaa">
+                        <GM />
+                    </div>
+                </div>
+                <div className="w-[49%] mt-[10px]   bg-white rounded-lg px-[15px] pt-[10px] mb-[120px] ">
+                    <div className="text-base font-bold text-black ">
+                        <p>Peer Reviews</p>
+                    </div>
+                    <div className="flex items-center justify-between mt-[5px] pt-[10px] pb-[18px]">
+                        <div className="text-sm">
+                            <p>
+                                review collage you have worked with anoymously
+                            </p>
+                        </div>
+                        <div className="w-[142px] h-[38px] px-4 py-3 bg-blue-500 rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex ">
+                            <div className="text-xs font-bold text-indigo-50 ">
+                                Review Colleagues
+                            </div>
+                        </div>
+                    </div>
+                    <div className="">
+                        <YES />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 };
 const GoalCheckBox = ({ checked, title }) => {
 	return (
@@ -435,5 +269,302 @@ const GoalMeter = ({ id, status }) => {
 		/>
 	);
 };
+const YES = () => {
+	return (
+        <>
+            <div className="">
+                <div className="flex items-center justify-between mt-[10px]">
+                    <div className="text-xs  text-black w-[35%] bold">
+                        <p>Strategy and Education</p>
+                    </div>
+                    <div className="w-[35%] flex items-center">
+                        <HoverRating />
+                    </div>
+                    <div className=" text-black  w-[35] ">5/5</div>
+                </div>
+                <div className="flex items-center justify-between mt-[10px]">
+                    <div className="text-xs font-bold w-[35%] ">
+                        <p>Character Traits</p>
+                    </div>
+                    <div className=" flex items-center w-[35%] ">
+                        <HoverRating />
+                    </div>
+                    <div className=" text-black ">3/5</div>
+                </div>
+                <div className="flex items-center justify-between mt-[10px]">
+                    <div className="text-xs font-bold text-black  w-[35%]">
+                        <p>Strategy and Education</p>
+                    </div>
+                    <div className=" flex items-center w-[35%] ">
+                        <HoverRating />
+                    </div>
+                    <div className=" text-black ">5/5</div>
+                </div>
+                <div className="flex items-center justify-between mt-[10px]">
+                    <div className="text-xs font-bold text-black  w-[35%]">
+                        <p>Interpersonal Relationship</p>
+                    </div>
+                    <div className=" flex items-center w-[35%] ">
+                        <HoverRating />
+                    </div>
+                    <div className=" text-black ">5/5</div>
+                </div>
+                <div className="flex items-center justify-between mt-[10px]">
+                    <div className="text-xs font-bold text-black  w-[35%]">
+                        <p>Ability to Build Talent</p>
+                    </div>
+                    <div className=" flex items-center w-[35%] ">
+                        <HoverRating />
+                    </div>
+                    <div className=" text-black ">5/5</div>
+                </div>
+                <div className="flex items-center justify-between mt-[10px]">
+                    <div className="text-xs font-bold text-black  w-[35%]">
+                        <p>Leadership and motivation skills</p>
+                    </div>
+                    <div className=" flex items-center w-[35%] ">
+                        <HoverRating />
+                    </div>
+                    <div className=" text-black ">5/5</div>
+                </div>
+            </div>
+        </>
+    );
+}
+const ONGOING = () => {
+	return (
+        <>
+            <div className="flex items-center justify-between p-1 text-xs font-normal text-black ">
+                <div className="flex items-center">
+                    <div className="">
+                        <img src="/src/assets/taskimg/check.svg" alt="" />
+                    </div>
+                    <div className="text-sm ">
+                        Create presentation slides for meeting with
+                    </div>
+                </div>
+                <div className="flex  w-[125px] h-[17.86px] ">
+                    {<HoverRating />}
+                </div>
+                <div className="text-sm">
+                    <p>3rd March 2024</p>
+                </div>
+            </div>
+            <div className="flex items-center justify-between p-1 mt-[-10px] text-black text-xs font-normal  pb-[-60px] ">
+                <div className="flex items-center">
+                    <div className="">
+                        <img src="/src/assets/taskimg/check.svg" alt="" />
+                    </div>
+                    <div className="text-sm ">
+                        Create presentation slides for meeting with
+                    </div>
+                </div>
+                <div className="flex w-[125px] h-[17.86px] ">
+                    {<HoverRating />}
+                </div>
+                <div className="text-sm">
+                    <p>3rd March 2024</p>
+                </div>
+            </div>
+        </>
+    );
+}
+const ONGOIN = () => {
+	return (
+        <>
+            <div className="mt-[-10px] text-black text-xs font-normal  ">
+                <div className="flex justify-between p-1">
+                    <div className="flex items-center">
+                        <div className="w-[26px]  ">
+                            <img src="/src/assets/taskimg/check.svg" alt="" />
+                        </div>
+                        <div className="text-sm">
+                            <p>People financial projections for upcoming..</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center w-[55px] mt-[5px]">
+                        <div className="img">
+                            <img src="/src/assets/homee/hme.svg" alt="" />
+                        </div>
+                        <div className="ml-[-13px]">
+                            <img src="/src/assets/homee/hme2.svg" alt="" />
+                        </div>
+                        <div className="ml-[-13px]">
+                            <img src="/src/assets/homee/hme3.svg" alt="" />
+                        </div>
+                    </div>
+                    <div className="text-sm">
+                        <p>23rd March 2024</p>
+                    </div>
+                </div>
+
+                <div className="flex justify-between p-1 mt-[-10px]">
+                    <div className="flex items-center">
+                        <div className="w-[26px]  ">
+                            <img src="/src/assets/taskimg/check.svg" alt="" />
+                        </div>
+                        <div className="text-sm">
+                            <p>People financial projections for upcoming..</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center w-[55px] mt-[5px]">
+                        <div className="img">
+                            <img src="/src/assets/homee/hme.svg" alt="" />
+                        </div>
+                        <div className="ml-[-13px]">
+                            <img src="/src/assets/homee/hme2.svg" alt="" />
+                        </div>
+                        <div className="ml-[-13px]">
+                            <img src="/src/assets/homee/hme3.svg" alt="" />
+                        </div>
+                    </div>
+                    <div className="text-sm">
+                        <p>3rd March 2024</p>
+                    </div>
+                </div>
+                <div className="flex justify-between p-1 mt-[-10px]">
+                    <div className="flex items-center">
+                        <div className="w-[26px]  ">
+                            <img src="/src/assets/taskimg/check.svg" alt="" />
+                        </div>
+                        <div className="text-sm">
+                            <p>People financial projections for upcoming..</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center w-[55px] mt-[5px]">
+                        <div className="img">
+                            <img src="/src/assets/homee/hme.svg" alt="" />
+                        </div>
+                        <div className="ml-[-13px]">
+                            <img src="/src/assets/homee/hme2.svg" alt="" />
+                        </div>
+                        <div className="ml-[-13px]">
+                            <img src="/src/assets/homee/hme3.svg" alt="" />
+                        </div>
+                    </div>
+                    <div className="text-sm">
+                        <p>13th March 2024</p>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+const GM = () => {
+	return (
+        <>
+            <div className="hold">
+                <div className="flex justify-between px-[20px] pb-[5px]">
+                    <div className="flex flex-wrap items-center gap-2 ">
+                        <div className="img">
+                            <img src="/src/assets/star/Eli14.svg" alt="" />
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-sm font-bold text-black ">
+                                <p>Hr</p>
+                            </div>
+                            <div className="text-black text-[10px] font-light  ">
+                                <div className="pt-[-40px]">
+                                    <p>2.00pm</p>
+                                </div>
+
+                                <div className="ml-[-26px]">
+                                    <p>
+                                        Onboarding for new employees
+                                        completed...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-[15px] h-[15px] relative origin-top-left ">
+                            <img src="/src/assets/star/share.svg" alt="" />
+                        </div>
+                        <div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
+                            <p>Reply</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-[543] h-[0px] border border-black border-opacity-10 "></div>
+            </div>
+            <div className="mt-[5px] mb-[5px]">
+                <div className="flex justify-between px-[20px] pb-[5px]">
+                    <div className="flex flex-wrap items-center gap-2 ">
+                        <div className="img">
+                            <img src="/src/assets/star/Eli14.svg" alt="" />
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-sm font-bold text-black ">
+                                <p>GM</p>
+                            </div>
+                            <div className="text-black text-[10px] font-light  ">
+                                <div className="pt-[-40px]">
+                                    <p>2.00pm</p>
+                                </div>
+
+                                <div className="ml-[-26px]">
+                                    <p>
+                                        Onboarding for new employees
+                                        completed...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-[15px] h-[15px] relative origin-top-left ">
+                            <img src="/src/assets/star/share.svg" alt="" />
+                        </div>
+                        <div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
+                            <p>Reply</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-[543] h-[0px] border border-black border-opacity-10 "></div>
+            </div>
+            <div className="hold">
+                <div className="flex justify-between px-[20px] pb-[5px]">
+                    <div className="flex flex-wrap items-center gap-2 ">
+                        <div className="img">
+                            <img src="/src/assets/star/Eli14.svg" alt="" />
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-sm font-bold text-black ">
+                                <p>GM</p>
+                            </div>
+                            <div className="text-black text-[10px] font-light  ">
+                                <div className="pt-[-40px]">
+                                    <p>2.00pm</p>
+                                </div>
+
+                                <div className="ml-[-26px]">
+                                    <p>
+                                        Onboarding for new employees
+                                        completed...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="w-[15px] h-[15px] relative origin-top-left ">
+                            <img src="/src/assets/star/share.svg" alt="" />
+                        </div>
+                        <div className="w-[31px] h-3.5 text-black text-[10px] font-light ">
+                            <p>Reply</p>
+                        </div>
+                    </div>
+                </div>
+
+                <textarea
+                    className="w-[90%]  text-black text-opacity-40 text-[13px] font-medium  mt-[10px] border-1 rounded-[20px] border-gray-200 p-1 ml-[25px] mb-[10px] "
+                    type="text"
+                    placeholder="Add a comment"
+                />
+            </div>
+        </>
+    );
+}
 
 export default Home;
