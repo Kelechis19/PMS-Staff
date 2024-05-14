@@ -1,67 +1,108 @@
-import React from "react";
-import { useState } from "react";
-import { FaRegTrashCan } from "react-icons/fa6";
-import { goals } from "../data/temp";
-import { IoMdAddCircle } from "react-icons/io";
-import { Evaluations } from "../data/temp";
-import { LuThumbsUp } from "react-icons/lu";
-import { LuThumbsDown } from "react-icons/lu";
+import React, { useState } from "react";
+import SelfAppraisalPage1 from "../components/SelfAppraisalPage1";
+import SelfAppraisalPage2 from "../components/SelfAppraisalPage2";
+import SelfAppraisalPage3 from "../components/SelfAppraisalPage3";
+import SelfAppraisalPage4 from "../components/SelfAppraisalPage4";
+import SelfAppraisalPage5 from "../components/SelfAppraisalPage5";
+import SelfAppraisalPage6 from "../components/SelfAppraisalPage6";
+import SelfAppraisalPage7 from "../components/SelfAppraisalPage7";
+import SelfAppraisalPage8 from "../components/SelfAppraisalPage8";
 
-const SelfAppraisal = () => {
+
+
+
+const Self_Appraisal = () => {
+	const [currentPage, setCurrentPage] = useState(0);
+	const totalPages = 8;
+	const goToNextPage = () => {
+		if (currentPage < totalPages) {
+			setCurrentPage(currentPage + 1);
+		}
+	};
+	const goToPreviousPage = () => {
+		if (currentPage > 0) {
+			setCurrentPage(currentPage - 1);
+		}
+	};
+	const pages = [
+        <SelfAppraisalPage1 key={0} />,
+        <SelfAppraisalPage2 key={1} />,
+        <SelfAppraisalPage3 key={2} />,
+        <SelfAppraisalPage4 key={3} />,
+        <SelfAppraisalPage5 key={4} />,
+        <SelfAppraisalPage6 key={5} />,
+        <SelfAppraisalPage7 key={6} />,
+        <SelfAppraisalPage8 key={7} />,
+    ];
+
+	const percentage1 = (currentPage / totalPages) * 100;
 	return (
 		<>
-			<div className=' mt-4 w-[full] h-[46px] bg-white rounded-tl-lg rounded-tr-lg shadow flex items-center'>
-				<div className='text-zinc-500 text-[18px] font-bold  pl-[120px]  '>
-					Title
+			<div className='w-full bg-white px-7 h-full p-2 rounded-lg relative mt-4'>
+				<div className='flex items-center gap-5 pt-[20px]'>
+					<div className='im'>
+						<img src='/src/assets/taskimg/Group330.svg' alt='' />
+					</div>
+					<div className='text'>
+						<div className='font-bold text-black'>
+							<p>Adoyiza omuya</p>
+						</div>
+						<div className='text-sm font-normal mt-[10px]'>
+							<p>General Manager</p>
+						</div>
+					</div>
 				</div>
-				<div className='text-zinc-500 text-[18px] font-bold pl-[575px] '>
-					Date
-				</div>
-				<div className='text-zinc-500 text-[18px] font-bold pl-[132px] '>
-					Response
-				</div>
-			</div>
 
-			<div className=''>
-				{Evaluations.map((item, key) => {
-					return <TaskRow title={item.title} date={item.date} to={item.to} />;
-				})}
+				<div className='flex items-center justify-between mt-[20px]'>
+					<div className='flex flex-col gap-4 w-[250px]  '>
+						<div>
+							<p className='text-[16px] font-semibold'>
+								{(currentPage / totalPages) * 100} %Completed
+							</p>
+						</div>
+						<div className='relative w-full bg-[#D9D9D9] h-[8px] rounded-full'>
+							<div
+								className=' h-full bg-blue-400 rounded-full relative duration-1000'
+								style={{ width: `${percentage1}%` }}></div>
+						</div>
+					</div>
+					<div className='flex items-center gap-7 mt-[25px] text-white'>
+						<button
+							className='cursor pointer bg-[#4D7CC1] w-[120px]  p-1 cursor-pointer items-center justify-center flex border border-[#17417E] rounded'
+							onClick={goToPreviousPage}
+							disabled={currentPage === 0}>
+							Previous
+						</button>
+						<button
+							className='cursor-pointer bg-[#4D7CC1] w-[120px]  p-1 items-center justify-center flex border border-[#17417E] rounded'
+							onClick={goToNextPage}
+							disabled={currentPage === totalPages}>
+							Next
+						</button>
+					</div>
+				</div>
+
+				<div className='font-bold mt-[26px]'>
+					<p>Instructions</p>
+				</div>
+				<div className='mt-[5px]'>
+					<p>
+						Evaluate yourself on the following listed factors by choosing a
+						score against each factor and entering details where necessary.
+					</p>
+				</div>
+				<div className='mt-[10px]'>
+					<div className='font-bold mb-[10px]'>
+						<p>Rating Key</p>
+					</div>
+					<div className=' mb-[12px]'>
+						<p>1 = Poor; 2 = fair; 3 = Good; 4 = Very Good; 5 = Outstanding; N/A - Not Applicable</p>
+					</div>
+				</div>
+				<div className="relative">{pages[currentPage]}</div>
 			</div>
 		</>
 	);
 };
 
-const TaskRow = ({ title, date, status, to }) => {
-	return (
-		<div className=' w-full flex flex-col gap-[10px] '>
-			<div>
-				<div className='w-[full] h-[60px] bg-white shadow flex border-b-[3px] border-b-[#656667]/10 items-center '>
-					<div className=' w-[4%] pl-[24px]'>
-						<img src='/src/assets/Ellipse 12.svg' alt='' />
-					</div>
-					<div className='w-[49%]  text-[20px] text-zinc-500  text-start '>
-						{title}
-					</div>
-					<div className='w-[28%]  text-[20px] text-zinc-500  text-center '>
-						{date}
-					</div>
-					<div className='flex gap-5 w-[8%]'>
-						<button className='w-[3%] text-[20px]'>
-							<LuThumbsUp />{" "}
-						</button>
-						<button className='w-[3%] text-[20px]'>
-							<LuThumbsDown />{" "}
-						</button>
-					</div>
-					<div className='ml-[28px]'>
-						<button className='w-[71px] rounded border border-[#17417E] hover:bg-blue-300'>
-							View
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
-};
-
-export default SelfAppraisal;
+export default Self_Appraisal;

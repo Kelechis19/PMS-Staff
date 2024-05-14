@@ -5,7 +5,7 @@ import Nav from "./Nav";
 
 const Layout = ({ children }) => {
 	return (
-		<div className="bg-[#F1F4F9] h-[100vh] p-[40px] flex flex-row gap-[1.5rem] w-[100vw] relative">
+		<div className="bg-[#F1F4F9] max-h-[100vh] p-[40px] flex flex-row gap-[1.5rem] w-[100vw] relative overflow-x-hidden">
 			<Nav />
 			<div className="w-full  relative">
 				<Header />

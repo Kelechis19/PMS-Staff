@@ -31,6 +31,7 @@
     "react-calendar": "^4.8.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
+    "react-rating-stars-component": "^2.2.0",
     "react-router": "^6.22.1",
     "react-tailwindcss-datepicker": "^1.6.6",
     "tailwind-merge": "^2.2.2",
