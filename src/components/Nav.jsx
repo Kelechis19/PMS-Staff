@@ -52,14 +52,14 @@ const Nav = () => {
 						</span>
 					</NavLink>
 					<NavLink
-						to="reports"
+						to="review"
 						className={({ isActive, isPending }) =>
 							isActive ? activeLink : normal
 						}>
 						<span className="flex gap-3 w-full items-center pl-[10px]">
 							<MdChecklist />
 
-							<span>Reports</span>
+							<span>Review</span>
 						</span>
 					</NavLink>
 				</div>

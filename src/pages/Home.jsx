@@ -37,7 +37,7 @@ const Home = () => {
 			{goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
 			<div className="w-full gap-4 mt-[10px] flex">
-				<Link to="TaskHistory">
+				<Link to="/task/TaskHistory">
 					<button>
 						<div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
 							<div className="flex flex-col gap-4">

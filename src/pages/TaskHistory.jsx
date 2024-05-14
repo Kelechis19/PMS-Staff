@@ -25,50 +25,50 @@ const Modal = ({ isOpen, onClose, children }) => {
 					closeModal();
 				}
 			}}>
-			<div className="relative  w-[782px] bg-white rounded-md shadow-lg my-auto h-[690px] ">
-				<div className="flex items-start justify-between p-3">
-					<h3 className="text-lg font-semibold">Overall Rating</h3>
+			<div className='relative  w-[782px] bg-white rounded-md shadow-lg my-auto h-[690px] '>
+				<div className='flex items-start justify-between p-3'>
+					<h3 className='text-lg font-semibold'>Overall Rating</h3>
 
 					<button
 						onClick={closeModal}
-						className="text-gray-500 hover:text-gray-700">
-						<span className="sr-only">Close</span>
+						className='text-gray-500 hover:text-gray-700'>
+						<span className='sr-only'>Close</span>
 						<svg
-							className="w-6 h-6"
-							fill="none"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							viewBox="0 0 24 24"
-							stroke="currentColor">
-							<path d="M6 18L18 6M6 6l12 12"></path>
+							className='w-6 h-6'
+							fill='none'
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							strokeWidth='2'
+							viewBox='0 0 24 24'
+							stroke='currentColor'>
+							<path d='M6 18L18 6M6 6l12 12'></path>
 						</svg>
 					</button>
 				</div>
-				<div className="p-4">{children}</div>
+				<div className='p-4'>{children}</div>
 			</div>
 		</div>
 	);
 };
-const TaskReview = () => {
+const TaskHistory = () => {
 	return (
-		<div className="">
-			<div className="flex items-center bg-white text-center mt-[20px] text-gray-400 rounded-lg">
-				<div className="w-[400px] ">
+		<div className=''>
+			<div className='flex items-center bg-white text-center mt-[20px] text-gray-400 rounded-lg'>
+				<div className='w-[400px] '>
 					<p>Task Title</p>
 				</div>
-				<div className="w-[205px]">
+				<div className='w-[205px]'>
 					<p>Rating</p>
 				</div>
-				<div className="w-[250px]">
+				<div className='w-[250px]'>
 					<p>Date Completed</p>
 				</div>
-				<div className="w-[170px]">
+				<div className='w-[170px]'>
 					<p>Members</p>
 				</div>
 			</div>
 
-			<div className="">
+			<div className=''>
 				{Tasks.map((item, key) => {
 					return (
 						<TaskRow
@@ -96,54 +96,54 @@ const TaskRow = ({ title, status, date, people, rating }) => {
 	};
 	return (
 		<>
-			<div className="relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10">
-				<div className="w-[35%] flex items-center gap-2.5 pb-[15px] ">
-					<div className="w-[30px] ">
+			<div className='relative w-full flex flex-row items-center px-[10px] justify-between  bg-white pt-[10px] border-b-[1px] border-b-[#656667]/10'>
+				<div className='w-[35%] flex items-center gap-2.5 pb-[15px] '>
+					<div className='w-[30px] '>
 						<img
 							src={`/src/assets/taskimg/${
 								status === "Not Approved" ? "Warning.svg" : "check.svg"
 							}`}
 						/>
 					</div>
-					<div className="note">
+					<div className='note'>
 						<p>{title}</p>
 					</div>
 				</div>
 
-				<div className="w-[20%]">
+				<div className='w-[20%]'>
 					<p>{<HoverRating />}</p>
 				</div>
 
-				<div className="w-[20%]">
+				<div className='w-[20%]'>
 					<p>{date}</p>
 				</div>
 
-				<div className="flex w-[10%]">
-					<div className="flex ">
+				<div className='flex w-[10%]'>
+					<div className='flex '>
 						<People people={people} />
 					</div>
 				</div>
-				<div className="bg-white text-center  w-[80px] mb-[23px] border-gray-500 border-[1px]  hover:bg-blue-500 hover:text-white rounded">
-					<button onClick={openModal} className="w-full">
+				<div className='bg-white text-center  w-[80px] mb-[23px] border-gray-500 border-[1px]  hover:bg-blue-500 hover:text-white rounded'>
+					<button onClick={openModal} className='w-full'>
 						View
 					</button>
 				</div>
 				{isOpen && (
 					<Modal isOpen={isOpen} onClose={closeModal}>
-						<div className="flex items-center gap-3">
-							<div className="text-6xl">3.0</div>
-							<div className="text-sm">Rated by GM</div>
+						<div className='flex items-center gap-3'>
+							<div className='text-6xl'>3.0</div>
+							<div className='text-sm'>Rated by GM</div>
 						</div>
 
-						<div className="flex items-center justify-between mt-[35px] font-bold">
-							<div className="">
+						<div className='flex items-center justify-between mt-[35px] font-bold'>
+							<div className=''>
 								<p>Create presentation slides for meeting with MD</p>
 							</div>
-							<div className="mr-[20px]">
+							<div className='mr-[20px]'>
 								<p>23rd Feb April 2024</p>
 							</div>
 						</div>
-						<div class="mt-[10px] text-sm max-h-[82px] max-w-[750px]  break-words border-1 rounded-lg text-wrap ">
+						<div class='mt-[10px] text-sm max-h-[82px] max-w-[750px]  break-words border-1 rounded-lg text-wrap '>
 							Lorem ipsum dolor sit amet consectetur. Orci mattis et vestibulum
 							tortor in id etiam. Eget lectus elit ullamcorper tincidunt ut eget
 							ullamcorper. Cursus purus urna fermentum lectus convallis. Mattis
@@ -152,43 +152,43 @@ const TaskRow = ({ title, status, date, people, rating }) => {
 							duis massa mi pulvinar sollicitudin. Nec enim.
 						</div>
 
-						<div className="w-[38%] h-3 bg-green-600 mt-[20px] rounded "></div>
-						<div className="flex items-center gap-6 mt-4">
-							<div className="12">
-								<p className="mt-[10px]">2/2 task completed</p>
+						<div className='w-[38%] h-3 bg-green-600 mt-[20px] rounded '></div>
+						<div className='flex items-center gap-6 mt-4'>
+							<div className='12'>
+								<p className='mt-[10px]'>2/2 task completed</p>
 							</div>
-							<div className="flex ">
-								<div className="imgg">
-									<img src="/src/assets/task/ima.svg" alt="" />
+							<div className='flex '>
+								<div className='imgg'>
+									<img src='/src/assets/task/ima.svg' alt='' />
 								</div>
-								<div className="ml-[-10px]">
-									<img src="/src/assets/task/imaa.svg" alt="" />
+								<div className='ml-[-10px]'>
+									<img src='/src/assets/task/imaa.svg' alt='' />
 								</div>
 							</div>
 						</div>
-						<div className="flex items-center gap-2 mt-[15px]">
-							<div className="img">
-								<img src="/src/assets/taskimg/check.png" alt="" />
+						<div className='flex items-center gap-2 mt-[15px]'>
+							<div className='img'>
+								<img src='/src/assets/taskimg/check.png' alt='' />
 							</div>
-							<div className="para">
+							<div className='para'>
 								<p>Create presentation slides 1-30</p>
 							</div>
 						</div>
-						<div className="flex items-center gap-2">
-							<div className="img">
-								<img src="/src/assets/taskimg/check.png" alt="" />
+						<div className='flex items-center gap-2'>
+							<div className='img'>
+								<img src='/src/assets/taskimg/check.png' alt='' />
 							</div>
-							<div className="para">
+							<div className='para'>
 								<p>Create presentation slides 31-50</p>
 							</div>
 						</div>
 
-						<div className="font-bold mt-[10px]">
+						<div className='font-bold mt-[10px]'>
 							<p>Comment by GM</p>
 						</div>
 
-						<div className="text">
-							<p className="block px-4 py-2 mt-4 text-black rounded-md border-1 text-wrap ">
+						<div className='text'>
+							<p className='block px-4 py-2 mt-4 text-black rounded-md border-1 text-wrap '>
 								Lorem ipsum dolor sit amet consectetur. Orci mattis et
 								vestibulum tortor in id etiam. Eget lectus elit ullamcorper
 								tincidunt ut eget ullamcorper. Cursus purus urna fermentum
@@ -207,4 +207,4 @@ const TaskRow = ({ title, status, date, people, rating }) => {
 	);
 };
 
-export default TaskReview;
+export default TaskHistory;
