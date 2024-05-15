@@ -52,6 +52,17 @@ export const user = {
 	phone_number: "+1234567890",
 	profile_img: "https://example.com/profile_images/johndoe.jpg",
 };
+export const User = {
+	firstname: "Samiya",
+	lastname: "Usman",
+	department: "Engineering",
+	middlename: "",
+	email: "johndoe@example.com",
+	role: "Engineer",
+	level: "Senior",
+	phone_number: "+1234567890",
+	profile_img: "https://example.com/profile_images/johndoe.jpg",
+};
 
 export const Tasks = [
 	{

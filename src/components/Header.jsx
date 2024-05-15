@@ -3,17 +3,20 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { IoMdMore } from "react-icons/io";
 import { GoDotFill } from "react-icons/go";
 import { CiSearch } from "react-icons/ci";
+import { User } from "../data/temp";
+import { useState, useEffect, useRef } from "react";
+import { FiMessageSquare } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
-	const User = {
-		name: "John Doe",
-		profile_picture: "/samiya.png",
-	};
+	
 	return (
-		<div>
+		<div className="h-full ">
 			{" "}
-			<div className="flex justify-between w-full">
-				<p className="text-[20px] font-[700]">Welcome Back, {User.name}</p>
+			<div className="w-full flex items-center justify-center  gap-[20px] ">
+				<p className="text-[20px] font-[700]">
+					Welcome Back, {User.firstname} {User.lastname}
+				</p>
 				<div className="w-[40%] h-[30px] flex bg-[white] items-center rounded-[30px] ">
 					<span className="text-[20px] pl-[20px] pr-[5px] text-slate-400">
 						<CiSearch />
@@ -24,7 +27,7 @@ const Header = () => {
 						placeholder="Search"
 					/>
 				</div>
-				<div className="flex items-center">
+				<div className="flex items-center gap-1">
 					<div className="relative flex">
 						<span className="text-[30px] text-slate-700">
 							<IoIosNotificationsOutline />
@@ -33,17 +36,29 @@ const Header = () => {
 							<GoDotFill className="" />
 						</span>
 					</div>
-					<div className="flex bg-[#585959]  py-[5px] px-[20px] items-center rounded-[20px] relative gap-3 h">
-						<img
-							src={User.profile_picture}
-							className="w-[32px] h-[32px] rounded-[60%] object-cover relative right-[15px]"
-						/>
-						<span className="text-white font-medium relative right-[20px]">
-							John Doe
+					<div className="relative flex">
+						<span className="text-[30px] text-slate-700">
+							<FiMessageSquare />
 						</span>
-						<span className="text-white font-medium text-[20px]">
-							<IoMdMore />
+						<span className="text-[red] absolute text-[10px] -right-[2px] top-[4px] ">
+							<GoDotFill className="" />
 						</span>
+					</div>
+					<div className="flex bg-[#585959] items-center px-[15px] py-[5px] rounded-[20px] relative gap-3 cursor-pointer">
+						<NavLink to="/dashboard/settings">
+							<div className="flex items-center justify-center gap-2 ">
+								<img
+									src={User.profile_img}
+									className="w-[32px] h-[32px] rounded-[60%] object-cover relative "
+								/>
+								<span className="relative font-medium text-white ">
+									Samiya Usman
+								</span>
+								<span className="text-white font-medium text-[20px]">
+									<IoMdMore />
+								</span>
+							</div>
+						</NavLink>
 					</div>
 				</div>
 			</div>
