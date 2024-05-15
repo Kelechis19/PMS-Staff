@@ -7,7 +7,7 @@ import Date from "../components/Date";
 import { Link } from "react-router-dom";
 import ComplaintPopup from "../components/ComplaintPopup";
 import ReactStars from "react-rating-stars-component";
-// go to line 116 that div there sort it out  cause when i comment it out the whole layout of the dashboard is messed up
+
 
 const Home = () => {
 	const [complaintPopup, setComplainPopup] = useState(false);
@@ -84,9 +84,9 @@ const Home = () => {
 				</div>
 			</div>
 
-			<div className='flex mt-[15px] justify-between px-2 flex-wrap'>
-				<div className=''>
-					<div className=' bg-white   w-[515px]  items-center rounded-lg '>
+			<div className='flex mt-[15px] w-full h-full gap-4 '>
+				<div className='relative w-full h-full flex flex-col gap-4'>
+					<div className=' bg-white  items-center rounded-lg h-full w-full'>
 						<div className='flex items-center justify-between p-2 pt-[-15px]'>
 							<div className='text-base font-bold text-black '>
 								<p>Ongoing Tasks</p>
@@ -103,9 +103,31 @@ const Home = () => {
 							<TaskList tasks={tasks} />
 						</div>
 					</div>
+					<div className='w-full bg-white rounded-lg h-full'>
+						<div className='flex items-center justify-between p-2 pt-[-15px]'>
+							<div className='text-base font-bold text-black '>
+								<p>Task Review</p>
+							</div>
+							<div className='flex items-center gap-1 text-sm font-medium text-black'>
+								<Link to='OngoingTasks'>
+									<div className='flex'>
+										<button>See all</button>
+										<div className='relative w-6 h-6'>
+											<img src='/src/assets/star/arrow.svg' alt='' />
+										</div>
+									</div>
+								</Link>
+							</div>
+						</div>
+						<div className='ji'>
+							<ONGOING />
+							<ONGOING />
+						</div>
+					</div>
 				</div>
-				<div className='hol2'>
-					<div className='w-[515px] bg-white rounded-lg p-3'>
+
+				<div className='h-full w-full'>
+					<div className=' bg-white rounded-lg p-3 h-[421px]'>
 						<div className='flex items-center justify-between p-2 pt-[-15px]'>
 							<div className='text-base font-bold text-black '>
 								<p>Complaints</p>
@@ -144,32 +166,31 @@ const Home = () => {
 						</button>
 					</div>
 				</div>
-				<div className='hol3'>
-					<div className='w-[515px] bg-white rounded-lg  mt-[-150px]'>
-						<div className='flex items-center justify-between p-2 pt-[-15px]'>
-							<div className='text-base font-bold text-black '>
-								<p>Task Review</p>
-							</div>
-							<div className='flex items-center gap-1 text-sm font-medium text-black'>
-								<Link to='OngoingTasks'>
-									<div className='flex'>
-										<button>See all</button>
-										<div className='relative w-6 h-6'>
-											<img src='/src/assets/star/arrow.svg' alt='' />
-										</div>
-									</div>
-								</Link>
-							</div>
+			</div>
+
+			<div className='flex gap-4 mt-[15px] w-full h-full'>
+				<div className='  bg-white rounded-lg w-full '>
+					<div className='flex items-center justify-between p-2 '>
+						<div className='text-base font-bold text-black '>
+							<p>Comment</p>
 						</div>
-						<div className='ji'>
-							<ONGOING />
-							<ONGOING />
+						<div className='flex items-center gap-1 text-sm font-medium text-black'>
+							<button>See all</button>
+							<div className='relative w-6 h-6'>
+								<img src='/src/assets/star/arrow.svg' alt='' />
+							</div>
 						</div>
 					</div>
+					<div className='h-fit'>
+						<ChatMessage />
+						<ChatMessage />
+						<ChatMessage />
+					</div>
 				</div>
-				<div className='hol4'>
-					<div className='w-[515px]  bg-white rounded-lg px-[15px] mt-[10px] p-2'>
-						<div className='text-base font-bold text-black '>
+
+				<div className="w-full bg-white rounded-lg">
+					<div className='  px-[15px]  p-2 '>
+						<div className='text-base font-bold '>
 							<p>Peer Reviews</p>
 						</div>
 						<div className='flex items-center justify-between mt-[5px] pt-[10px] pb-[18px]'>
@@ -184,26 +205,6 @@ const Home = () => {
 						</div>
 						<div className=''>
 							<PeerReviewRow />
-						</div>
-					</div>
-				</div>
-				<div className='hol5'>
-					<div className='w-[515px]  bg-white rounded-lg mt-[-64%]'>
-						<div className='flex items-center justify-between p-2 pt-[-15px]'>
-							<div className='text-base font-bold text-black '>
-								<p>Comment</p>
-							</div>
-							<div className='flex items-center gap-1 text-sm font-medium text-black'>
-								<button>See all</button>
-								<div className='relative w-6 h-6'>
-									<img src='/src/assets/star/arrow.svg' alt='' />
-								</div>
-							</div>
-						</div>
-						<div className='h-fit'>
-							<ChatMessage />
-							<ChatMessage />
-							<ChatMessage />
 						</div>
 					</div>
 				</div>
