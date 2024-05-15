@@ -1,87 +1,73 @@
-import React from "react";
-import { useState } from "react";
-
-import { Complaintss } from "../data/temp";
-import ComplaintPopup from "../components/ComplaintPopup";
+import React, { useState } from "react";
+import { Departments } from "../data/temp";
+import { TopPerformerData } from "../data/temp";
+import { CiSearch } from "react-icons/ci";
+import { motion, AnimatePresence } from "framer-motion";
+import { useParams } from "react-router";
 
 const Peer_Review = () => {
-	const [complaintPopup, setComplainPopup] = useState(false);
-	const complain = () => {
-		setComplainPopup(!complaintPopup);
-	};
+	const data = Departments;
+	const [emplpoyeeOpenPage, setEmployeeOpenPage] = useState(0);
+
 	return (
 		<>
-			{complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
-			<div className=' mt-4 w-[full] h-[46px] bg-white rounded-tl-lg rounded-tr-lg shadow flex items-center'>
-				<div className='text-zinc-500 text-[18px] font-bold  pl-[120px]  '>
-					Title
-				</div>
-				<div className='text-zinc-500 text-[18px] font-bold pl-[575px] '>
-					To
-				</div>
-				<div className='text-zinc-500 text-[18px] font-bold pl-[132px] '>
-					Status
-				</div>
-			</div>
+			<div className='bg-white h-full relative w-full p-2 '>
+				<div className=' relative w-full h-full items-center  '>
+					<div className='relative w-full h-[30px] flex bg-[white] items-center rounded-lg border border-[#00000040]'>
+						<span className='text-[20px] pl-[10px] pr-[5px] '>
+							<CiSearch />
+						</span>
 
-			<div className=''>
-				{Complaintss.map((item, key) => {
-					return (
-						<TaskRow title={item.title} status={item.status} to={item.to} />
-					);
-				})}
-			</div>
-
-			<button className='relative items-center w-full h-12 bg-white pl-[970px] py-[5px] rounded-b-lg'>
-				<div
-					className='w-[146px] h-[37px] px-3 py-2 bg-blue-500 rounded shadow justify-center items-center gap-2 inline-flex'
-					onClick={complain}>
-					<img className='w-[21px] h-[21px]' src='/src/assets/Subtract.svg' />
-
-					<div className='text-xs font-bold text-center text-indigo-50 '>
-						File a Complaint
+						<input
+							className='no-underline outline-none w-full rounded-[30px]'
+							placeholder='Search Employee'
+						/>
+					</div>
+					<div className='relative flex text-sm mt-6 font-semibold gap-3 items-center '>
+						<p>Department</p>
+						<div className='w-[50%] h-[40px] animate-appearance-in flex rounded-lg  '>
+							<div className=' items-center content-center w-full h-full rounded-lg bg-[#E9EFF7] '>
+								<select className='w-full outline-none rounded-lg bg-[#E9EFF7]'>
+									<option className='bg-white'>HOD</option>
+									<option className='bg-white'>GM</option>
+									<option className='bg-white'>HR</option>
+									<option className='bg-white'>All Departments</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<p className='pt-6 mb-6 '>Employeee</p>
+					<div className='pl-9 relative'>
+						<EmployeeRow />
 					</div>
 				</div>
-			</button>
+			</div>
 		</>
 	);
 };
 
-const TaskRow = ({ title, status, to }) => {
+const EmployeeRow = () => {
+	const position = ["GM", "AGM", "HOD"];
+	const admindata = Departments["Administration"];
+
 	return (
-		<div className=' w-full flex flex-col gap-[10px] '>
-			<div>
-				<div className='w-[full] h-[60px] bg-white shadow flex border-b-[3px] border-b-[#656667]/10 items-center '>
-					<div className=' w-[6%] pl-[24px]'>
-						<img src='../src/assets/taskimg/Check.svg' alt='' />
-					</div>
-					<div className='w-[54%]  text-[20px] text-zinc-500  text-start'>
-						{title}
-					</div>
-					<div className='w-[10%]  text-[20px] text-zinc-500  text-center'>
-						{to}
-					</div>
-					<div className='w-[18%] relative'>
-						<div
-							className={` ml-[65px] w-[100px] h-[30px] rounded-[4px] ${
-								status === "Received"
-									? "bg-[#74B72E] text-[#74B72E]"
-									: status === "Pending"
-									? "bg-[#F5BA45] text-[#F5BA45]"
-									: ""
-							}    bg-opacity-20   `}>
-							<div className='relative justify-start w-full h-full text-center'>
-								{status}
-							</div>
-						</div>
-					</div>
-					<div className='ml-[28px]'>
-						<button className='w-[71px] rounded border border-[#17417E] hover:bg-blue-300'>
-							View
-						</button>
-					</div>
-				</div>
+		<div className='flex items-center relative'>
+			<img src='/joe.jpg' className='w-[50px] h-[50px] rounded-[50%] mr-5' />
+			<div className='flex flex-col'>
+				<div className='lol font-semibold'>{admindata.HOD.name}</div>
+				<div className=' font-normal'>{position[0]}</div>
 			</div>
+			<div className='font-normal ml-[100px] mr-24'>{admindata.HOD.position}</div>
+
+			{[...Array(5)].map((_, index) => (
+				<div
+					key={index}
+					className='relative w-[4%] bg-[#D9D9D9] h-[8px] rounded-full flex flex-row mr-2'>
+					<div className='w-full h-full bg-inherit rounded-full relative duration-1000'></div>
+				</div>
+			))}
+
+			<div className="hello ml-10">iuorughoirengoi</div>
 		</div>
 	);
 };

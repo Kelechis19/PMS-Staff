@@ -69,7 +69,7 @@ const TaskReview = () => {
 				</div>
 			</div>
 
-			<div className="">
+			<div className="pb-96">
 				{TaskReviews.map((item, key) => {
 					return (
 						<TaskRow

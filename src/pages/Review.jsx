@@ -10,9 +10,9 @@ const Review = () => {
 	function handleClick(tabNumber) {
 		setActiveTab(tabNumber);
 	}
-	return (
-		<div>
-			<div className='flex items-center bg-white text-center mt-[20px]  font-[700] rounded-[10px] overflow-hidden '>
+	return ( 
+		<div className="w-full overflow-hidden -ml-4">
+			<div className='flex items-center bg-white text-center mt-[20px]  font-[700] rounded-[10px]  '>
 				<div
 					className={`w-full h-[45px] bg-[white] rounded-[5px] flex text-center text-[#205BB1]`}>
 					<NavLink

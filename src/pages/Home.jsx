@@ -32,7 +32,7 @@ const Home = () => {
             {complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
             {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
-            <div className="w-full gap-4 mt-[10px] flex">
+            <div className="w-full gap-4 mt-[10px] flex relative">
                 <Link to="TaskHistory">
                     <button>
                         <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">

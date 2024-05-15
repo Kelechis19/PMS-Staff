@@ -24,7 +24,7 @@ const OngoingTask = () => {
 				</div>
 			</div>
 
-			<div className="">
+			<div className=" pb-96">
 				{Tasks.map((item, key) => {
 					return (
 						<TaskRow
