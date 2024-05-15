@@ -12,8 +12,8 @@ const Task = () => {
 	}
 
 	return (
-		<>
-			<div className='flex items-center bg-white text-center mt-[20px]  font-[700] rounded-[10px] overflow-hidden  '>
+		<div className="w-full flex flex-col  mt-[20px] -ml-4 h-full">
+			<div className='flex items-center bg-white text-center   font-[700] rounded-[10px] overflow-hidden  '>
 				<div
 					className={`w-full h-[45px] bg-[white] rounded-[5px] flex text-center text-[#205BB1]`}>
 					<NavLink
@@ -52,7 +52,7 @@ const Task = () => {
 				</div>
 				
 			</div>
-			<div>
+			<div >
 				<Routes>
 					<Route path='ongoing-task' element={<OngoingTask />} />
 					<Route path='task-review' element={<TaskReview />} />
@@ -60,7 +60,7 @@ const Task = () => {
 					<Route path='/' element={<Navigate to='ongoing-task' />} />
 				</Routes>
 			</div>
-		</>
+		</div>
 	);
 };
 
