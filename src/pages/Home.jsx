@@ -28,191 +28,213 @@ const Home = () => {
 	};
 
 	return (
-		<div className='flex flex-col bg-[#F1F4F9] w-full'>
-			{complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
-			{goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
+        <div className="flex flex-col bg-[#F1F4F9] w-full">
+            {complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
+            {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
-			<div className='w-full gap-4 mt-[10px] flex'>
-				<Link to='TaskHistory'>
-					<button>
-						<div className='flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 '>
-							<div className='flex flex-col gap-4'>
-								<div>
-									<p className='text-[16px] font-[700]'>
-										Overall Task Completed
-									</p>
-									<p className='font-[300] text-[12px] '>
-										28/56 tasks completed
-									</p>
-								</div>
-								<div className='relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full'>
-									<div
-										className='absolute h-full bg-[#cdc307ed] rounded-full'
-										style={{ width: `${percentage1}%` }}></div>
-								</div>
-								<span className='text-[20px] font-[600] '>{percentage1}%</span>
-							</div>
-						</div>
-					</button>
-				</Link>
-				<Link to='TaskReview'>
-					<button>
-						<div className='flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 '>
-							<div className='flex flex-col gap-4'>
-								<div>
-									<p className='text-[16px] font-[700]'>Average Task Review</p>
-									<p className='font-[300] text-[12px] '>
-										Reviewed by GM on 13/05/2023
-									</p>
-								</div>
+            <div className="w-full gap-4 mt-[10px] flex">
+                <Link to="TaskHistory">
+                    <button>
+                        <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
+                            <div className="flex flex-col gap-4">
+                                <div>
+                                    <p className="text-[16px] font-[700]">
+                                        Overall Task Completed
+                                    </p>
+                                    <p className="font-[300] text-[12px] ">
+                                        28/56 tasks completed
+                                    </p>
+                                </div>
+                                <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
+                                    <div
+                                        className="absolute h-full bg-[#cdc307ed] rounded-full"
+                                        style={{
+                                            width: `${percentage1}%`,
+                                        }}></div>
+                                </div>
+                                <span className="text-[20px] font-[600] ">
+                                    {percentage1}%
+                                </span>
+                            </div>
+                        </div>
+                    </button>
+                </Link>
+                <Link to="TaskReview">
+                    <button>
+                        <div className="flex bg-white h-[160px] w-[350px] rounded-[8px] items-center p-[30px] gap-6 ">
+                            <div className="flex flex-col gap-4">
+                                <div>
+                                    <p className="text-[16px] font-[700]">
+                                        Average Task Review
+                                    </p>
+                                    <p className="font-[300] text-[12px] ">
+                                        Reviewed by GM on 13/05/2023
+                                    </p>
+                                </div>
 
-								<div className='relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full'>
-									<div
-										className='absolute h-full rounded-full bg-lime-500'
-										style={{
-											width: `${percentage2}%`,
-										}}></div>
-								</div>
+                                <div className="relative w-[300px] bg-[#D9D9D9] h-[8px] rounded-full">
+                                    <div
+                                        className="absolute h-full rounded-full bg-lime-500"
+                                        style={{
+                                            width: `${percentage2}%`,
+                                        }}></div>
+                                </div>
 
-								<div className='flex items-center justify-between'>
-									<span className='text-[20px] font-[600] '>
-										{percentage2}%
-									</span>
-									<div className='text-lg font-normal text-black'>
-										<p>Excellent</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</button>
-				</Link>
-				<button>
-					{" "}
-					<div className='w-[430px] h-[160px] bg-white rounded-[8px]'>
-						{<Date />}
-					</div>
-				</button>
-			</div>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-[20px] font-[600] ">
+                                        {percentage2}%
+                                    </span>
+                                    <div className="text-lg font-normal text-black">
+                                        <p>Excellent</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </Link>
+                <button>
+                    {" "}
+                    <div className="w-[430px] h-[160px] bg-white rounded-[8px]">
+                        {<Date />}
+                    </div>
+                </button>
+            </div>
 
-			<div className='flex flex-wrap gap-x-5 '>
-				<div className=' bg-white  mt-[20px] w-[49%]  items-center rounded-lg px-1'>
-					<div className='flex items-center justify-between p-2 pt-[-15px]'>
-						<div className='text-base font-bold text-black '>
-							<p>Ongoing Tasks</p>
-						</div>
-						<Link to='OngoingTasks'>
-							<div className='flex items-center text-sm font-medium text-black '>
-								<button className='flex '>
-									See all <img src='/src/assets/star/arrow.svg' alt='' />
-								</button>
-							</div>
-						</Link>
-					</div>
-					<div>
-						<TaskList tasks={tasks} />
-					</div>
-				</div>
+            <div className="flex flex-wrap gap-x-5 ">
+                <div className=" bg-white  mt-[20px] w-[49%]  items-center rounded-lg px-1">
+                    <div className="flex items-center justify-between p-2 pt-[-15px]">
+                        <div className="text-base font-bold text-black ">
+                            <p>Ongoing Tasks</p>
+                        </div>
+                        <Link to="OngoingTasks">
+                            <div className="flex items-center text-sm font-medium text-black ">
+                                <button className="flex ">
+                                    See all{" "}
+                                    <img
+                                        src="/src/assets/star/arrow.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </Link>
+                    </div>
+                    <div>
+                        <TaskList tasks={tasks} />
+                    </div>
+                </div>
 
-				<div className=' '>
-					{/* <p>Analysis</p> */}
-				</div>
+                <div className=" ">{/* <p>Analysis</p> */}</div>
 
-				<div className='w-[49%] mt-[10px]   bg-white rounded-lg h-full px-1'>
-					<div className='flex items-center justify-between p-2 pt-[-15px]'>
-						<div className='text-base font-bold text-black '>
-							<p>Task Review</p>
-						</div>
-						<div className='flex items-center gap-1 text-sm font-medium text-black'>
-							<Link to='OngoingTasks'>
-								<div className='flex'>
-									<button>See all</button>
-									<div className='relative w-6 h-6'>
-										<img src='/src/assets/star/arrow.svg' alt='' />
-									</div>
-								</div>
-							</Link>
-						</div>
-					</div>
-					<div className='ji'>
-						<ONGOING />
-						<ONGOING />
-					</div>
-				</div>
-				<div className='w-[49%] mt-[-130px]   bg-white rounded-lg pl-[15px] '>
-					<div className='flex items-center justify-between p-2 pt-[-15px]'>
-						<div className='text-base font-bold text-black '>
-							<p>Complaints</p>
-						</div>
-						<Link to='OngoingTasks'>
-							<div className='flex items-center text-sm font-medium text-black '>
-								<button className='flex '>
-									See all <img src='/src/assets/star/arrow.svg' alt='' />
-								</button>
-							</div>
-						</Link>
-					</div>
-					<div className='text-black text-xs font-normal  pt-[6px] pb-[10px]'>
-						<p>You can send complaints or feedback to your General Manager</p>
-					</div>
+                <div className="w-[49%] mt-[10px] h-[120px]  bg-white rounded-lg  px-1">
+                    <div className="flex items-center justify-between p-2 pt-[-15px]">
+                        <div className="text-base font-bold text-black ">
+                            <p>Task Review</p>
+                        </div>
+                        <div className="flex items-center gap-1 text-sm font-medium text-black">
+                            <Link to="OngoingTasks">
+                                <div className="flex">
+                                    <button>See all</button>
+                                    <div className="relative w-6 h-6">
+                                        <img
+                                            src="/src/assets/star/arrow.svg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="ji">
+                        <ONGOING />
+                        <ONGOING />
+                    </div>
+                </div>
+                <div className="w-[49%] mt-[-130px]   bg-white rounded-lg pl-[15px] ">
+                    <div className="flex items-center justify-between p-2 pt-[-15px]">
+                        <div className="text-base font-bold text-black ">
+                            <p>Complaints</p>
+                        </div>
+                        <Link to="OngoingTasks">
+                            <div className="flex items-center text-sm font-medium text-black ">
+                                <button className="flex ">
+                                    See all{" "}
+                                    <img
+                                        src="/src/assets/star/arrow.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="text-black text-xs font-normal  pt-[6px] pb-[10px]">
+                        <p>
+                            You can send complaints or feedback to your General
+                            Manager
+                        </p>
+                    </div>
 
-					<input
-						className='w-[65%] h-[27px] border-[#00000033] border-1 text-wrap rounded outline-none'
-						type='text'
-					/>
-					<div className='pt-[7px] '>
-						<p>Report</p>
-					</div>
-					<textarea
-						className='w-[95%] h-[97px] border-[#00000033] border-1 mt-[8px] text-sm  p-2 text-wrap rounded outline-none '
-						placeholder='Write Complaint'
-						type='text'
-					/>
+                    <input
+                        className="w-[65%] h-[27px] border-[#00000033] border-1 text-wrap rounded outline-none"
+                        type="text"
+                    />
+                    <div className="pt-[7px] ">
+                        <p>Report</p>
+                    </div>
+                    <textarea
+                        className="w-[95%] h-[97px] border-[#00000033] border-1 mt-[8px] text-sm  p-2 text-wrap rounded outline-none "
+                        placeholder="Write Complaint"
+                        type="text"
+                    />
 
-					<button
-						className='w-[130px] h-[30px] bg-[#4D7CC1] rounded shadow ml-[410px] mt-[10px] mb-[8px] '
-						onClick={complain}>
-						<div className='text-xs font-semibold text-indigo-50 '>Submit</div>
-					</button>
-				</div>
-				<div className='w-[49%] mb-[80px] bg-white rounded-lg  mt-[-25px] h-full'>
-					<div className='flex items-center justify-between p-2 pt-[-15px]'>
-						<div className='text-base font-bold text-black '>
-							<p>Comment</p>
-						</div>
-						<div className='flex items-center gap-1 text-sm font-medium text-black'>
-							<button>See all</button>
-							<div className='relative w-6 h-6'>
-								<img src='/src/assets/star/arrow.svg' alt='' />
-							</div>
-						</div>
-					</div>
-					<div className='h-fit'>
-						<ChatMessage />
-						<ChatMessage />
-						<ChatMessage />
-					</div>
-				</div>
-				<div className='w-[49%] mt-[-263px]   ml-[51%] bg-white rounded-lg px-[15px] pt-[10px] mb-[120px] p-2'>
-					<div className='text-base font-bold text-black '>
-						<p>Peer Reviews</p>
-					</div>
-					<div className='flex items-center justify-between mt-[5px] pt-[10px] pb-[18px]'>
-						<div className='text-sm'>
-							<p>review collage you have worked with anoymously</p>
-						</div>
-						<div className='w-[142px] h-[38px] px-4 py-3 bg-[#4D7CC1] rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex '>
-							<div className='text-xs font-bold text-indigo-50 '>
-								Review Colleagues
-							</div>
-						</div>
-					</div>
-					<div className=''>
-						<PeerReviewRow />
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+                    <button
+                        className="w-[130px] h-[30px] bg-[#4D7CC1] rounded shadow ml-[410px] mt-[10px] mb-[8px] "
+                        onClick={complain}>
+                        <div className="text-xs font-semibold text-indigo-50 ">
+                            Submit
+                        </div>
+                    </button>
+                </div>
+                <div className="w-[49%] mb-[80px] bg-white rounded-lg  mt-[-25px] h-[220px]">
+                    <div className="flex items-center justify-between p-2 pt-[-15px]">
+                        <div className="text-base font-bold text-black ">
+                            <p>Comment</p>
+                        </div>
+                        <div className="flex items-center gap-1 text-sm font-medium text-black">
+                            <button>See all</button>
+                            <div className="relative w-6 h-6">
+                                <img src="/src/assets/star/arrow.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="h-fit">
+                        <ChatMessage />
+                        <ChatMessage />
+                        <ChatMessage />
+                    </div>
+                </div>
+                <div className="w-[49%] mt-[-263px]   ml-[51%] bg-white rounded-lg px-[15px] pt-[10px] mb-[120px] p-2">
+                    <div className="text-base font-bold text-black ">
+                        <p>Peer Reviews</p>
+                    </div>
+                    <div className="flex items-center justify-between mt-[5px] pt-[10px] pb-[18px]">
+                        <div className="text-sm">
+                            <p>
+                                review collage you have worked with anoymously
+                            </p>
+                        </div>
+                        <div className="w-[142px] h-[38px] px-4 py-3 bg-[#4D7CC1] rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex ">
+                            <div className="text-xs font-bold text-indigo-50 ">
+                                Review Colleagues
+                            </div>
+                        </div>
+                    </div>
+                    <div className="">
+                        <PeerReviewRow />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 const PeerReviewRow = () => {
