@@ -221,7 +221,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="hol5">
-                    <div className="w-[515px]  bg-white rounded-lg mt-[-328px]">
+                    <div className="w-[515px]  bg-white rounded-lg mt-[-64%]">
                         <div className="flex items-center justify-between p-2 pt-[-15px]">
                             <div className="text-base font-bold text-black ">
                                 <p>Comment</p>
