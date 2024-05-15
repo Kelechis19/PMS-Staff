@@ -174,7 +174,7 @@ const Home = () => {
 						<div className='text-xs font-semibold text-indigo-50 '>Submit</div>
 					</button>
 				</div>
-				<div className='w-fit mb-[80px] bg-white rounded-lg  mt-[-31px] h-full'>
+				<div className='w-[49%] mb-[80px] bg-white rounded-lg  mt-[-25px] h-full'>
 					<div className='flex items-center justify-between p-2 pt-[-15px]'>
 						<div className='text-base font-bold text-black '>
 							<p>Comment</p>
@@ -192,7 +192,7 @@ const Home = () => {
 						<ChatMessage />
 					</div>
 				</div>
-				<div className='w-[49%] mt-[10px]   bg-white rounded-lg px-[15px] pt-[10px] mb-[120px] p-2'>
+				<div className='w-[49%] mt-[-263px]   ml-[51%] bg-white rounded-lg px-[15px] pt-[10px] mb-[120px] p-2'>
 					<div className='text-base font-bold text-black '>
 						<p>Peer Reviews</p>
 					</div>
