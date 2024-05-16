@@ -28,13 +28,13 @@ const Home = () => {
 	};
 
 	return (
-		<div className='flex flex-col bg-[#F1F4F9] w-full '>
+		<div className='flex flex-col bg-[#F1F4F9] p-4	 w-full '>
 			{complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
 			{goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
-			<div className='w-full gap-4 mt-[10px] flex relative h-[160px]'>
+			<div className='w-full gap-6 mt-[10px] flex relative h-[160px]'>
 				<Link to='TaskHistory'>
-					<div className='flex bg-white h-full w-[300px] px-4 rounded-[8px] items-center gap-6 '>
+					<div className='flex bg-white h-full w-[320px] px-4 rounded-[8px] items-center gap-6 '>
 						<div className='flex flex-col gap-4 relative'>
 							<div>
 								<p className='text-[16px] font-[700]'>Overall Task Completed</p>
@@ -52,7 +52,7 @@ const Home = () => {
 					</div>
 				</Link>
 				<Link to='TaskReview'>
-					<div className='flex bg-white h-full w-[300px] rounded-[8px] items-center p-[30px] gap-6 '>
+					<div className='flex bg-white h-full w-[320px] rounded-[8px] items-center p-[30px] gap-6 '>
 						<div className='flex flex-col gap-4'>
 							<div>
 								<p className='text-[16px] font-[700]'>Average Task Review</p>
