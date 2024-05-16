@@ -132,6 +132,7 @@ const Home = () => {
 						<div className='ji'>
 							<ONGOING />
 							<ONGOING />
+							<ONGOING />
 						</div>
 					</div>
 				</div>
@@ -162,13 +163,13 @@ const Home = () => {
 							<p>Report</p>
 						</div>
 						<textarea
-							className='w-[95%] h-[77px] border-[#00000033] border-1 mt-[8px] text-sm  p-2 text-wrap rounded outline-none '
+							className='w-full h-[215px] border-[#00000033] border-1 mt-[8px] text-sm  p-2 text-wrap rounded outline-none '
 							placeholder='Write Complaint'
 							type='text'
 						/>
 
 						<button
-							className='w-[130px] h-[30px] bg-[#4D7CC1] rounded shadow ml-[68%] mt-[10px] mb-[8px] '
+							className='w-[130px] h-[30px] bg-[#4D7CC1] rounded shadow ml-[75%] mt-[10px] mb-[8px] '
 							onClick={complain}>
 							<div className='text-xs font-semibold text-indigo-50 '>
 								Submit
