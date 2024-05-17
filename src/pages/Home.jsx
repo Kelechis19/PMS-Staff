@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import ComplaintPopup from "../components/ComplaintPopup";
 import ReactStars from "react-rating-stars-component";
 
-
 const Home = () => {
 	const [complaintPopup, setComplainPopup] = useState(false);
 	const complain = () => {
@@ -28,76 +27,66 @@ const Home = () => {
 	};
 
 	return (
-        <div className="flex flex-col bg-[#F1F4F9] p-4	 w-full ">
-            {complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
-            {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
+		<div className='flex flex-col bg-[#F1F4F9] p-4	 w-full h-full'>
+			{complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
+			{goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
-            <div className="w-full gap-6 mt-[10px] flex relative h-[160px]">
-                <Link to="TaskHistory">
-                    <div className="flex bg-white h-full w-[320px] px-4 rounded-[8px] items-center gap-6 ">
-                        <div className="flex flex-col gap-4 relative">
-                            <div>
-                                <p className="text-[16px] font-[700]">
-                                    Overall Task Completed
-                                </p>
-                                <p className="font-[300] text-[12px] ">
-                                    28/56 tasks completed
-                                </p>
-                            </div>
-                            <div className="relative w-[250px] bg-[#D9D9D9] h-[8px] rounded-full">
-                                <div
-                                    className="absolute h-full bg-[#cdc307ed] rounded-full"
-                                    style={{
-                                        width: `${percentage1}%`,
-                                    }}></div>
-                            </div>
-                            <span className="text-[20px] font-[600] ">
-                                {percentage1}%
-                            </span>
-                        </div>
-                    </div>
-                </Link>
-                <Link to="TaskReview">
-                    <div className="flex bg-white h-full w-[320px] rounded-[8px] items-center p-[30px] gap-6 ">
-                        <div className="flex flex-col gap-4">
-                            <div>
-                                <p className="text-[16px] font-[700]">
-                                    Average Task Review
-                                </p>
-                                <p className="font-[300] text-[12px] ">
-                                    Reviewed by GM on 13/05/2023
-                                </p>
-                            </div>
+			<div className='w-full gap-4  flex relative h-[160px]'>
+				<Link to='TaskHistory'>
+					<div className='flex bg-white h-full w-[300px] px-4 rounded-[8px] items-center '>
+						<div className='flex flex-col gap-4 relative'>
+							<div>
+								<p className='text-[16px] font-[700]'>Overall Task Completed</p>
+								<p className='font-[300] text-[12px] '>28/56 tasks completed</p>
+							</div>
+							<div className='relative w-[250px] bg-[#D9D9D9] h-[8px] rounded-full'>
+								<div
+									className='absolute h-full bg-[#cdc307ed] rounded-full'
+									style={{
+										width: `${percentage1}%`,
+									}}></div>
+							</div>
+							<span className='text-[20px] font-[600] '>{percentage1}%</span>
+						</div>
+					</div>
+				</Link>
+				<Link to='TaskReview'>
+					<div className='flex bg-white h-full w-[300px] rounded-[8px] items-center p-[30px] gap-6 '>
+						<div className='flex flex-col gap-4'>
+							<div>
+								<p className='text-[16px] font-[700]'>Average Task Review</p>
+								<p className='font-[300] text-[12px] '>
+									Reviewed by GM on 13/05/2023
+								</p>
+							</div>
 
-                            <div className="relative w-[250px] bg-[#D9D9D9] h-[8px] rounded-full">
-                                <div
-                                    className="absolute h-full rounded-full bg-lime-500"
-                                    style={{
-                                        width: `${percentage2}%`,
-                                    }}></div>
-                            </div>
+							<div className='relative w-[250px] bg-[#D9D9D9] h-[8px] rounded-full'>
+								<div
+									className='absolute h-full rounded-full bg-lime-500'
+									style={{
+										width: `${percentage2}%`,
+									}}></div>
+							</div>
 
-                            <div className="flex items-center justify-between">
-                                <span className="text-[20px] font-[600] ">
-                                    {percentage2}%
-                                </span>
-                                <div className="text-lg font-normal text-black">
-                                    <p>Excellent</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
+							<div className='flex items-center justify-between'>
+								<span className='text-[20px] font-[600] '>{percentage2}%</span>
+								<div className='text-lg font-normal text-black'>
+									<p>Excellent</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</Link>
 
-                <div className="w-[500px] h-[160px] bg-white rounded-[8px]">
-                    {<Date />}
-                </div>
-            </div>
+				<div className='w-[500px] h-full bg-white rounded-[8px]'>
+					{<Date />}
+				</div>
+			</div>
 
-			<div className='flex mt-[15px] w-full h-full gap-4 '>
-				<div className='relative w-full h-full flex flex-col gap-4'>
+			<div className='flex mt-[15px] w-full h-full gap-4 rounded-lg'>
+				<div className='relative w-full h-full flex flex-col gap-3 '>
 					<div className=' bg-white  items-center rounded-lg h-full w-full'>
-						<div className='flex items-center justify-between p-2 pt-[-15px]'>
+						<div className='flex items-center justify-between p-2 '>
 							<div className='text-base font-bold text-black '>
 								<p>Ongoing Tasks</p>
 							</div>
@@ -109,16 +98,16 @@ const Home = () => {
 								</div>
 							</Link>
 						</div>
-						<div>
+						<div className="p-1">
 							<TaskList tasks={tasks} />
 						</div>
 					</div>
 					<div className='w-full bg-white rounded-lg h-full'>
-						<div className='flex items-center justify-between p-2 pt-[-15px]'>
+						<div className='flex items-center justify-between p-[11.5px] '>
 							<div className='text-base font-bold text-black '>
 								<p>Task Review</p>
 							</div>
-							<div className='flex items-center gap-1 text-sm font-medium text-black'>
+							<div className='flex items-center text-sm font-medium '>
 								<Link to='OngoingTasks'>
 									<div className='flex'>
 										<button>See all</button>
@@ -129,7 +118,7 @@ const Home = () => {
 								</Link>
 							</div>
 						</div>
-						<div className='ji'>
+						<div className='h-fit w-full pb-1 px-1'>
 							<ONGOING />
 							<ONGOING />
 							<ONGOING />
@@ -138,7 +127,7 @@ const Home = () => {
 				</div>
 
 				<div className='h-full w-full'>
-					<div className=' bg-white rounded-lg p-3 h-[421px]'>
+					<div className=' bg-white rounded-lg p-3 h-full'>
 						<div className='flex items-center justify-between p-2 pt-[-15px]'>
 							<div className='text-base font-bold text-black '>
 								<p>Complaints</p>
@@ -179,52 +168,49 @@ const Home = () => {
 				</div>
 			</div>
 
-            <div className="flex gap-4 mt-[15px] w-full h-full">
-                <div className="  bg-white rounded-lg w-full ">
-                    <div className="flex items-center justify-between p-2 ">
-                        <div className="text-base font-bold text-black ">
-                            <p>Comment</p>
-                        </div>
-                        <div className="flex items-center gap-1 text-sm font-medium text-black">
-                            <button>See all</button>
-                            <div className="relative w-6 h-6">
-                                <img src="/src/assets/star/arrow.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="h-fit">
-                        <ChatMessage />
-                        <ChatMessage />
-                        <ChatMessage />
-                    </div>
-                </div>
+			<div className='flex gap-4 mt-[14px] w-full h-full'>
+				<div className='  bg-white rounded-lg w-full '>
+					<div className='flex items-center justify-between p-2 '>
+						<div className='text-base font-bold text-black '>
+							<p>Comment</p>
+						</div>
+						<div className='flex items-center gap-1 text-sm font-medium text-black'>
+							<button>See all</button>
+							<div className='relative w-6 h-6'>
+								<img src='/src/assets/star/arrow.svg' alt='' />
+							</div>
+						</div>
+					</div>
+					<div className='h-fit'>
+						<ChatMessage />
+						<ChatMessage />
+						<ChatMessage />
+					</div>
+				</div>
 
-                <div className="w-full bg-white rounded-lg">
-                    <div className="  px-[15px]  p-2 ">
-                        <div className="text-base font-bold ">
-                            <p>Peer Reviews</p>
-                        </div>
-                        <div className="flex items-center justify-between mt-[5px] pt-[10px] pb-[18px]">
-                            <div className="text-sm">
-                                <p>
-                                    review collage you have worked with
-                                    anoymously
-                                </p>
-                            </div>
-                            <div className="w-[142px] h-[38px] px-4 py-3 bg-[#4D7CC1] rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex ">
-                                <div className="text-xs font-bold text-indigo-50 ">
-                                    Review Colleagues
-                                </div>
-                            </div>
-                        </div>
-                        <div className="">
-                            <PeerReviewRow />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+				<div className='w-full bg-white rounded-lg'>
+					<div className='  px-[15px]  p-2 '>
+						<div className='text-base font-bold '>
+							<p>Peer Reviews</p>
+						</div>
+						<div className='flex items-center justify-between mt-[5px] pt-[10px] pb-[18px]'>
+							<div className='text-sm'>
+								<p>review collage you have worked with anoymously</p>
+							</div>
+							<div className='w-[142px] h-[38px] px-4 py-3 bg-[#4D7CC1] rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex '>
+								<div className='text-xs font-bold text-indigo-50 '>
+									Review Colleagues
+								</div>
+							</div>
+						</div>
+						<div className=''>
+							<PeerReviewRow />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 const PeerReviewRow = () => {
