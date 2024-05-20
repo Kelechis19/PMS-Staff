@@ -251,7 +251,7 @@ const Home = () => {
 							<img src="/src/assets/desc/sent1.svg" alt="" />
 						</div>
                     </div> */}
-                    <div className="relative mt-[50px] px-2 ">
+                    <div className="relative px-2 ">
                         <input
                             type="text"
                             placeholder="Add a comment"
