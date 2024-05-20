@@ -251,16 +251,16 @@ const Home = () => {
 							<img src="/src/assets/desc/sent1.svg" alt="" />
 						</div>
                     </div> */}
-                    <div className="relative mt-[10px] px-4 ">
+                    <div className="relative mt-[50px] px-2 ">
                         <input
                             type="text"
                             placeholder="Add a comment"
-                            className="border rounded-2xl border-gray-300  px-4 py-2 w-[96%]"
+                            className="border rounded-2xl border-gray-300  px-4 py-2 w-full"
                         />
                         <img
                             src="/src/assets/desc/sent1.svg"
                             alt="Image"
-                            className="absolute ml-[83%] top-1/2 transform -translate-y-1/2 h-6 w-6"
+                            className="absolute ml-[90%] top-1/2 transform -translate-y-1/2 h-6 w-6"
                         />
                     </div>
                 </div>
