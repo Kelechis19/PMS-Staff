@@ -240,6 +240,29 @@ const Home = () => {
                         <ChatMessage />
                         <ChatMessage />
                     </div>
+                    {/* <div className="flex items-center">
+                        <textarea
+                            className="w-full h-[40px] border-[#00000033]  border-1 mt-[8px] text-sm  p-2 text-wrap outline-none rounded-3xl "
+                            placeholder="Add a comment"
+                            type="text"
+							
+                        />
+						<div className=" ml-[-20px]">
+							<img src="/src/assets/desc/sent1.svg" alt="" />
+						</div>
+                    </div> */}
+                    <div className="relative mt-[10px] px-4 ">
+                        <input
+                            type="text"
+                            placeholder="Add a comment"
+                            className="border rounded-2xl border-gray-300  px-4 py-2 w-[96%]"
+                        />
+                        <img
+                            src="/src/assets/desc/sent1.svg"
+                            alt="Image"
+                            className="absolute ml-[83%] top-1/2 transform -translate-y-1/2 h-6 w-6"
+                        />
+                    </div>
                 </div>
 
                 <div className="w-full bg-white rounded-lg">
