@@ -167,28 +167,39 @@ const Home = () => {
                                 General Manager
                             </p>
                         </div>
-                        <div className="flex px-2 font-medium ">
+                        {/* <div className="flex px-2 font-medium ">
                             <div className="p">
                                 <p>TITLE</p>
                             </div>
                             <div className="ml-[71%]">
                                 <p>TO:</p>
                             </div>
-                        </div>
+                        </div> */}
 
-                        <div className="flex p-2  justify-between">
-                            <input
-                                className="w-[75%] h-[27px] border-[#00000033] border-1 text-wrap rounded outline-none text-sm" placeholder=" Complaint Title.."
-                                type="text" 
-                            />
-                            <div className="w-[90px] outline-none bg-white rounded border-1 border-gray-300 border-opacity">
-                                <select
-                                    name=""
-                                    id=""
-                                    className="w-full h-full rounded text-sm text-gray-500">
-                                    <option>HOD/GM</option>
-                                    <option>HR</option>
-                                </select>
+                        <div className="flex p-1  justify-between">
+                            <div className="w-[85%]">
+                                <div className="k">
+                                    <p>TITLE</p>
+                                </div>
+                                <input
+                                    className="w-[95%] h-[27px] border-[#00000033] border-1 text-wrap rounded outline-none text-sm"
+                                    placeholder=" Complaint Title.."
+                                    type="text"
+                                />
+                            </div>
+                            <div className="ll">
+                                <div className="kk">
+                                    <p>TO:</p>
+                                </div>
+                                <div className="w-[90px] outline-none bg-white rounded border-1 border-gray-300 border-opacity">
+                                    <select
+                                        name=""
+                                        id=""
+                                        className="w-full h-full rounded text-sm text-gray-500">
+                                        <option>HOD/GM</option>
+                                        <option>HR</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div className="pt-[7px] ">
