@@ -12,7 +12,7 @@ const SelfAppraisalPage7 = () => {
                     attribute to your profession development since last year
                 </p>
             </div>
-            <div className="border-1 border-black w-[1000px] rounded-md  px-2">
+            <div className="border-1 border-[#D7D7D7] outline-none p-1 w-[1000px] rounded-md  px-2">
                 <NO />
             </div>
             <div className="text-sm mt-[10px]">
@@ -22,7 +22,7 @@ const SelfAppraisalPage7 = () => {
                     capabilities
                 </p>
             </div>
-            <textarea className="w-[1000px] h-[90px] border-1 border-black mt-[5px] rounded-md"></textarea>
+            <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none p-1 mt-[5px] rounded-md"></textarea>
         </div>
     );
 };

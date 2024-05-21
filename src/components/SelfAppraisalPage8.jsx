@@ -12,7 +12,7 @@ const SelfAppraisalPage8 = () => {
                     for the product/service delivered by your department?
                 </p>
             </div>
-            <div className="border-1 border-black w-[1000px] rounded-md  px-3 pb-[5px] mt-[10px]">
+            <div className="border-1  border-[#D7D7D7] outline-none p-1 w-[1000px] rounded-md  px-3 pb-[5px] mt-[10px]">
                 <div className="flex items-center gap-2 pt-[10px]">
                     <input className="" type="checkbox" name="" id="" />
                     <div className="text-sm">72 Hours</div>

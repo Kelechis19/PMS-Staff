@@ -1,14 +1,29 @@
 import React, { useState } from "react";
 import { Departments } from "../data/temp";
 import { CiSearch } from "react-icons/ci";
+import CloseIcon from "@mui/icons-material/Close";
+import SelfAppraisalPage1 from "../components/SelfAppraisalPage1";
 
 const Peer_Review = () => {
 	const data = Departments;
 	const [emplpoyeeOpenPage, setEmployeeOpenPage] = useState(0);
+	const percentage1 = 80;
+	const [currentPage, setCurrentPage] = useState(0);
+	const totalPages = 8;
+	const goToNextPage = () => {
+		if (currentPage < totalPages) {
+			setCurrentPage(currentPage + 1);
+		}
+	};
+	const goToPreviousPage = () => {
+		if (currentPage > 0) {
+			setCurrentPage(currentPage - 1);
+		}
+	};
 
 	return (
-		<div className='bg-white h-full relative rounded-lg  mt-4'>
-			<div className=' relative  h-full items-center p-2'>
+		<div className='relative h-full mt-4 bg-white rounded-lg'>
+			<div className='relative items-center h-full p-2 '>
 				<div className='relative w-full h-[30px] flex bg-[white] items-center rounded-lg border border-[#00000040]'>
 					<span className='text-[20px] pl-[10px] pr-[5px] '>
 						<CiSearch />
@@ -19,7 +34,7 @@ const Peer_Review = () => {
 						placeholder='Search Employee'
 					/>
 				</div>
-				<div className='relative flex text-sm mt-6 font-semibold gap-3 items-center '>
+				<div className='relative flex items-center gap-3 mt-6 text-sm font-semibold '>
 					<p>Department</p>
 					<div className='w-[50%] h-[40px] animate-appearance-in flex rounded-lg  '>
 						<div className=' items-center content-center w-full h-full rounded-lg bg-[#E9EFF7] '>
@@ -33,13 +48,83 @@ const Peer_Review = () => {
 					</div>
 				</div>
 				<p className='pt-6 mb-6 '>Employeee</p>
-				<div className=' relative space-y-3 '>
+				<div className='relative space-y-2 '>
 					<EmployeeRow />
 					<EmployeeRow />
 					<EmployeeRow />
 					<EmployeeRow />
 					<EmployeeRow />
 				</div>
+			</div>
+			{/* this is where the pages start from  */}
+			<div className='relative flex flex-col w-full h-full p-4 '>
+				<div className='flex justify-between mb-4'>
+					<div className='flex'>
+						<img
+							src='/src/assets/member/Group1.svg'
+							alt=''
+							className='w-[90px] h-[90px] mr-2'
+						/>
+						<div className='flex-col mt-3 '>
+							<p className='text-base font-bold'>
+								{Departments.Broadband.HOD.name}
+							</p>
+							<p className='text-sm font-medium'>
+								{Departments.Broadband.HOD.position}
+							</p>
+						</div>
+					</div>
+					<div className='items-end justify-end'>
+						<CloseIcon />
+					</div>
+				</div>
+				<div className='flex items-center pl-2 '>
+					<div className='flex flex-col w-full gap-4 '>
+						<div>
+							<p className='text-[16px] font-semibold'>
+								{(currentPage / totalPages) * 100} %Completed
+							</p>
+						</div>
+						<div className='relative w-[80%] bg-[#D9D9D9] h-[8px] rounded-full'>
+							<div
+								className='relative h-full duration-1000 bg-blue-400 rounded-full '
+								style={{ width: `${percentage1}%` }}></div>
+						</div>
+					</div>
+					<div className='flex items-center gap-7 mt-[25px] text-white mb-4'>
+						<button
+							className='cursor pointer bg-[#4D7CC1] w-[120px]  p-1 cursor-pointer items-center justify-center flex border border-[#17417E] rounded'
+							onClick={goToPreviousPage}
+							disabled={currentPage === 0}>
+							Previous
+						</button>
+						<button
+							className='cursor-pointer bg-[#4D7CC1] w-[120px]  p-1 items-center justify-center flex border border-[#17417E] rounded'
+							onClick={goToNextPage}
+							disabled={currentPage === totalPages}>
+							Next
+						</button>
+					</div>
+				</div>
+				<p className='text-base font-bold mb-2 pl-2'>Instructions:</p>
+				<p className='pl-2 text-pretty mb-4 w-[90%]'>
+					Please indicate the rating that corresponds to the degree to which you
+					observe this person demonstrating the listed behavior, according to
+					the rating key listed below. NA should be used if you have not been in
+					situations which would afford you the opportunity to observe the
+					behavior.
+				</p>
+				<p className='pl-2 text-pretty mb-4 w-[90%]'>
+					Kindly provide comments and examples which support your ratings. If
+					you have questions, please contact the immediate supervisor of the
+					feedback recipient.
+				</p>
+				<p className='text-base font-bold mb-2 pl-2'>Rating Key:</p>
+				<p className='pl-2'>
+					1 = Poor; 2 = Fair; 3 = Good; 4 = Very Good; 5 = Outstanding; NA = Not
+					Applicable
+				</p>
+				<div><SelfAppraisalPage1/></div>
 			</div>
 		</div>
 	);
@@ -50,27 +135,27 @@ const EmployeeRow = () => {
 	const admindata = Departments["Administration"];
 
 	return (
-		<div className='flex items-center relative text-nowrap w-full h-full gap-40 hover:border hover:border-[#98B4DB] duration-600 ease-in-out rounded-lg px-2'>
-			<div className="flex h-full ">
+		<div className='flex items-center relative text-nowrap w-full h-full gap-40 hover:border hover:border-[#98B4DB]  duration-500  rounded-lg p-2 hover:transition scroll-smooth '>
+			<div className='flex h-full '>
 				<img src='/joe.jpg' className='w-[50px] h-[50px] rounded-[50%] mr-4 ' />
 				<div className='flex flex-col text-nowrap'>
-					<div className=' font-semibold '>{admindata.HOD.name}</div>
-					<div className=' font-normal'>{position[0]}</div>
+					<div className='font-semibold '>{admindata.HOD.name}</div>
+					<div className='font-normal '>{position[0]}</div>
 				</div>
 			</div>
-			<div className='font-normal h-full  text-center'>
+			<div className='h-full font-normal text-center'>
 				{admindata.HOD.position}
 			</div>
 
-			<div className='flex duration-1000 relative '>
+			<div className='relative flex duration-1000 '>
 				{[...Array(5)].map((_, index) => (
 					<div
 						key={index}
 						className='relative w-10 bg-[#D9D9D9] h-[8px] rounded-full flex  mr-2'></div>
 				))}
 			</div>
-			<div className='w-[90px] h-[30px] bg-white rounded shadow flex items-center justify-center border-[#6A91CB] border  cursor-pointer'>
-				<div className='text-xs font-semibold text-[#6A91CB]'>Review</div>
+			<div className='w-[90px] h-[30px] bg-white rounded  flex items-center justify-center border-[#6A91CB] border  cursor-pointer text-[#6A91CB] hover:bg-[#4D7CC1] hover:text-white duration-300'>
+				<div className='text-xs font-semibold '>Review</div>
 			</div>
 		</div>
 	);

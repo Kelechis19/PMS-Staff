@@ -1,6 +1,6 @@
 const Section = ({ title, items }) => {
 	return (
-		<div className='border-2 border-gray-300 px-7 rounded-lg p-3 mb-5 space-y-5'>
+		<div className='border-2 border-[#D7D7D7] px-7 rounded-lg p-3 mb-5 space-y-5'>
 			<div className='font-bold'>
 				<p>{title}</p>
 			</div>

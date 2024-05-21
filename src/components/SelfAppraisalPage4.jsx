@@ -15,14 +15,14 @@ const SelfAppraisalPage4 = () => {
                         satisfaction and retention?
                     </p>
                 </div>
-                <textarea className="w-[1000px] h-[110px] border-1 border-black mt-[5px] rounded-md"></textarea>
+                <textarea className="w-[1000px] h-[110px] border-1 border-[#D7D7D7] outline-none p-1 mt-[5px] rounded-md"></textarea>
 
                 <div className="text-sm mt-[10px]">
                     <p>
                        State two career goals for the coming year and indicate how you plan to accomplish them
                     </p>
                 </div>
-                <textarea className="w-[1000px] h-[110px] border-1 border-black mt-[5px] rounded-md"></textarea>
+                <textarea className="w-[1000px] h-[110px] border-1 border-[#D7D7D7] outline-none p-1 mt-[5px] rounded-md"></textarea>
             </div>
         </>
     );
