@@ -7,8 +7,8 @@ const Peer_Review = () => {
 	const [emplpoyeeOpenPage, setEmployeeOpenPage] = useState(0);
 
 	return (
-		<div className='bg-white h-full relative   mt-4 -m-2'>
-			{/* <div className=' relative  h-full items-center  '>
+		<div className='bg-white h-full relative rounded-lg  mt-4'>
+			<div className=' relative  h-full items-center p-2'>
 				<div className='relative w-full h-[30px] flex bg-[white] items-center rounded-lg border border-[#00000040]'>
 					<span className='text-[20px] pl-[10px] pr-[5px] '>
 						<CiSearch />
@@ -33,10 +33,14 @@ const Peer_Review = () => {
 					</div>
 				</div>
 				<p className='pt-6 mb-6 '>Employeee</p>
-				<div className='pl-9 relative'>
+				<div className=' relative space-y-3 '>
+					<EmployeeRow />
+					<EmployeeRow />
+					<EmployeeRow />
+					<EmployeeRow />
 					<EmployeeRow />
 				</div>
-			</div> */}ronorkmg
+			</div>
 		</div>
 	);
 };
@@ -46,26 +50,27 @@ const EmployeeRow = () => {
 	const admindata = Departments["Administration"];
 
 	return (
-		<div className='flex items-center relative'>
-			<img src='/joe.jpg' className='w-[50px] h-[50px] rounded-[50%] mr-5' />
-			<div className='flex flex-col'>
-				<div className='lol font-semibold'>{admindata.HOD.name}</div>
-				<div className=' font-normal'>{position[0]}</div>
+		<div className='flex items-center relative text-nowrap w-full h-full gap-40 hover:border hover:border-[#98B4DB] duration-600 ease-in-out rounded-lg px-2'>
+			<div className="flex h-full ">
+				<img src='/joe.jpg' className='w-[50px] h-[50px] rounded-[50%] mr-4 ' />
+				<div className='flex flex-col text-nowrap'>
+					<div className=' font-semibold '>{admindata.HOD.name}</div>
+					<div className=' font-normal'>{position[0]}</div>
+				</div>
 			</div>
-			<div className='font-normal ml-[100px] mr-24'>
+			<div className='font-normal h-full  text-center'>
 				{admindata.HOD.position}
 			</div>
 
-			{[...Array(5)].map((_, index) => (
-				<div
-					key={index}
-					className='relative w-[4%] bg-[#D9D9D9] h-[8px] rounded-full flex flex-row mr-2'>
-					<div className='w-full h-full bg-inherit rounded-full relative duration-1000'></div>
-				</div>
-			))}
-
-			<div className='w-[130px] h-[30px] bg-black rounded shadow ml-[75%] mt-[10px] mb-[8px] '>
-				<div className='text-xs font-semibold text-indigo-50 '>Submit</div>
+			<div className='flex duration-1000 relative '>
+				{[...Array(5)].map((_, index) => (
+					<div
+						key={index}
+						className='relative w-10 bg-[#D9D9D9] h-[8px] rounded-full flex  mr-2'></div>
+				))}
+			</div>
+			<div className='w-[90px] h-[30px] bg-white rounded shadow flex items-center justify-center border-[#6A91CB] border  cursor-pointer'>
+				<div className='text-xs font-semibold text-[#6A91CB]'>Review</div>
 			</div>
 		</div>
 	);
