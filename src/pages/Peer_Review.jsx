@@ -40,7 +40,7 @@ const Peer_Review = () => {
 				</div>
 				<div className='relative flex items-center gap-3 mt-6 text-sm font-semibold '>
 					<p>Department</p>
-					<div className='w-[50%] h-[40px] animate-appearance-in flex rounded-lg  '>
+					<div className='w-[50%] h-[40px]  flex rounded-lg  '>
 						<div className=' items-center content-center w-full h-full rounded-lg bg-[#E9EFF7] '>
 							<select className='w-full outline-none rounded-lg bg-[#E9EFF7]'>
 								<option className='bg-white'>HOD</option>
