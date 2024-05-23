@@ -23,7 +23,7 @@ const Peer_Review = () => {
 		if (currentPage > 0) {
 			setCurrentPage(currentPage - 1);
 		}
-	};/* this is for the pages to go next or prev to understand better go to self appraisal page */
+	}; /* this is for the pages to go next or prev to understand better go to self appraisal page */
 
 	return (
 		<div className='relative h-full mt-4 bg-white rounded-lg '>
@@ -165,12 +165,14 @@ const Peer_Review = () => {
 				<textarea className='w-full h-[150px] border-2 resize-none border-[#D7D7D7] outline-none rounded p-1 mt-[5px]'></textarea>
 
 				{/* This is the last Page that says thank you */}
-				<body class='flex justify-center items-center h-screen'>
-					<div class=' w-full h-full flex  flex-col justify-center items-center gap-4'>
-						<p className=" text-5xl font-bold ">Thank you!</p>
-						<p className=" text-2xl font-medium">Your evaluation has been recorded</p>
+				<div class='flex justify-center items-center h-screen '>
+					<div class=' w-full h-full flex  flex-col justify-center items-center gap-4 border-2 rounded-lg border-[#D7D7D7]'>
+						<p className=' text-5xl font-bold '>Thank you!</p>
+						<p className=' text-2xl font-medium'>
+							Your evaluation has been recorded
+						</p>
 					</div>
-				</body>
+				</div>
 			</div>
 		</div>
 	);
