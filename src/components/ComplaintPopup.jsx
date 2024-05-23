@@ -34,7 +34,7 @@ const ComplaintPopup = ({ complain }) => {
 				<div className="mt-[24px] ml-[24px] text-base font-semibold">
 					<div>Report</div>
 				</div>
-				<textarea className="h-[200px] mt-[8px] ml-[24px] w-[712px] rounded border border-black border-opacity-20 "></textarea>
+				<textarea className="h-[200px] mt-[8px] ml-[24px] w-[712px] rounded border border-black border-opacity-20  resize-none"></textarea>
 				<button className="w-[65px] h-[30px] bg-[#4D7CC1] rounded shadow justify-center items-center ml-[700px] mt-2">
 					<div className="text-xs font-semibold text-center text-indigo-50 ">
 						Submit

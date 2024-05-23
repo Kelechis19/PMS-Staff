@@ -12,7 +12,7 @@ const SelfAppraisalPage2 = () => {
                   last year.(list 3 only)
               </p>
           </div>
-          <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none rounded p-1 mt-[5px]"></textarea>
+          <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none resize-none rounded p-1 mt-[5px]"></textarea>
           <div className="text-sm mt-[10px] rounded-md">
               <p>
                   Since the last appraisal period have you successfuly performed
@@ -20,14 +20,14 @@ const SelfAppraisalPage2 = () => {
                   regular responsibility? if so, please specify
               </p>
           </div>
-          <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none rounded p-1 mt-[5px]"></textarea>
+          <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none resize-none rounded p-1 mt-[5px]"></textarea>
           <div className="text-sm mt-[10px] rounded-md">
               <p>
                   what activities have you initailed participated in an effort
                   to encourage camaderie and teamarck with your group or office?
               </p>
           </div>
-          <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none rounded p-1 mt-[5px] "></textarea>
+          <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none resize-none rounded p-1 mt-[5px] "></textarea>
       </div>
   );
 }

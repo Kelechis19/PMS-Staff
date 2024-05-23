@@ -22,7 +22,7 @@ const SelfAppraisalPage3 = () => {
                   capabilities
               </p>
           </div>
-          <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] mt-[5px] rounded-md"></textarea>
+          <textarea className="w-[1000px] h-[90px] border-1 resize-none border-[#D7D7D7] mt-[5px] rounded-md"></textarea>
       </div>
   );
 }

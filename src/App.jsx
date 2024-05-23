@@ -9,10 +9,7 @@ import Review from "./pages/Review";
 import Signin from "./pages/Signin";
 import Department from "./components/Department";
 import Settings from "./pages/Settings";
-import OngoingTask from "./pages/OngoingTask";
-import TaskReview from "./pages/TaskReview";
-import TaskHistory from "./pages/TaskHistory";
-
+import Complaints from "./pages/Complaints";
 function App() {
 	return (
 		<BrowserRouter>
@@ -20,12 +17,13 @@ function App() {
 				<Route path='signin' element={<Signin />} />
 				<Route element={<Layout />}>
 					<Route path='dashboard' element={<Home />} />
-					<Route path='task/*' element={<Task />}/>
+					<Route path='task/*' element={<Task />} />
 					<Route path='departments/:pathId' element={<Department />} />
 					<Route path='analytics' element={<Analytics />} />
 					<Route path='settings' element={<Settings />} />
-					<Route path='*' element={<Error />} /> {/* Error route */}
 					<Route path='review/*' element={<Review />} />
+					<Route path='complaints' element={<Complaints />} />
+					<Route path='*' element={<Error />} /> {/* Error route */}
 				</Route>
 			</Routes>
 		</BrowserRouter>

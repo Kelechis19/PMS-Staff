@@ -13,284 +13,233 @@ const Home = () => {
 	const complain = () => {
 		setComplainPopup(!complaintPopup);
 	};
-
-	const [goalsList, setGoals] = useState([...goals]);
-
 	const percentage1 = 50;
 	const percentage2 = 70;
 	const [goalform, setGoalForm] = useState(false);
-	const handleAddGoal = (e) => {
-		setGoalForm(true);
-	};
+
 	const closeGoalForm = () => {
 		setGoalForm(false);
 	};
 
 	return (
-        <div className="flex flex-col bg-[#F1F4F9] p-4	 w-full h-full">
-            {complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
-            {goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
+		<div className='flex flex-col bg-[#F1F4F9] p-4	 w-full h-full'>
+			{complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
+			{goalform && <GoalForm close={closeGoalForm} addGoal={setGoals} />}
 
-            <div className="w-full gap-4  flex relative h-[160px]">
-                <Link to="TaskHistory">
-                    <div className="flex bg-white h-full w-[300px] px-4 rounded-[8px] items-center ">
-                        <div className="flex flex-col gap-4 relative">
-                            <div>
-                                <p className="text-[16px] font-[700]">
-                                    Overall Task Completed
-                                </p>
-                                <p className="font-[300] text-[12px] ">
-                                    28/56 tasks completed
-                                </p>
-                            </div>
-                            <div className="relative w-[250px] bg-[#D9D9D9] h-[8px] rounded-full">
-                                <div
-                                    className="absolute h-full bg-[#cdc307ed] rounded-full"
-                                    style={{
-                                        width: `${percentage1}%`,
-                                    }}></div>
-                            </div>
-                            <span className="text-[20px] font-[600] ">
-                                {percentage1}%
-                            </span>
-                        </div>
-                    </div>
-                </Link>
-                <Link to="TaskReview">
-                    <div className="flex bg-white h-full w-[300px] rounded-[8px] items-center p-[30px] gap-6 ">
-                        <div className="flex flex-col gap-4">
-                            <div>
-                                <p className="text-[16px] font-[700]">
-                                    Average Task Review
-                                </p>
-                                <p className="font-[300] text-[12px] ">
-                                    Reviewed by GM on 13/05/2023
-                                </p>
-                            </div>
-
-                            <div className="relative w-[250px] bg-[#D9D9D9] h-[8px] rounded-full">
-                                <div
-                                    className="absolute h-full rounded-full bg-lime-500"
-                                    style={{
-                                        width: `${percentage2}%`,
-                                    }}></div>
-                            </div>
-
-                            <div className="flex items-center justify-between">
-                                <span className="text-[20px] font-[600] ">
-                                    {percentage2}%
-                                </span>
-                                <div className="text-lg font-normal text-black">
-                                    <p>Excellent</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
-
-                <div className="w-[500px] h-full bg-white rounded-[8px]">
-                    {<Date />}
-                </div>
-            </div>
-
-            <div className="flex mt-[15px] w-full h-full gap-4 rounded-lg">
-                <div className="relative w-full h-full flex flex-col gap-3 ">
-                    <div className=" bg-white  items-center rounded-lg h-full w-full">
-                        <div className="flex items-center justify-between p-2 ">
-                            <div className="text-base font-bold text-black ">
-                                <p>Ongoing Tasks</p>
-                            </div>
-                            <Link to="OngoingTasks">
-                                <div className="flex items-center text-sm font-medium text-black ">
-                                    <button className="flex ">
-                                        See all{" "}
-                                        <img
-                                            src="/src/assets/star/arrow.svg"
-                                            alt=""
-                                        />
-                                    </button>
-                                </div>
-                            </Link>
-                        </div>
-                        <div className="p-1">
-                            <TaskList tasks={tasks} />
-                        </div>
-                    </div>
-                    <div className="w-full bg-white rounded-lg h-full">
-                        <div className="flex items-center justify-between p-[11.5px] ">
-                            <div className="text-base font-bold text-black ">
-                                <p>Task Review</p>
-                            </div>
-                            <div className="flex items-center text-sm font-medium ">
-                                <Link to="OngoingTasks">
-                                    <div className="flex">
-                                        <button>See all</button>
-                                        <div className="relative w-6 h-6">
-                                            <img
-                                                src="/src/assets/star/arrow.svg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="h-fit w-full pb-1 px-1">
-                            <ONGOING />
-                            <ONGOING />
-                            <ONGOING />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="h-full w-full">
-                    <div className=" bg-white rounded-lg p-3 h-full">
-                        <div className="flex items-center justify-between p-2 pt-[-15px]">
-                            <div className="text-base font-bold text-black ">
-                                <p>Complaints</p>
-                            </div>
-                            <Link to="OngoingTasks">
-                                <div className="flex items-center text-sm font-medium text-black ">
-                                    <button className="flex ">
-                                        See all{" "}
-                                        <img
-                                            src="/src/assets/star/arrow.svg"
-                                            alt=""
-                                        />
-                                    </button>
-                                </div>
-                            </Link>
-                        </div>
-                        <div className="text-black text-xs font-normal  pt-[6px] pb-[10px]">
-                            <p>
-                                You can send complaints or feedback to your
-                                General Manager
-                            </p>
-                        </div>
-                        {/* <div className="flex px-2 font-medium ">
-                            <div className="p">
-                                <p>TITLE</p>
-                            </div>
-                            <div className="ml-[71%]">
-                                <p>TO:</p>
-                            </div>
-                        </div> */}
-
-                        <div className="flex p-1  justify-between">
-                            <div className="w-[85%]">
-                                <div className="k">
-                                    <p>TITLE</p>
-                                </div>
-                                <input
-                                    className="w-[95%] h-[27px] border-[#00000033] border-1 text-wrap rounded outline-none text-sm"
-                                    placeholder=" Complaint Title.."
-                                    type="text"
-                                />
-                            </div>
-                            <div className="ll">
-                                <div className="kk">
-                                    <p>TO:</p>
-                                </div>
-                                <div className="w-[90px] outline-none bg-white rounded border-1 border-gray-300 border-opacity">
-                                    <select
-                                        name=""
-                                        id=""
-                                        className="w-full h-full rounded text-sm text-gray-500">
-                                        <option>HOD/GM</option>
-                                        <option>HR</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="pt-[7px] ">
-                            <p>Report</p>
-                        </div>
-                        <textarea
-                            className="w-full h-[215px] border-[#00000033] border-1 mt-[8px] text-sm  p-2 text-wrap rounded outline-none "
-                            placeholder="Write Complaint"
-                            type="text"
-                        />
-
-                        <button
-                            className="w-[130px] h-[30px] bg-[#4D7CC1] rounded shadow ml-[75%] mt-[10px] mb-[8px] "
-                            onClick={complain}>
-                            <div className="text-xs font-semibold text-indigo-50 ">
-                                Submit
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div className="flex gap-4 mt-[14px] w-full h-full">
-                <div className="  bg-white rounded-lg w-full ">
-                    <div className="flex items-center justify-between p-2 ">
-                        <div className="text-base font-bold text-black ">
-                            <p>Comment</p>
-                        </div>
-                        <div className="flex items-center gap-1 text-sm font-medium text-black">
-                            <button>See all</button>
-                            <div className="relative w-6 h-6">
-                                <img src="/src/assets/star/arrow.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="h-fit">
-                        <ChatMessage />
-                        <ChatMessage />
-                        <ChatMessage />
-                    </div>
-                    {/* <div className="flex items-center">
-                        <textarea
-                            className="w-full h-[40px] border-[#00000033]  border-1 mt-[8px] text-sm  p-2 text-wrap outline-none rounded-3xl "
-                            placeholder="Add a comment"
-                            type="text"
-							
-                        />
-						<div className=" ml-[-20px]">
-							<img src="/src/assets/desc/sent1.svg" alt="" />
+			<div className='w-full gap-4  flex relative h-[160px]'>
+				<Link to='/task/task-history'>
+					<div className='flex bg-white h-full w-[300px] px-4 rounded-[8px] items-center '>
+						<div className='flex flex-col gap-4 relative'>
+							<div>
+								<p className='text-[16px] font-[700]'>Overall Task Completed</p>
+								<p className='font-[300] text-[12px] '>28/56 tasks completed</p>
+							</div>
+							<div className='relative w-[250px] bg-[#D9D9D9] h-[8px] rounded-full'>
+								<div
+									className='absolute h-full bg-[#cdc307ed] rounded-full'
+									style={{
+										width: `${percentage1}%`,
+									}}></div>
+							</div>
+							<span className='text-[20px] font-[600] '>{percentage1}%</span>
 						</div>
-                    </div> */}
-                    <div className="relative px-2 ">
-                        <input
-                            type="text"
-                            placeholder="Add a comment"
-                            className="border rounded-2xl border-gray-300  px-4 py-2 w-full"
-                        />
-                        <img
-                            src="/src/assets/desc/sent1.svg"
-                            alt="Image"
-                            className="absolute ml-[90%] top-1/2 transform -translate-y-1/2 h-6 w-6"
-                        />
-                    </div>
-                </div>
+					</div>
+				</Link>
+				<Link to='/task/task-review'>
+					<div className='flex bg-white h-full w-[300px] rounded-[8px] items-center p-[30px] gap-6 '>
+						<div className='flex flex-col gap-4'>
+							<div>
+								<p className='text-[16px] font-[700]'>Average Task Review</p>
+								<p className='font-[300] text-[12px] '>
+									Reviewed by GM on 13/05/2023
+								</p>
+							</div>
 
-                <div className="w-full bg-white rounded-lg">
-                    <div className="  px-[15px]  p-2 ">
-                        <div className="text-base font-bold ">
-                            <p>Peer Reviews</p>
-                        </div>
-                        <div className="flex items-center justify-between mt-[5px] pt-[10px] pb-[18px]">
-                            <div className="text-sm">
-                                <p>
-                                    review collage you have worked with
-                                    anoymously
-                                </p>
-                            </div>
-                            <div className="w-[142px] h-[38px] px-4 py-3 bg-[#4D7CC1] rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex ">
-                                <div className="text-xs font-bold text-indigo-50 ">
-                                    Review Colleagues
-                                </div>
-                            </div>
-                        </div>
-                        <div className="">
-                            <PeerReviewRow />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+							<div className='relative w-[250px] bg-[#D9D9D9] h-[8px] rounded-full'>
+								<div
+									className='absolute h-full rounded-full bg-lime-500'
+									style={{
+										width: `${percentage2}%`,
+									}}></div>
+							</div>
+
+							<div className='flex items-center justify-between'>
+								<span className='text-[20px] font-[600] '>{percentage2}%</span>
+								<div className='text-lg font-normal text-black'>
+									<p>Excellent</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</Link>
+
+				<div className='w-[500px] h-full bg-white rounded-[8px]'>
+					{<Date />}
+				</div>
+			</div>
+
+			<div className='flex mt-[15px] w-full h-full gap-4 rounded-lg'>
+				<div className='relative w-full h-full flex flex-col gap-3 '>
+					<div className=' bg-white  items-center rounded-lg h-full w-full'>
+						<div className='flex items-center justify-between p-2 '>
+							<div className='text-base font-bold text-black '>
+								<p>Ongoing Tasks</p>
+							</div>
+							<Link to='/task/ongoing-task'>
+								<div className='flex items-center text-sm font-medium text-black '>
+									<button className='flex '>
+										See all <img src='/src/assets/star/arrow.svg' alt='' />
+									</button>
+								</div>
+							</Link>
+						</div>
+						<div className='p-1'>
+							<TaskList tasks={tasks} />
+						</div>
+					</div>
+					<div className='w-full bg-white rounded-lg h-full'>
+						<div className='flex items-center justify-between p-[11.5px] '>
+							<div className='text-base font-bold text-black '>
+								<p>Task Review</p>
+							</div>
+							<div className='flex items-center text-sm font-medium '>
+								<Link to='/task/task-review'>
+									<div className='flex'>
+										<button>See all</button>
+										<div className='relative w-6 h-6'>
+											<img src='/src/assets/star/arrow.svg' alt='' />
+										</div>
+									</div>
+								</Link>
+							</div>
+						</div>
+						<div className='h-fit w-full pb-1 px-1'>
+							<ONGOING />
+							<ONGOING />
+							<ONGOING />
+						</div>
+					</div>
+				</div>
+
+				<div className='h-full w-full'>
+					<div className=' bg-white rounded-lg p-3 h-full'>
+						<div className='flex items-center justify-between'>
+							<div className='text-base font-bold text-black '>
+								<p>Complaints</p>
+							</div>
+							<Link to='/Complaints'>
+								<div className='flex items-center text-sm font-medium text-black '>
+									<button className='flex '>
+										See all <img src='/src/assets/star/arrow.svg' alt='' />
+									</button>
+								</div>
+							</Link>
+						</div>
+						<div className='text-black text-xs font-normal  pt-[6px] mb-[10px] '>
+							<p>You can send complaints or feedback to your General Manager</p>
+						</div>
+
+						<div className='flex   justify-between'>
+							<div className='w-[85%]'>
+								<div className='k'>
+									<p className=''>TITLE</p>
+								</div>
+								<input
+									className='w-[95%] h-[27px] border-[#00000033] border-1 text-wrap rounded outline-none text-sm'
+									placeholder=' Complaint Title..'
+									type='text'
+								/>
+							</div>
+							<div className='ll'>
+								<div className='kk'>
+									<p>TO:</p>
+								</div>
+								<div className='w-[90px] h-[27px] outline-none bg-white rounded border-1 border-[#00000033] border-opacity'>
+									<select className='w-full  rounded text-sm text-gray-500 outline-none'>
+										<option>HOD/GM</option>
+										<option>HR</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div className='pt-[7px] '>
+							<p>Report</p>
+						</div>
+						<textarea
+							className='w-full h-[215px] border-[#00000033] border-1 mt-[8px] text-sm  p-2 text-wrap rounded outline-none  resize-none'
+							placeholder='Write Complaint'
+							type='text'
+						/>
+
+						<button
+							className='w-[130px] h-[30px] bg-[#4D7CC1] rounded shadow ml-[75%] mt-[10px] mb-[8px] '
+							>
+							<div className='text-xs font-semibold text-indigo-50 '>
+								Submit
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div className='flex gap-4 mt-[14px] w-full h-full'>
+				<div className='  bg-white rounded-lg w-full '>
+					<div className='flex items-center justify-between p-2 '>
+						<div className='text-base font-bold text-black '>
+							<p>Comment</p>
+						</div>
+						<div className='flex items-center gap-1 text-sm font-medium text-black'>
+							<button>See all</button>
+							<div className='relative w-6 h-6'>
+								<img src='/src/assets/star/arrow.svg' alt='' />
+							</div>
+						</div>
+					</div>
+					<div className='h-fit'>
+						<ChatMessage />
+						<ChatMessage />
+						<ChatMessage />
+					</div>
+
+					<div className='relative px-2 '>
+						<input
+							type='text'
+							placeholder='Add a comment'
+							className='border rounded-2xl border-gray-300  px-4 py-2 w-full'
+						/>
+						<img
+							src='/src/assets/desc/sent1.svg'
+							alt='Image'
+							className='absolute ml-[90%] top-1/2 transform -translate-y-1/2 h-6 w-6'
+						/>
+					</div>
+				</div>
+
+				<div className='w-full bg-white rounded-lg'>
+					<div className='  px-[15px]  p-2 '>
+						<div className='text-base font-bold '>
+							<p>Peer Reviews</p>
+						</div>
+						<div className='flex items-center justify-between mt-[5px] pt-[10px] pb-[18px]'>
+							<div className='text-sm'>
+								<p>Review colleges you have worked with anoymously</p>
+							</div>
+							<Link to={"/review/Self Appraisal"}>
+								<div className='w-[142px] h-[38px] px-4 py-3 bg-[#4D7CC1] rounded border border-black border-opacity-0 justify-center items-center gap-2 inline-flex '>
+									<div className='text-xs font-bold text-indigo-50 '>
+										Review Colleagues
+									</div>
+								</div>
+							</Link>
+						</div>
+						<div className=''>
+							<PeerReviewRow />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 const PeerReviewRow = () => {

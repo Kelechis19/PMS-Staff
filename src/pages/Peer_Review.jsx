@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Departments } from "../data/temp";
 import { CiSearch } from "react-icons/ci";
 import CloseIcon from "@mui/icons-material/Close";
-import SelfAppraisalPage1 from "../components/SelfAppraisalPage1";
+import PeerReviewPage1 from "../components/PeerReviewPage1";
+import PeerReviewPage2 from "../components/PeerReviewPage2";
+import PeerReviewPage3 from "../components/PeerReviewPage3";
+import PeerReviewPage4 from "../components/PeerReviewPage4";
+import PeerReviewPage5 from "../components/PeerReviewPage5";
 
 const Peer_Review = () => {
 	const data = Departments;
@@ -19,10 +23,10 @@ const Peer_Review = () => {
 		if (currentPage > 0) {
 			setCurrentPage(currentPage - 1);
 		}
-	};
+	};/* this is for the pages to go next or prev to understand better go to self appraisal page */
 
 	return (
-		<div className='relative h-full mt-4 bg-white rounded-lg'>
+		<div className='relative h-full mt-4 bg-white rounded-lg '>
 			<div className='relative items-center h-full p-2 '>
 				<div className='relative w-full h-[30px] flex bg-[white] items-center rounded-lg border border-[#00000040]'>
 					<span className='text-[20px] pl-[10px] pr-[5px] '>
@@ -120,11 +124,53 @@ const Peer_Review = () => {
 					feedback recipient.
 				</p>
 				<p className='text-base font-bold mb-2 pl-2'>Rating Key:</p>
-				<p className='pl-2'>
+				<p className='pl-2 mb-4'>
 					1 = Poor; 2 = Fair; 3 = Good; 4 = Very Good; 5 = Outstanding; NA = Not
 					Applicable
 				</p>
-				<div><SelfAppraisalPage1/></div>
+				<div>
+					<PeerReviewPage1 />
+				</div>
+				{/* first page  */}
+				<div>
+					<PeerReviewPage2 />
+				</div>
+				{/* Sedond page  */}
+				<div>
+					<PeerReviewPage3 />
+				</div>
+				{/* You get the idea  */}
+				<div>
+					<PeerReviewPage4 />
+				</div>
+				<div>
+					<PeerReviewPage5 />
+				</div>
+				<div className='relative flex flex-col'>
+					<p className='text-base font-bold mb-2 pl-2'>
+						WRITTEN COMMENT SECTION
+					</p>
+					<p className='text-base mb-8 pl-2'>
+						Comments are very important and a useful part of the appraisal
+						system. Please be very specific to help your comment be actionable
+						and helpful. Your comments are anonymous; so be very candid and free
+						to offer them. Elaborate on most positive skills and attitudes.
+					</p>
+					<p className='text-base mb-2 pl-2'>
+						Tell us about what officer should do differently. Is there anything
+						that people are afraid of telling the officer? If any, tell us about
+						it and why people are afraid of telling the officer.
+					</p>
+				</div>
+				<textarea className='w-full h-[150px] border-2 resize-none border-[#D7D7D7] outline-none rounded p-1 mt-[5px]'></textarea>
+
+				{/* This is the last Page that says thank you */}
+				<body class='flex justify-center items-center h-screen'>
+					<div class=' w-full h-full flex  flex-col justify-center items-center gap-4'>
+						<p className=" text-5xl font-bold ">Thank you!</p>
+						<p className=" text-2xl font-medium">Your evaluation has been recorded</p>
+					</div>
+				</body>
 			</div>
 		</div>
 	);

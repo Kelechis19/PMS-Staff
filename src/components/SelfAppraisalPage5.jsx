@@ -12,17 +12,17 @@ const SelfAppraisalPage5 = () => {
                     people/resources to achive your departmemtal goals
                 </p>
             </div>
-            <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none p-1 mt-[5px] rounded-md"></textarea>
+            <textarea className="w-[1000px] h-[90px] border-1 border-[#D7D7D7] outline-none resize-none p-1 mt-[5px] rounded-md"></textarea>
             <div className="text-sm mt-[10px]">
                 <p>
                     <span>INNOVATION & CREATIVITY</span> have you added value or
                     developed innovation at work in your DEPARTMENT
                 </p>
             </div>
-            <div className="border-1 border-[#D7D7D7] outline-none  w-[1000px] rounded-md px-2 p-2">
+            <div className="border-1 border-[#D7D7D7] outline-none resize-none  w-[1000px] rounded-md px-2 p-2">
                 <Num />
             </div>
-            <div className="border-1 border-[#D7D7D7] outline-none p-1 w-[1000px] rounded-md  px-3 pb-[5px] mt-[10px]">
+            <div className="border-1 border-[#D7D7D7] outline-none resize-none p-1 w-[1000px] rounded-md  px-3 pb-[5px] mt-[10px]">
                 <div className="flex items-center gap-2 pt-[10px]">
                     <input className="" type="checkbox" name="" id="" />
                     <div className="text-sm">Yes</div>
@@ -37,7 +37,7 @@ const SelfAppraisalPage5 = () => {
                     INTEGRITY. Have you been delay in remmitance of customers payment in the course of your departmental work 
                 </p>
             </div>
-            <div className="border-1 border-[#D7D7D7] outline-none p-1 w-[1000px] rounded-md  px-3 pb-[5px] mt-[10px]">
+            <div className="border-1 border-[#D7D7D7] outline-none resize-none p-1 w-[1000px] rounded-md  px-3 pb-[5px] mt-[10px]">
                 <div className="flex items-center gap-2 pt-[10px]">
                     <input className="" type="checkbox" name="" id="" />
                     <div className="text-sm">Yes</div>
