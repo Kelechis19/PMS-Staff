@@ -890,3 +890,5 @@ export const Departments = {
 	  "wall_paper": "default_paper.jpg"
 	}
   }
+
+  
