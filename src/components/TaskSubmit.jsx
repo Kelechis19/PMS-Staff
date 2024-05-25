@@ -38,7 +38,7 @@ const Modal = ({ title, modal }) => {
                 </div>
                 <div className="ml-[25px]">
                 <div className="text-black text-base font-bold   mt-[15px]">Task title</div>
-                <div className="text-black text-sm font-medium   mt-[5px] mb-[40px]">Create presentation slides for meeting with MD concerning the...</div>
+                <div className="text-black text-sm font-medium   mt-[5px] mb-[40px]">Create presentation slides for meeting with concerning the...</div>
                 <div className="text-base font-medium text-black ">
                     <p>Report</p>
                 </div>
@@ -49,6 +49,7 @@ const Modal = ({ title, modal }) => {
                 </div>
                 </div>
               
+        
 
                 <div className="p-4">{title}</div>
             </div>
