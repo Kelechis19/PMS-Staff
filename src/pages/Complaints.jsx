@@ -1,166 +1,80 @@
-import React from "react";
-import CloseIcon from "@mui/icons-material/Close";
-import { Departments } from "../data/temp";
+import { goals } from "../data/temp";
+import { IoMdAddCircle } from "react-icons/io";
+import { Complaintss } from "../data/temp";
+import ComplaintPopup from "../components/ComplaintPopup";
+import { useState } from "react";
 
 const Complaints = () => {
-    return (
-        <div className="w-full relative h-full -ml-4">
-            <div className="mt-[10px] flex items-center border-1 justify-between border-White px-3 p-1 text-blue-300 rounded-md ">
-                <p>Complaints</p>
+	const [complaintPopup, setComplainPopup] = useState(false);
+	const complain = () => {
+		setComplainPopup(!complaintPopup);
+	};
+	return (
+		<div className='w-full h-screen relative -ml-4'>
+			{complaintPopup ? <ComplaintPopup complain={complain} /> : ""}
+			<div className=' mt-4 w-[full] h-[46px] bg-white rounded-tl-lg rounded-tr-lg shadow flex items-center text-zinc-500 text-[18px] font-bold relative'>
+				<div className='   pl-[120px]  '>Title</div>
+				<div className='  pl-[540px] '>To</div>
+				<div className='  pl-[132px] '>Status</div>
+			</div>
 
-                <CloseIcon />
-            </div>
-            <div className="flex bg-white p-2  mt-[10px] rounded-md">
-                <div className="pl-[5%]">
-                    <p>Title</p>
-                </div>
-                <div className="pl-[52%]">
-                    <p>To</p>
-                </div>
-                <div className="pl-[16%]">
-                    <p>Status</p>
-                </div>
-            </div>
-            <div className="hold">
-                <ComplaintsRow />
-                {/*  I want this to just be the complaints like a single entity row  */}
-            </div>
-        </div>
-    );
+			<div className=''>
+				{Complaintss.map((item, key) => {
+					return (
+						<TaskRow title={item.title} status={item.status} to={item.to} />
+					);
+				})}
+			</div>
+
+			<button onClick={complain} className='relative items-center w-full h-12 bg-white pl-[86%] flex  '>
+				<div className='w-[146px] h-[37px]  bg-blue-500 rounded shadow justify-center items-center gap-2 flex'>
+					<img className='w-[21px] h-[21px]' src='/src/assets/Subtract.svg' />
+					<div className='text-xs font-bold text-center text-indigo-50 '>
+						File a Complaint
+					</div>
+				</div>
+			</button>
+		</div>
+	);
 };
-/* See ehn you can look at the code at the tasks tab and see how to get the ongoing tasks tab and follow that syntax  */
-const ComplaintsRow = () => {
-    return (
-        <>
-            <div className="bg-white h-[500px] px-2 mt-[10px] rounded-lg">
-                <div className="flex items-center pt-[15px]">
-                    <div className="">
-                        <p className="flex items-center ">
-                            <span className="font-black ">.</span>{" "}
-                            {/* Do not use a fullstop instead import the svg from figma and align it centrally next to the text */}
-                            <span className="pl-[8px]">
-                                Create presentation slides for..
-                            </span>
-                        </p>
-                    </div>
-                    <div className="pl-[38%]">
-                        <p>HR</p>
-                    </div>
-                    <div className="border-1 ml-[15%]  border-amber-300 bg-amber-100 text-amber-300 w-[80px] px-2">
-                        {/* Get the right colors from figma the hex value dont use talwind colors  */}
-                        <p>Pending</p>
-                    </div>
-                    <div className="border-1 border-black px-3  w-[60px] ml-[7%]">
-                        <p>View</p>
-                    </div>
-                </div>
-                <div className="border-1 border-gray-300 mt-[10px]"></div>
 
-                <div className="flex items-center pt-[15px] ">
-                    <div className="">
-                        <p>
-                            <span className="font-black  ">.</span>{" "}
-                            <span className="pl-[8px]">
-                                Create presentation slides for..
-                            </span>
-                        </p>
-                    </div>
-                    <div className="pl-[38%]">
-                        <p>HR</p>
-                    </div>
-                    <div className="border-1 ml-[15%]  border-amber-300 bg-amber-100 text-amber-300 w-[80px] px-2">
-                        <p>Pending</p>
-                    </div>
-                    <div className="border-1 border-black px-3  w-[60px] ml-[7%]">
-                        <p>View</p>
-                    </div>
-                </div>
-                <div className="border-1 border-gray-300 mt-[10px]"></div>
-
-                <div className="flex items-center pt-[15px]">
-                    <div className="">
-                        <p>
-                            <span className="font-black ">.</span>{" "}
-                            <span className="pl-[8px]">
-                                Create presentation slides for..
-                            </span>
-                        </p>
-                    </div>
-                    <div className="pl-[38%]">
-                        <p>GM</p>
-                    </div>
-                    <div className="border-1 ml-[14.5%] border-amber-300 bg-amber-100 text-amber-300  w-[80px] px-2">
-                        <p>Pending</p>
-                    </div>
-                    <div className="border-1 border-black px-3  w-[60px] ml-[7.2%]">
-                        <p>View</p>
-                    </div>
-                </div>
-                <div className="border-1 border-gray-300 mt-[10px]"></div>
-                <div className="flex items-center pt-[15px]">
-                    <div className="">
-                        <p>
-                            <span className="font-black ">.</span>{" "}
-                            <span className="pl-[8px]">
-                                Create presentation slides for..
-                            </span>
-                        </p>
-                    </div>
-                    <div className="pl-[38%]">
-                        <p>HR</p>
-                    </div>
-                    <div className="border-1 ml-[15%]  border-green-600 text-green-500 bg-green-200 w-[80px] px-2">
-                        <p>Received</p>
-                    </div>
-                    <div className="border-1 border-black px-3  w-[60px] ml-[7%]">
-                        <p>View</p>
-                    </div>
-                </div>
-                <div className="border-1 border-gray-300 mt-[10px]"></div>
-
-                <div className="flex items-center pt-[15px]">
-                    <div className="">
-                        <p>
-                            <span className="font-black ">.</span>{" "}
-                            <span className="pl-[8px]">
-                                Create presentation slides for..
-                            </span>
-                        </p>
-                    </div>
-                    <div className="pl-[38%]">
-                        <p>GM</p>
-                    </div>
-                    <div className="border-1 ml-[14.5%]  border-green-600 text-green-500 bg-green-200 w-[80px] px-2">
-                        <p>Received</p>
-                    </div>
-                    <div className="border-1 border-black px-3  w-[60px] ml-[7.2%]">
-                        <p>View</p>
-                    </div>
-                </div>
-                <div className="border-1 border-gray-300 mt-[10px]"></div>
-                <div className="flex items-center pt-[15px]">
-                    <div className="">
-                        <p>
-                            <span className="font-black ">.</span>{" "}
-                            <span className="pl-[8px]">
-                                Create presentation slides for..
-                            </span>
-                        </p>
-                    </div>
-                    <div className="pl-[38%]">
-                        <p>GM</p>
-                    </div>
-                    <div className="border-1 ml-[14.5%]  border-green-600 text-green-500 bg-green-200 w-[80px] px-2">
-                        <p>Received</p>
-                    </div>
-                    <div className="border-1 border-black px-3  w-[60px] ml-[7.2%]">
-                        <p>View</p>
-                    </div>
-                </div>
-                <div className="border-1 border-gray-300 mt-[10px]"></div>
-            </div>
-        </>
-    );
+const TaskRow = ({ title, status, to }) => {
+	return (
+		<div className=' w-full flex flex-col gap-[10px] '>
+			<div>
+				<div className='w-[full] h-[60px] bg-white shadow flex border-b-[3px] border-b-[#656667]/10 items-center '>
+					<div className=' w-[6%] pl-[24px]'>
+						<img src='../src/assets/taskimg/Check.svg' alt='' />
+					</div>
+					<div className='w-[54%]  text-[20px] text-zinc-500  text-start'>
+						{title}
+					</div>
+					<div className='w-[10%]  text-[20px] text-zinc-500  text-center'>
+						{to}
+					</div>
+					<div className='w-[18%] relative'>
+						<div
+							className={` ml-[65px] w-[100px] h-[30px] rounded-[4px]  ${
+								status === "Received"
+									? "bg-[#74B72E] text-[#74B72E]"
+									: status === "Pending"
+									? "bg-[#F5BA45] text-[#F5BA45]"
+									: ""
+							}    bg-opacity-20   `}>
+							<div className='relative w-full h-full text-center flex items-center justify-center'>
+								{status}
+							</div>
+						</div>
+					</div>
+					<div className='ml-[28px]'>
+						<button className='w-[71px] rounded border border-[#17417E] hover:bg-blue-300'>
+							View
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Complaints;

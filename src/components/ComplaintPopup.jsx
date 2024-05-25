@@ -22,10 +22,10 @@ const ComplaintPopup = ({ complain }) => {
 				</div>
 				<div className="flex">
 					<input
-						className="ml-[24px] w-[556px] h-[38px] text-wrap rounded border border-black border-opacity-20"
+						className="ml-[24px] w-[556px] h-[38px] text-wrap rounded border border-black border-opacity-20 outline-none pl-1"
 						placeholder="Complaint Title..."></input>
 					<div className="ml-[24px] w-[130px] bg-white rounded border border-black border-opacity-20">
-						<select name="" id="" className="w-full h-full rounded">
+						<select name="" id="" className="w-full h-full rounded outline-none">
 							<option>GM/HOD</option>
 							<option>HR</option>
 						</select>
@@ -34,7 +34,7 @@ const ComplaintPopup = ({ complain }) => {
 				<div className="mt-[24px] ml-[24px] text-base font-semibold">
 					<div>Report</div>
 				</div>
-				<textarea className="h-[200px] mt-[8px] ml-[24px] w-[712px] rounded border border-black border-opacity-20  resize-none"></textarea>
+				<textarea className="h-[200px] mt-[8px] ml-[24px] w-[712px] rounded border border-black border-opacity-20  resize-none outline-none p-1"></textarea>
 				<button className="w-[65px] h-[30px] bg-[#4D7CC1] rounded shadow justify-center items-center ml-[700px] mt-2">
 					<div className="text-xs font-semibold text-center text-indigo-50 ">
 						Submit
