@@ -3,8 +3,8 @@ import React from "react";
 const SelfAppraisalPage9 = () => {
     return (
         <>
-            <div className="ml-[40%]">
-                <div className="font-semibold text-2xl px-8">
+            <div className="ml-[40%] h-[400px]">
+                <div className="font-semibold pt-[80px] text-2xl px-8">
                     <p>Thank You</p>
                 </div>
                 <div className="text-sm mt-[10px] font-medium">
