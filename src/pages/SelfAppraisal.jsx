@@ -71,7 +71,7 @@ const Self_Appraisal = () => {
 					<div className='flex flex-col gap-4 w-[250px]'>
 						<div>
 							<p className='text-[16px] font-semibold'>
-								{(currentPage / totalPages) * 100} %Completed
+								{Math.ceil((currentPage / totalPages) * 100)} %Completed
 							</p>
 						</div>
 						<div className='relative w-full bg-[#D9D9D9] h-[8px] rounded-full'>
