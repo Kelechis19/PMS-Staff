@@ -8,23 +8,23 @@ import SelfAppraisalPage6 from "../components/SelfAppraisalPage6";
 import SelfAppraisalPage7 from "../components/SelfAppraisalPage7";
 import SelfAppraisalPage8 from "../components/SelfAppraisalPage8";
 
+
+
+
 const Self_Appraisal = () => {
-    const [currentPage, setCurrentPage] = useState(0);
-    const totalPages = 8;
-
-    const goToNextPage = () => {
-        if (currentPage < totalPages - 1) {
-            setCurrentPage(currentPage + 1);
-        }
-    };
-
-    const goToPreviousPage = () => {
-        if (currentPage > 0) {
-            setCurrentPage(currentPage - 1);
-        }
-    };
-
-    const pages = [
+	const [currentPage, setCurrentPage] = useState(0);
+	const totalPages = 8;
+	const goToNextPage = () => {
+		if (currentPage < totalPages) {
+			setCurrentPage(currentPage + 1);
+		}
+	};
+	const goToPreviousPage = () => {
+		if (currentPage > 0) {
+			setCurrentPage(currentPage - 1);
+		}
+	};
+	const pages = [
         <SelfAppraisalPage1 key={0} />,
         <SelfAppraisalPage2 key={1} />,
         <SelfAppraisalPage3 key={2} />,
@@ -33,7 +33,6 @@ const Self_Appraisal = () => {
         <SelfAppraisalPage6 key={5} />,
         <SelfAppraisalPage7 key={6} />,
         <SelfAppraisalPage8 key={7} />,
-    
     ];
 
     const percentage1 = (currentPage / totalPages) * 100;
