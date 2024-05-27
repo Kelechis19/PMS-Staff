@@ -7,6 +7,7 @@ import SelfAppraisalPage5 from "../components/SelfAppraisalPage5";
 import SelfAppraisalPage6 from "../components/SelfAppraisalPage6";
 import SelfAppraisalPage7 from "../components/SelfAppraisalPage7";
 import SelfAppraisalPage8 from "../components/SelfAppraisalPage8";
+import SelfAppraisalPage9 from "../components/SelfAppraisalPage9";
 
 
 
@@ -33,6 +34,8 @@ const Self_Appraisal = () => {
         <SelfAppraisalPage6 key={5} />,
         <SelfAppraisalPage7 key={6} />,
         <SelfAppraisalPage8 key={7} />,
+        <SelfAppraisalPage9 key={8} />,
+
     ];
 
     const percentage1 = (currentPage / totalPages) * 100;
@@ -66,22 +69,22 @@ const Self_Appraisal = () => {
                         </div>
                     </div>
                     <div className='flex items-center gap-7 mt-[25px] text-white'>
-                        <button
+                        {currentPage !== totalPages &&(<button
                             className='cursor pointer bg-[#4D7CC1] w-[120px] p-1 cursor-pointer items-center justify-center flex border border-[#17417E] rounded'
                             onClick={goToPreviousPage}
                             disabled={currentPage === 0}>
                             Previous
-                        </button>
-                        <button
+                        </button>)}
+                        {currentPage !== totalPages &&(<button
                             className='cursor-pointer bg-[#4D7CC1] w-[120px] p-1 items-center justify-center flex border border-[#17417E] rounded'
                             onClick={goToNextPage}
-                            disabled={currentPage === totalPages - 1}>
+                            disabled={currentPage === totalPages }>
                             Next
-                        </button>
+                        </button>)}
                     </div>
                 </div>
 
-                {currentPage === totalPages  && (
+                {currentPage !== totalPages  && (
                     <>
                         <div className='font-bold mt-[26px]'>
                             <p>Instructions</p>
@@ -100,16 +103,7 @@ const Self_Appraisal = () => {
                     </>
                 )}
 
-                {currentPage === totalPages  && (
-                    <>
-                        <div className='font-bold mt-[26px]'>
-                            <p>Evaluation Recorded</p>
-                        </div>
-                        <div className='mt-[5px]'>
-                            <p>Your evaluation has been recorded.</p>
-                        </div>
-                    </>
-                )}
+                
 
                 <div className="relative">{pages[currentPage]}</div>
             </div>
