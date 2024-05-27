@@ -10,13 +10,9 @@ import SelfAppraisalPage6 from "../components/SelfAppraisalPage6";
 import SelfAppraisalPage7 from "../components/SelfAppraisalPage7";
 import SelfAppraisalPage8 from "../components/SelfAppraisalPage8";
 import SelfAppraisalPage9 from "../components/SelfAppraisalPage9";
-import SelfAppraisalPage1int from "../components/SelfAppraisalPage1int";
 
 const Self_Appraisal = () => {
 	const [currentPage, setCurrentPage] = useState(0);
-<<<<<<< HEAD
-	const totalPages = 9;
-=======
 	const totalPages = 8
 	const navigate = useNavigate();
 
@@ -30,7 +26,6 @@ const Self_Appraisal = () => {
 		}
 	}, [currentPage, totalPages, navigate]);
 	;
->>>>>>> 17a1a42ebbfd39222bdea59dcc018b1a7dddc108
 	const goToNextPage = () => {
 		if (currentPage < totalPages) {
 			setCurrentPage(currentPage + 1);
@@ -42,21 +37,6 @@ const Self_Appraisal = () => {
 		}
 	};
 	const pages = [
-<<<<<<< HEAD
-        <SelfAppraisalPage1 key={0} />,
-        <SelfAppraisalPage2 key={1} />,
-        <SelfAppraisalPage3 key={2} />,
-        <SelfAppraisalPage4 key={3} />,
-        <SelfAppraisalPage5 key={4} />,
-        <SelfAppraisalPage6 key={5} />,
-        <SelfAppraisalPage7 key={6} />,
-        <SelfAppraisalPage8 key={7} />,
-        <SelfAppraisalPage9 key={8} />,
-        <SelfAppraisalPage1int key={9} />,
-    ];
-
-    const percentage1 = (currentPage / totalPages) * 100;
-=======
 		<SelfAppraisalPage1 key={0} />,
 		<SelfAppraisalPage2 key={1} />,
 		<SelfAppraisalPage3 key={2} />,
@@ -67,7 +47,6 @@ const Self_Appraisal = () => {
 		<SelfAppraisalPage8 key={7} />,
 		<SelfAppraisalPage9 key={8} />,
 	];
->>>>>>> 17a1a42ebbfd39222bdea59dcc018b1a7dddc108
 
 	const percentage1 = (currentPage / totalPages) * 100;
 
