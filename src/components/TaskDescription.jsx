@@ -20,7 +20,7 @@ const myData = {
 const Desc = ({ opendesc }) => {
 	return ReactDOM.createPortal(
 		<>
-			<div
+			<div 
 				className={`absolute inset-0 w-screen h-screen  z-50 flex items-center justify-center overflow-auto bg-black/20`}>
 				<div
 					className="absolute inset-0 z-10 flex items-center justify-center w-screen h-screen overflow-auto bg-black/20"
@@ -28,8 +28,8 @@ const Desc = ({ opendesc }) => {
 						opendesc();
 					}}
 				/>
-				<div className="absolute w-screen z-50 h-[70%] bottom-0 bg-slate-100 rounded-lg">
-					<div className="">
+				<div className="absolute w-screen z-50 h-[70%] bottom-0 bg-slate-100 rounded-lg cursor-pointer">
+					<div className="" onClick={()=>{opendesc()}}>
 						<img
 							className="ml-[97.5%] mt-2  w-8 h-8"
 							src="/src/assets/Close_round.svg"
