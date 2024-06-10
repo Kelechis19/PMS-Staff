@@ -1,7 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { goals } from "../data/temp";
-import HoverRating from "../components/Star";
 import GoalForm from "../components/GoalForm";
 import Date from "../components/Date";
 import { Link } from "react-router-dom";

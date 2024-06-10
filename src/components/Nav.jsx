@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { LuLayoutDashboard } from "react-icons/lu";
-import { GoBriefcase } from "react-icons/go";
 import { IoMdAnalytics } from "react-icons/io";
 import { MdChecklist } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -15,7 +14,7 @@ const Nav = () => {
 	const activeLink =
 		"text-[#205BB1] bg-[#1D53A117]  w-full h-[40px] shadow-lg shadow-[black]/10 font-medium   flex  rounded-[10px]";
 	const normal =
-		"w-full  hover:bg-[#1D53A117]/10 h-[40px] rounded-[10px] flex   ";
+		"w-full  hover:bg-[#1D53A117]/10 h-[40px] rounded-[10px] flex ";
 	return (
 		<div className="relative w-[303px] h-[90vh] bg-[white] rounded-[20px] flex flex-col items-center">
 			<img src={logo} className="relative mt-[30px]" />
